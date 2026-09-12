@@ -625,7 +625,8 @@ def run(args: argparse.Namespace) -> Path:
             perf_counter() - started,
             (
                 f"ONLINE-RISK-SP-{args.scoring_mode}-S{args.scenario_count}-"
-                f"BAT{args.battery_interpretation}-OBS{args.observation_delay_slots}-"
+                f"TIME{args.time_mapping}-BAT{args.battery_interpretation}-"
+                f"OBS{args.observation_delay_slots}-RESET{int(args.compatibility_reset)}-"
                 f"{ARM_MODEL_IDS[args.arm]}"
             ),
         )
