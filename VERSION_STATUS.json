@@ -30,10 +30,14 @@
       "candidate_versions": {
         "V3": {
           "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
-          "status": "P1_PASS_DEVELOPMENT_RUN_ALLOWED",
+          "status": "DEVELOPMENT_COMPLETE_FULL_RUN_PENDING",
           "formal_use": false,
           "m1_score": 94,
           "p1_score": 95,
+          "selected_forecast_arm": "B0",
+          "selected_forecast_model_id": "Q2V2-SW2-REC5",
+          "predictor_upgrade_adopted": false,
+          "development_decision": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_v1/development_decision.json",
           "official_upstream_allowed": false
         }
       }

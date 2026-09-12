@@ -3,7 +3,7 @@
   "question": "Q2",
   "version": "V3",
   "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
-  "status": "P1_PASS_DEVELOPMENT_RUN_ALLOWED",
+  "status": "DEVELOPMENT_COMPLETE_FULL_RUN_PENDING",
   "formal_use": false,
   "m1": {
     "status": "PASS",
@@ -21,6 +21,12 @@
     "B1": "Q2V3-HGBLOAD-HGBPV",
     "Abl-L": "Q2V3-HGBLOAD-REC5PV",
     "Abl-PV": "Q2V3-SW2LOAD-HGBPV"
+  },
+  "development_selection": {
+    "selected_arm": "B0",
+    "selected_model_id": "Q2V2-SW2-REC5",
+    "predictor_upgrade_adopted": false,
+    "reason": "All three challengers reduced point-estimate asset-adjusted cost, but every 14-day block-bootstrap 95% interval crossed zero."
   },
   "official_upstream_allowed": false
 }
