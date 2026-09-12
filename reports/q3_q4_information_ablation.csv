@@ -1,0 +1,4 @@
+scenario,audit_days,rolling_minus_no_update_cost,rolling_savings_vs_no_update,positive_days
+q3,184,-27638.37907416709,27638.37907416709,63
+q4_2,184,-0.0,0.0,0
+q4_3,184,-27140.17108739508,27140.17108739508,67

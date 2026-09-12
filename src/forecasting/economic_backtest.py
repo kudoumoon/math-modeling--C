@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from .adaptive import AdaptiveConfig, adapt_daily_forecasts
+from .drift import DriftConfig, adapt_daily_forecasts
 from .data import load_problem_data, daily_to_long
 from .economic import execute_day, plan_day
 
@@ -24,7 +24,7 @@ def _actual_long(matrix: pd.DataFrame) -> pd.DataFrame:
 
 def _daily_prediction_matrix(predictions: pd.DataFrame, target: str, actual: pd.DataFrame):
     frame = predictions[predictions["target_name"] == target].copy()
-    adapted = adapt_daily_forecasts(frame, _actual_long(actual), AdaptiveConfig())
+    adapted = adapt_daily_forecasts(frame, _actual_long(actual), DriftConfig())
     base_rows = []
     online_rows = []
     for issue, group in adapted.groupby("issue_time"):

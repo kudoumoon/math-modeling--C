@@ -36,4 +36,11 @@ Get-ChildItem -Recurse -File problem,data,plan | Get-FileHash -Algorithm SHA256
 
 ## 当前状态
 
-本提交只完成训练前资料冻结与防泄漏约束。预测模型架构、超参数及 GPU 训练结果尚未在本仓库中宣称确定，必须经过时间序列基线、滚动回测、消融实验和下游优化成本检验后再选择。
+当前主线已完成：因果预测主干、漂移感知在线自适应、真实 LP 与交易账本、完整 Q3/Q4 逐日滚动回测，以及块 Bootstrap、月度分解和信息消融证据。
+
+- 运行预测回测：`PYTHONPATH=src .venv/bin/python -m forecasting.backtest`
+- 运行完整收益验证：`PYTHONPATH=src .venv/bin/python -m forecasting.rolling_backtest`
+- 主要结果：`reports/q3_q4_rolling_summary.csv`、`reports/q3_q4_rolling_daily.csv`、`reports/q3_q4_monthly_decomposition.csv`、`reports/q3_q4_block_bootstrap.csv`、`reports/q3_q4_information_ablation.csv`
+- 方法说明：[Q3/Q4 滚动收益验证](docs/Q3-Q4滚动收益验证.md)
+
+当前推荐候选为“因果预测 + 漂移感知适配 + LP + 经济门控”。H100 统一模型仍属于 challenger：必须在相同随机种子、相同因果边界和相同审计账本上证明现金成本与风险均改善后，才允许替换小模型主线。
