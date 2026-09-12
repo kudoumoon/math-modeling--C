@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "gate": "P1",
+  "revision": 2,
+  "status": "PASS",
+  "score": 96,
+  "hard_blockers": [],
+  "reviewed_commit": "60eeacfe2494707f430bab670971e6fcfc5d3d66",
+  "tests": {
+    "scope": "solutions/Q2_V3_CAUSAL_FORECAST/program/tests",
+    "passed": 23,
+    "failed": 0
+  },
+  "smoke_runs": {
+    "main": "runs/q2v3-r2-p1-main-20260913-02",
+    "battery_b": "runs/q2v3-r2-p1-batb-20260913-02",
+    "time_b": "runs/q2v3-r2-p1-timeb-20260913-02",
+    "delay_1": "runs/q2v3-r2-p1-delay1-20260913-02",
+    "reset_feb": "runs/q2v3-r2-p1-resetfeb-20260913-02"
+  },
+  "verified": [
+    "manifest, live source, Git blob, input and output hashes",
+    "model identity and causal time mapping",
+    "commanded versus realized battery actions",
+    "energy balance, SOC dynamics, bounds and cost reconstruction",
+    "cross-day planned and executed initial states",
+    "Time B future-perturbation invariance",
+    "February SOC reset with January candidate history retained"
+  ],
+  "scope": "Allows the four-arm February-June development rerun. Does not approve annual release or Q3/Q4 upstream use."
+}

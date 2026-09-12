@@ -4,7 +4,7 @@
   "version": "V3",
   "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
   "revision": 2,
-  "status": "CAUSAL_REFREEZE_M1_PASS_P1_RERUN_PENDING",
+  "status": "CAUSAL_REFREEZE_P1_PASS_DEVELOPMENT_RERUN_ALLOWED",
   "formal_use": false,
   "m1": {
     "status": "PASS",
@@ -12,10 +12,10 @@
     "date": "2026-09-13"
   },
   "p1": {
-    "status": "INVALIDATED_BY_CAUSAL_SOURCE_CHANGE",
-    "score": null,
+    "status": "PASS",
+    "score": 96,
     "date": "2026-09-13",
-    "scope": "Allows January warm-up plus February-June four-arm development runs only."
+    "scope": "Allows the causal-refreeze January warm-up plus February-June four-arm development rerun only."
   },
   "forecast_arms": {
     "B0": "Q2V2-SW2-REC5",

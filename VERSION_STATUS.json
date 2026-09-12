@@ -30,10 +30,10 @@
       "candidate_versions": {
         "V3": {
           "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
-          "status": "CAUSAL_REFREEZE_M1_PASS_P1_RERUN_PENDING",
+          "status": "CAUSAL_REFREEZE_P1_PASS_DEVELOPMENT_RERUN_ALLOWED",
           "formal_use": false,
           "m1_score": 97,
-          "p1_score": null,
+          "p1_score": 96,
           "selected_forecast_arm": null,
           "selected_forecast_model_id": null,
           "predictor_upgrade_adopted": null,

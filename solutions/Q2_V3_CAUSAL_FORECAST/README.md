@@ -1,6 +1,6 @@
 # Q2 V3 Causal Forecast
 
-状态：`CAUSAL_REFREEZE_M1_PASS_P1_RERUN_PENDING`。末槽因果修复后的 M1 为 97/100；旧 P1、四臂开发期和年度运行均已失效，正在基于新提交重跑。本目录尚不是正式 Q2 或 Q3/Q4 上游。
+状态：`CAUSAL_REFREEZE_P1_PASS_DEVELOPMENT_RERUN_ALLOWED`。末槽因果修复后的 M1 为 97/100，P1 为 96/100；允许重跑四臂开发期，但尚不是正式 Q2 或 Q3/Q4 上游。
 
 ## 目录
 
