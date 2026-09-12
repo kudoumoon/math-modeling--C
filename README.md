@@ -1,6 +1,17 @@
-# 2026 数模国赛 C 题：预测与滚动优化准备仓库
+# 2026 数模国赛 C 题：数据、模型与版本归档
 
-本仓库冻结 C 题原始题目、官方附件、结果模板和当前唯一主规约，为后续 Q3/Q4 的因果预测、滚动优化和 GPU 模型实验提供统一输入。
+本仓库冻结 C 题原始题目、附件、结果模板、主规约和 Q1–Q4 可追溯产物。Q3/Q4 是已确认使用错误上游的历史快照，不是正式结果。
+
+## 版本状态（必读）
+
+| 目录 | 状态 | 用途 |
+|---|---|---|
+| `solutions/Q1_BASELINE` | 当前 Q1 基线 | 可复现计算与论文参考 |
+| `solutions/Q2_V2_OFFICIAL_ONLINE_RISK` | **Q2 唯一正式路线** | 队友 `ONLINE-RISK-SP-A-S10-BATA`；条件主结果 |
+| `solutions/Q3_V2_WRONG_UPSTREAM_ARCHIVE` | **错误上游归档** | 实际导入 `q2_pipeline_v1`，仅供追溯 |
+| `solutions/Q4_WRONG_UPSTREAM_ARCHIVE` | **错误上游归档** | 继承错误 Q3 且直接导入 V1 兼容核心，仅供追溯 |
+
+机器可读状态见 [`VERSION_STATUS.json`](VERSION_STATUS.json)。后续 Q3/Q4 必须从 `Q2_V2_OFFICIAL_ONLINE_RISK` 重建，禁止从两个 `WRONG_UPSTREAM_ARCHIVE` 目录提取正式数值。
 
 ## 仓库内容
 
@@ -13,7 +24,7 @@ docs/训练前数据与防泄漏规约.md          预测实验硬规则
 data_manifest.json                     文件大小与 SHA-256
 ```
 
-不在本次冻结范围内：社交平台方案包、未经复现的年度结果、现有 Q1–Q3 求解输出、缓存、个人报告和本地绝对路径配置。
+不在本次冻结范围内：社交平台方案包、Python 虚拟环境、缓存和重复 ZIP。Q3/Q4 年度输出予以保留，但只是错误上游的审计材料。
 
 ## 最重要的时间口径
 
@@ -36,11 +47,13 @@ Get-ChildItem -Recurse -File problem,data,plan | Get-FileHash -Algorithm SHA256
 
 ## 当前状态
 
-当前主线已完成：因果预测主干、漂移感知在线自适应、真实 LP 与交易账本、完整 Q3/Q4 逐日滚动回测，以及块 Bootstrap、月度分解和信息消融证据。
+正式结果口径：Q1 已归档；Q2 已冻结为队友 ONLINE-RISK V2。`solutions` 下的 Q3/Q4 仅保留错误上游版本用于审计，待真正绑定 Q2 V2 后重建，禁止作为正式提交结果。
+
+独立预测验证线已完成：因果预测主干、漂移感知在线自适应、真实 LP 与交易账本、Q3/Q4 逐日滚动回测，以及块 Bootstrap、月度分解和信息消融证据。这些预测实验属于候选验证资产，不改变上述 Q3/Q4 正式版本状态。
 
 - 运行预测回测：`PYTHONPATH=src .venv/bin/python -m forecasting.backtest`
 - 运行完整收益验证：`PYTHONPATH=src .venv/bin/python -m forecasting.rolling_backtest`
 - 主要结果：`reports/q3_q4_rolling_summary.csv`、`reports/q3_q4_rolling_daily.csv`、`reports/q3_q4_monthly_decomposition.csv`、`reports/q3_q4_block_bootstrap.csv`、`reports/q3_q4_information_ablation.csv`
 - 方法说明：[Q3/Q4 滚动收益验证](docs/Q3-Q4滚动收益验证.md)
 
-当前推荐候选为“因果预测 + 漂移感知适配 + LP + 经济门控”。H100 统一模型仍属于 challenger：必须在相同随机种子、相同因果边界和相同审计账本上证明现金成本与风险均改善后，才允许替换小模型主线。
+当前预测候选为“因果预测 + 漂移感知适配 + LP + 经济门控”。H100 统一模型仍属于 challenger；GPU 训练结果必须在相同随机种子、因果边界和审计账本下通过时序基线、滚动回测、消融及下游现金成本/风险检验，才允许升级冻结版本。

@@ -1,0 +1,6 @@
+﻿method,source,best_result,rejection_reason,paper_usage
+medium CVaR,Rockafellar-Uryasev,1387.597335,higher planned cost,cost-risk sensitivity only
+budgeted robust surrogate,Bertsimas-Sim,1416.614503,price of robustness exceeds benefit,robustness discussion
+Wasserstein DRO,Esfahani-Kuhn,,daily 144-slot multi-stage reformulation exceeds current scipy LP interface,feasibility boundary
+cluster medoid,engineering extension,1405.295394,no material benefit and higher complexity,scenario reduction comparison
+scenario tree,XHS S4 inspiration,1412.625727,Q2 nonanticipativity removes claimed recourse advantage,information boundary

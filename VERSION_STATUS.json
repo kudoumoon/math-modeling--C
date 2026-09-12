@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-13 Asia/Shanghai",
+  "authoritative_rule": "Only BASELINE/OFFICIAL entries may be used as formal upstreams.",
+  "questions": {
+    "Q1": {
+      "directory": "solutions/Q1_BASELINE",
+      "status": "BASELINE",
+      "formal_use": true
+    },
+    "Q2": {
+      "directory": "solutions/Q2_V2_OFFICIAL_ONLINE_RISK",
+      "status": "OFFICIAL_CONDITIONAL_BASELINE",
+      "formal_use": true,
+      "model_id": "ONLINE-RISK-SP-A-S10-BATA",
+      "total_cost_yuan": 13808033.330642482,
+      "battery_interpretation": "A",
+      "initial_soc_2025_02_01_kwh": 6000.0,
+      "result2_sha256": "411DCE9F4DADE1B966EFC7AA0A95C2789D0FFCB93EE0043B44448B71D2CAED76"
+    },
+    "Q3": {
+      "directory": "solutions/Q3_V2_WRONG_UPSTREAM_ARCHIVE",
+      "status": "INVALID_FORMAL_UPSTREAM_ARCHIVE_ONLY",
+      "formal_use": false,
+      "reason": "Imports q2_pipeline_v1 through q2_v2_compatible instead of frozen ONLINE-RISK-SP."
+    },
+    "Q4": {
+      "directory": "solutions/Q4_WRONG_UPSTREAM_ARCHIVE",
+      "status": "INVALID_FORMAL_UPSTREAM_ARCHIVE_ONLY",
+      "formal_use": false,
+      "reason": "Inherits invalid Q3 and directly imports q2_pipeline_v1/q2_v2_compatible."
+    }
+  }
+}

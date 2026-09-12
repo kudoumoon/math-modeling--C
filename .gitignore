@@ -28,3 +28,6 @@ wandb/
 *.ckpt
 *.pt
 *.pth
+
+# Reproducible contents are committed unpacked; local bundles are redundant.
+*.zip

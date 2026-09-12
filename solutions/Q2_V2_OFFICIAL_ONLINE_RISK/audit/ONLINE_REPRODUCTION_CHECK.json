@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "expected_cost_wan": 1380.803333064248,
+  "actual_cost_wan": 1380.8033330642481,
+  "difference_wan": 2.2737367544323206e-13,
+  "tolerance_wan": 1e-06
+}

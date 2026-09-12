@@ -1,0 +1,29 @@
+{
+  "version": "V2",
+  "role": "FORMAL_Q2_ROUTE_CONDITIONAL_NUMERIC_BASELINE",
+  "source_owner": "teammate",
+  "model_family": "ONLINE-RISK-SP",
+  "model_id": "ONLINE-RISK-SP-A-S10-BATA",
+  "battery_interpretation": "A",
+  "scenario_count": 10,
+  "initial_soc_on_2025_02_01_kwh": 6000.0,
+  "continuous_january_warmup": false,
+  "time_mapping": "A_NO_SHIFT_0:10_MEANS_0:10-0:20",
+  "plan_cost_yuan": 13068019.45803071,
+  "emergency_cost_yuan": 740013.8726117717,
+  "total_cost_yuan": 13808033.330642482,
+  "formal_for_q2": true,
+  "allowed_as_q3_q4_route_upstream": true,
+  "requires_q3_q4_soc_and_information_adaptation": true,
+  "source_zip_sha256": "A0D2CC57232B1C417FE40CF006A911E991BC0581EA0188CD31AB436EB35E62AA",
+  "core_hashes": {
+    "q2_model.py": "3A233256F8BB9DC5D15E90717268051A419BEC8EB9C5433179E26F3D94DCCC80",
+    "run_q2_online_selector.py": "622C2910BF48BCDC8F96C226879F0B0713F681A97431E29C4962B268ACD1E3DE",
+    "requirements-lock.txt": "972E2AFAA78662E5EBAA451C7CFA8DD12FC94D0469D3433B494AB0BA8DCE4562"
+  },
+  "result_hashes": {
+    "q2_execution_log.csv": "DAD8C331C12852A718F1853A42B854E36D4FA03D1601FC98DBECF2F95F4D62AA",
+    "q2_final_summary.json": "81016AFF4FC45053DDF0B994FA04FA152C91EDE558CC438E5A02800396B98760",
+    "result2.xlsx": "411DCE9F4DADE1B966EFC7AA0A95C2789D0FFCB93EE0043B44448B71D2CAED76"
+  }
+}

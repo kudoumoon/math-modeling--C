@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "target_date": "2025-02-01",
+  "bridge": {
+    "soc_midnight_kwh": 5743.453033407413,
+    "predicted_start_soc_kwh": 6493.453033407413,
+    "actual_start_soc_kwh": 6493.453033407413
+  },
+  "q4_2": {
+    "ledger": {
+      "base_plan_cost_yuan": 19776.496671910943,
+      "up_adjustment_cost_yuan": 0.0,
+      "down_refund_B_yuan": 0.0,
+      "ordinary_cost_B_yuan": 19776.496671910943,
+      "emergency_cost_yuan": 0.0,
+      "total_cash_B_yuan": 19776.496671910943
+    },
+    "physical": {
+      "rows_144": true,
+      "max_energy_residual_kwh": 1.1368683772161603e-13,
+      "max_soc_residual_kwh": 9.094947017729282e-13,
+      "soc_bounds": true,
+      "power_bounds": true,
+      "mutex": true,
+      "emergency_not_charging": true
+    }
+  },
+  "q4_3": {
+    "ledger": {
+      "base_plan_cost_yuan": 20644.57843587562,
+      "up_adjustment_cost_yuan": 0.0,
+      "down_refund_B_yuan": 0.0,
+      "ordinary_cost_B_yuan": 20644.57843587562,
+      "emergency_cost_yuan": 0.0,
+      "total_cash_B_yuan": 20644.57843587562
+    },
+    "physical": {
+      "rows_144": true,
+      "max_energy_residual_kwh": 1.1368683772161603e-13,
+      "max_soc_residual_kwh": 9.094947017729282e-13,
+      "soc_bounds": true,
+      "power_bounds": true,
+      "mutex": true,
+      "emergency_not_charging": true
+    },
+    "decisions": [
+      {
+        "release_hour": 6,
+        "issue_time": "2025-02-01T06:00:00.000Z",
+        "current_actual_price": 0.8102,
+        "price_max_source_time": "2025-02-01T06:00:00.000Z",
+        "price_current_actual_step": 35,
+        "load_source_max": "2025-02-01T00:10:00.000Z",
+        "load_correction_source_max": "2025-02-01T06:00:00.000Z",
+        "risk_days": 31,
+        "gate_days": 0,
+        "accepted": false,
+        "keep_score_yuan": null,
+        "new_score_yuan": null,
+        "lp_residual_kwh": 0.0
+      },
+      {
+        "release_hour": 12,
+        "issue_time": "2025-02-01T12:00:00.000Z",
+        "current_actual_price": 0.2979,
+        "price_max_source_time": "2025-02-01T12:00:00.000Z",
+        "price_current_actual_step": 71,
+        "load_source_max": "2025-02-01T00:10:00.000Z",
+        "load_correction_source_max": "2025-02-01T12:00:00.000Z",
+        "risk_days": 31,
+        "gate_days": 0,
+        "accepted": false,
+        "keep_score_yuan": null,
+        "new_score_yuan": null,
+        "lp_residual_kwh": 0.0
+      },
+      {
+        "release_hour": 18,
+        "issue_time": "2025-02-01T18:00:00.000Z",
+        "current_actual_price": 1.0662,
+        "price_max_source_time": "2025-02-01T18:00:00.000Z",
+        "price_current_actual_step": 107,
+        "load_source_max": "2025-02-01T00:10:00.000Z",
+        "load_correction_source_max": "2025-02-01T18:00:00.000Z",
+        "risk_days": 31,
+        "gate_days": 0,
+        "accepted": false,
+        "keep_score_yuan": null,
+        "new_score_yuan": null,
+        "lp_residual_kwh": 0.0
+      }
+    ]
+  },
+  "checks": {
+    "01_common_continuous_warm_start": true,
+    "02_warmup_starts_at_6000": true,
+    "03_q42_price_sources_causal": true,
+    "04_q43_price_sources_causal": true,
+    "05_current_release_price_visible": true,
+    "06_future_price_fault_invariant": true,
+    "07_q42_forecast_actual_price_separate": true,
+    "08_q42_dynamic_reoptimization": true,
+    "09_q42_physics": true,
+    "10_q43_physics": true,
+    "11_b_ledger_hand_cases": true,
+    "12_adjustment_lp_residuals": true,
+    "13_q43_inherits_m3_releases": true,
+    "14_price_actual_positive": true,
+    "15_no_solver_fallback_field": true
+  },
+  "manifest": {
+    "inputs": {
+      "attachment2": "2e95fd446bfafa0d8c59577b5c2e2ea8b3f1def20dde54a3062556f4da9b4c72",
+      "attachment3": "8a61b06c52bd0d639a1cc37c61a7d9f5b75edcbca718f64c1bd3498ec9f9d843",
+      "attachment4": "20e9c93aeab5e8e21ae4dd15587f9e190f7408692504c1319598461cd654fe71",
+      "analysis": "6adbecd73bd95954fa2dff212a52db85717d2fad973ef76d9fe4ad2530db94f4",
+      "terms": "8c0da0de92b847dce4420aa0d752fca42a083e435a03957d2a970c85d92e24b9"
+    },
+    "code": {
+      "q4_core": "98e278eb4246ca868a4226f8793f70b1bcea131a7e957298c45f3f605b953729",
+      "q4_p1": "b68e03b64b53064bad1a93244f1e2f5505351e3b879c2cc53040c10f9e0d9e1a"
+    },
+    "python": "3.7.8",
+    "numpy": "1.21.6",
+    "pandas": "1.3.5",
+    "scipy": "1.7.3",
+    "openpyxl": "3.1.3",
+    "command": "python Q4/program/q4_p1.py --mode p1"
+  }
+}

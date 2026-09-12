@@ -1,0 +1,3 @@
+# Preserve archived model artifacts byte-for-byte. Their original line endings
+# and trailing whitespace may be hash-bound and are not repository formatting errors.
+solutions/** -text whitespace=-trailing-space

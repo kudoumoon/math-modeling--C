@@ -1,0 +1,4 @@
+﻿release_hour,issue_time,current_actual_price,price_max_source_time,price_current_actual_step,load_source_max,load_correction_source_max,risk_days,gate_days,accepted,keep_score_yuan,new_score_yuan,lp_residual_kwh
+6,2025-02-01 06:00:00,0.8102,2025-02-01 06:00:00,35,2025-02-01 00:10:00,2025-02-01 06:00:00,31,0,False,,,9.094947017729282e-13
+12,2025-02-01 12:00:00,0.2979,2025-02-01 12:00:00,71,2025-02-01 00:10:00,2025-02-01 12:00:00,31,0,False,,,0.0
+18,2025-02-01 18:00:00,1.0662,2025-02-01 18:00:00,107,2025-02-01 00:10:00,2025-02-01 18:00:00,31,0,False,,,0.0
