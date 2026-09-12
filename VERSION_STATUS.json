@@ -1,22 +1,31 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "frozen_at": "2026-09-13 Asia/Shanghai",
-  "authoritative_rule": "Only BASELINE/OFFICIAL entries may be used as formal upstreams.",
+  "authoritative_rule": "Only entries with formal_use=true and a passing current reproduction gate may be used as formal upstreams.",
+  "current_gate": "M1_PASS_94_2026-09-13; Q2_V3_MINIMAL_IMPLEMENTATION_ALLOWED; old Q2 remains unreleased",
   "questions": {
     "Q1": {
       "directory": "solutions/Q1_BASELINE",
-      "status": "BASELINE",
-      "formal_use": true
+      "status": "PENDING_M1_REFREEZE",
+      "formal_use": false,
+      "reason": "Migrated path is repaired and isolated A/B reproductions pass; independent M1/P1/P2 refreeze gates remain."
     },
     "Q2": {
       "directory": "solutions/Q2_V2_OFFICIAL_ONLINE_RISK",
-      "status": "OFFICIAL_CONDITIONAL_BASELINE",
-      "formal_use": true,
+      "status": "PENDING_REPRODUCTION_IDENTITY_CONFLICT",
+      "formal_use": false,
       "model_id": "ONLINE-RISK-SP-A-S10-BATA",
       "total_cost_yuan": 13808033.330642482,
       "battery_interpretation": "A",
       "initial_soc_2025_02_01_kwh": 6000.0,
-      "result2_sha256": "411DCE9F4DADE1B966EFC7AA0A95C2789D0FFCB93EE0043B44448B71D2CAED76"
+      "result2_sha256": "411DCE9F4DADE1B966EFC7AA0A95C2789D0FFCB93EE0043B44448B71D2CAED76",
+      "identity_conflict": {
+        "q2_execution_log_expected_sha256": "DAD8C331C12852A718F1853A42B854E36D4FA03D1601FC98DBECF2F95F4D62AA",
+        "q2_execution_log_actual_sha256": "31C5A386B301D0FE4BA49A40505C6ED16FDB8258BD819BD3210ABF80A7CE85BA",
+        "q2_final_summary_expected_sha256": "81016AFF4FC45053DDF0B994FA04FA152C91EDE558CC438E5A02800396B98760",
+        "q2_final_summary_actual_sha256": "FAF99CE8752AECEA399A0AA442EB1FA55A8D72C7BE7F595C51116FCEA018B2B0"
+      },
+      "reason": "V2_IDENTITY.json disagrees with two archived formal result files; January warm-up and strict interval timing are also unresolved."
     },
     "Q3": {
       "directory": "solutions/Q3_V2_WRONG_UPSTREAM_ARCHIVE",

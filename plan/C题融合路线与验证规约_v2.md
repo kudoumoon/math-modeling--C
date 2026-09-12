@@ -83,7 +83,7 @@
 区间t＝0,…,143，E为145个边界状态。所有功率乘Δt＝1/6小时后再进入能量模型，内部单位统一kWh；E是电量，SOC＝E/12000是比例，二者不得混用。
 
 \[
-q_t+h_t+v_t+d_t=l_t+c_t+w_t,
+q_t+h_t+v_t\Delta t+d_t=l_t\Delta t+c_t+w_t,
 \qquad E_{t+1}=E_t+0.9c_t-d_t/0.9.
 \]
 

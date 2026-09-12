@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import argparse
 import json
 import platform
 import shutil
@@ -15,11 +16,11 @@ import scipy
 from scipy.optimize import linprog
 
 
-ROOT = Path(__file__).resolve().parents[2]
-INPUT_XLSX = ROOT / "附件" / "附件1.xlsx"
-TEMPLATE_XLSX = ROOT / "附件" / "附件5" / "result1.xlsx"
-ROUTE_SPEC = ROOT / "C题融合路线与验证规约_v2.md"
-OUTPUT_DIR = ROOT / "Q1" / "result"
+ROOT = Path(__file__).resolve().parents[3]
+INPUT_XLSX = ROOT / "data" / "附件1.xlsx"
+TEMPLATE_XLSX = ROOT / "data" / "附件5" / "result1.xlsx"
+ROUTE_SPEC = ROOT / "plan" / "C题融合路线与验证规约_v2.md"
+OUTPUT_DIR = ROOT / "solutions" / "Q1_BASELINE" / "result"
 OUTPUT_XLSX = OUTPUT_DIR / "result1_v2.xlsx"
 
 INTERVALS = 144
@@ -196,12 +197,14 @@ def audit_solution(price, load_kw, pv_kw, solution):
     return audit, checks, milp_certificate
 
 
-def build_time_mapping(input_frame, template_labels):
+def build_time_mapping(input_frame, template_labels, time_mapping):
     mapping = []
     for step in range(INTERVALS):
+        source_step = step if time_mapping == "A" else (step + 1) % INTERVALS
         mapping.append({
             "step": step,
-            "input_time_label": str(input_frame.iloc[step, 0]),
+            "source_step": source_step,
+            "input_time_label": str(input_frame.iloc[source_step, 0]),
             "internal_start": clock(10 + step * 10),
             "internal_end": clock(20 + step * 10),
             "template_label": str(template_labels[step]),
@@ -210,10 +213,12 @@ def build_time_mapping(input_frame, template_labels):
         raise AssertionError("首时段内部映射错误")
     if mapping[-1]["internal_start"] != "00:00+1" or mapping[-1]["internal_end"] != "00:10+1":
         raise AssertionError("末时段内部映射错误")
-    if not mapping[0]["input_time_label"].startswith("00:10"):
+    if time_mapping == "A" and not mapping[0]["input_time_label"].startswith("00:10"):
         raise AssertionError("附件1首项不是00:10，无法对齐首段00:10-00:20")
-    if mapping[-1]["input_time_label"] not in {"0:00+1", "00:00+1"}:
+    if time_mapping == "A" and mapping[-1]["input_time_label"] not in {"0:00+1", "00:00+1"}:
         raise AssertionError("附件1末项不是0:00+1，无法解释为次日00:00-00:10")
+    if time_mapping == "B" and (mapping[0]["source_step"] != 1 or mapping[-1]["source_step"] != 0):
+        raise AssertionError("Q1 B映射必须按典型日周期左移一槽")
     if str(template_labels[0]) != "0:10-0:20":
         raise AssertionError("result1首行标签不是0:10-0:20")
     if str(template_labels[-1]) != "0:00+1-0:10+1":
@@ -221,7 +226,8 @@ def build_time_mapping(input_frame, template_labels):
     return pd.DataFrame(mapping)
 
 
-def write_outputs(input_frame, price, load_kw, pv_kw, solution, audit, checks, milp_certificate):
+def write_outputs(input_frame, price, load_kw, pv_kw, solution, audit, checks, milp_certificate,
+                  time_mapping):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     workbook = openpyxl.load_workbook(TEMPLATE_XLSX)
     plan_sheet = workbook.worksheets[0]
@@ -232,7 +238,7 @@ def write_outputs(input_frame, price, load_kw, pv_kw, solution, audit, checks, m
         raise AssertionError("result1储能工作表结构变化")
 
     template_labels = [plan_sheet.cell(row=row, column=1).value for row in range(2, 146)]
-    time_mapping = build_time_mapping(input_frame, template_labels)
+    time_mapping_frame = build_time_mapping(input_frame, template_labels, time_mapping)
     purchase = solution["purchase_kwh"]
     charge = solution["charge_kwh"]
     discharge = solution["discharge_kwh"]
@@ -261,10 +267,10 @@ def write_outputs(input_frame, price, load_kw, pv_kw, solution, audit, checks, m
 
     dispatch = pd.DataFrame({
         "step": np.arange(INTERVALS),
-        "internal_start": time_mapping["internal_start"],
-        "internal_end": time_mapping["internal_end"],
-        "input_time_label": time_mapping["input_time_label"],
-        "template_label": time_mapping["template_label"],
+        "internal_start": time_mapping_frame["internal_start"],
+        "internal_end": time_mapping_frame["internal_end"],
+        "input_time_label": time_mapping_frame["input_time_label"],
+        "template_label": time_mapping_frame["template_label"],
         "price_yuan_per_kwh": price,
         "load_kw": load_kw,
         "pv_kw": pv_kw,
@@ -279,7 +285,7 @@ def write_outputs(input_frame, price, load_kw, pv_kw, solution, audit, checks, m
         "purchase_cost_yuan": price * purchase,
     })
     dispatch.to_csv(OUTPUT_DIR / "q1_dispatch.csv", index=False, encoding="utf-8-sig")
-    time_mapping.to_csv(OUTPUT_DIR / "q1_time_mapping.csv", index=False, encoding="utf-8-sig")
+    time_mapping_frame.to_csv(OUTPUT_DIR / "q1_time_mapping.csv", index=False, encoding="utf-8-sig")
     pd.DataFrame(block_rows).to_csv(OUTPUT_DIR / "q1_four_hour_blocks.csv", index=False, encoding="utf-8-sig")
 
     requested = ["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"]
@@ -322,7 +328,7 @@ def write_outputs(input_frame, price, load_kw, pv_kw, solution, audit, checks, m
         raise AssertionError(f"result1模板回读失败: {template_readback}")
 
     manifest = {
-        "route": "C题融合路线与验证规约_v2.md is the only primary specification",
+        "route": "题目分析报告.md v1.1 governs current status; the v2 route supplies the archived mathematical contract.",
         "inputs": {
             str(INPUT_XLSX.relative_to(ROOT)): sha256(INPUT_XLSX),
             str(TEMPLATE_XLSX.relative_to(ROOT)): sha256(TEMPLATE_XLSX),
@@ -351,13 +357,22 @@ def write_outputs(input_frame, price, load_kw, pv_kw, solution, audit, checks, m
             "eta_charge": ETA_CHARGE,
             "eta_discharge": ETA_DISCHARGE,
             "round_trip_efficiency": ETA_CHARGE * ETA_DISCHARGE,
+            "time_mapping": time_mapping,
+            "mapping_b_terminal_rule": (
+                "Q1 fixed typical day is assumed periodic, so the final slot uses source row 0."
+                if time_mapping == "B" else None
+            ),
         },
         "contracts": {
             "q1_state_rule": "single-day closed cycle: E0=E144=6000 kWh",
             "q2_q4_state_rule": "continuous cross-day rolling state; never reset to 6000 each day",
             "time_rule": "first interval 00:10-00:20; last interval next-day 00:00-00:10",
+            "time_mapping": time_mapping,
         },
-        "command": "python Q1/program/q1_reproduce_v2.py",
+        "command": (
+            "python solutions/Q1_BASELINE/program/q1_reproduce_v2.py "
+            f"--time-mapping {time_mapping} --output-dir {OUTPUT_DIR}"
+        ),
     }
     (OUTPUT_DIR / "q1_input_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -394,10 +409,27 @@ def write_outputs(input_frame, price, load_kw, pv_kw, solution, audit, checks, m
 
 
 def main():
+    global OUTPUT_DIR, OUTPUT_XLSX
+    parser = argparse.ArgumentParser(description="Reproduce the archived Q1 numerical baseline")
+    parser.add_argument(
+        "--output-dir",
+        default=str(OUTPUT_DIR),
+        help="New or archived output directory; use a new runs/ path for independent checks.",
+    )
+    parser.add_argument("--time-mapping", choices=["A", "B"], default="A")
+    args = parser.parse_args()
+    OUTPUT_DIR = Path(args.output_dir).resolve()
+    OUTPUT_XLSX = OUTPUT_DIR / "result1_v2.xlsx"
     input_frame, price, load_kw, pv_kw = load_q1_data()
+    if args.time_mapping == "B":
+        # Q1 is a fixed typical day, so the right-endpoint sensitivity is periodic.
+        price, load_kw, pv_kw = (np.roll(values, -1) for values in (price, load_kw, pv_kw))
     solution = solve_q1_lp(price, load_kw, pv_kw)
     audit, checks, milp_certificate = audit_solution(price, load_kw, pv_kw, solution)
-    summary = write_outputs(input_frame, price, load_kw, pv_kw, solution, audit, checks, milp_certificate)
+    summary = write_outputs(
+        input_frame, price, load_kw, pv_kw, solution, audit, checks,
+        milp_certificate, args.time_mapping,
+    )
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 

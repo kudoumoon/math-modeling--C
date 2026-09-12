@@ -6,12 +6,12 @@
 
 | 目录 | 状态 | 用途 |
 |---|---|---|
-| `solutions/Q1_BASELINE` | 当前 Q1 基线 | 可复现计算与论文参考 |
-| `solutions/Q2_V2_OFFICIAL_ONLINE_RISK` | **Q2 唯一正式路线** | 队友 `ONLINE-RISK-SP-A-S10-BATA`；条件主结果 |
+| `solutions/Q1_BASELINE` | 待重新冻结 | 数值内核已回放，迁移后路径正在修复 |
+| `solutions/Q2_V2_OFFICIAL_ONLINE_RISK` | **待复现的条件基线** | 队友 `ONLINE-RISK-SP-A-S10-BATA`；存在归档哈希冲突 |
 | `solutions/Q3_V2_WRONG_UPSTREAM_ARCHIVE` | **错误上游归档** | 实际导入 `q2_pipeline_v1`，仅供追溯 |
 | `solutions/Q4_WRONG_UPSTREAM_ARCHIVE` | **错误上游归档** | 继承错误 Q3 且直接导入 V1 兼容核心，仅供追溯 |
 
-机器可读状态见 [`VERSION_STATUS.json`](VERSION_STATUS.json)。后续 Q3/Q4 必须从 `Q2_V2_OFFICIAL_ONLINE_RISK` 重建，禁止从两个 `WRONG_UPSTREAM_ARCHIVE` 目录提取正式数值。
+机器可读状态见 [`VERSION_STATUS.json`](VERSION_STATUS.json)。当前 Q1/Q2 均为 `formal_use=false`；Q2 v3 通过复现、P1/P2 和独立评分后才可签发 Q3/Q4 上游，禁止从两个 `WRONG_UPSTREAM_ARCHIVE` 目录提取正式数值。
 
 ## 仓库内容
 
@@ -47,7 +47,7 @@ Get-ChildItem -Recurse -File problem,data,plan | Get-FileHash -Algorithm SHA256
 
 ## 当前状态
 
-正式结果口径：Q1 已归档；Q2 已冻结为队友 ONLINE-RISK V2。`solutions` 下的 Q3/Q4 仅保留错误上游版本用于审计，待真正绑定 Q2 V2 后重建，禁止作为正式提交结果。
+当前结果口径：Q1 已归档但迁移后复现入口待修；Q2 ONLINE-RISK V2 是待复现的条件数值基线，不是已放行正式上游。`solutions` 下的 Q3/Q4 仅保留错误上游版本用于审计，禁止作为正式提交结果。
 
 独立预测验证线包含因果预测、漂移感知在线自适应、LP计划与费用回放。2026-09-13完成第三轮独立审核，已修复月初训练标签、首日风险余量及跨日SOC的信息边界。这些实验属于候选验证资产，不改变上述Q1-Q4正式版本状态；历史Q3/Q4费用报告来自修复前实现，日内更新也尚未完成正式滚动LP重建。
 

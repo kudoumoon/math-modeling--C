@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "frozen_at": "2026-09-12",
+  "frozen_at": "2026-09-13",
   "publication_transform": "The nine XLSX publication copies differ from the supplied files only by removal of the x15ac:absPath workbook metadata element; worksheet content and all other ZIP members are unchanged.",
   "files": [
     {"path": "data/附件1.xlsx", "bytes": 12723, "sha256": "03cab394053650f26cfa0930e32693385acbd9045813ee8313581ef2247f31cd"},
@@ -12,7 +12,7 @@
     {"path": "data/附件5/result3.xlsx", "bytes": 220829, "sha256": "dc5b627e65c52dbf7ff7c7f97581201599081714fc252ac99e53bcd0f9aaf3ca"},
     {"path": "data/附件5/result4-2.xlsx", "bytes": 15243, "sha256": "17a84df513dcd8c8bf02e316df801ed01ea5d7cde4ce7f8498b3dbaad7632008"},
     {"path": "data/附件5/result4-3.xlsx", "bytes": 220829, "sha256": "dc5b627e65c52dbf7ff7c7f97581201599081714fc252ac99e53bcd0f9aaf3ca"},
-    {"path": "plan/C题融合路线与验证规约_v2.md", "bytes": 39006, "sha256": "803d56edf4aecdf95413529dba47f7b8a7867898633ef677149c48dbae4b28d8"},
+    {"path": "plan/C题融合路线与验证规约_v2.md", "bytes": 39022, "sha256": "752e0cac48c064449f6644a46879c60ef359eef5eca3dcf1a9040c5371995706"},
     {"path": "problem/C题.pdf", "bytes": 354389, "sha256": "2c098f6ae9dd47ae965aebdec3b9facf3de6c173f999783c1012c08fc5fb9d2d"}
   ]
 }
