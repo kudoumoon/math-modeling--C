@@ -3,12 +3,18 @@
   "question": "Q2",
   "version": "V3",
   "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
-  "status": "P1_REPAIR_ROUND_1",
+  "status": "P1_PASS_DEVELOPMENT_RUN_ALLOWED",
   "formal_use": false,
   "m1": {
     "status": "PASS",
     "score": 94,
     "date": "2026-09-13"
+  },
+  "p1": {
+    "status": "PASS",
+    "score": 95,
+    "date": "2026-09-13",
+    "scope": "Allows January warm-up plus February-June four-arm development runs only."
   },
   "forecast_arms": {
     "B0": "Q2V2-SW2-REC5",

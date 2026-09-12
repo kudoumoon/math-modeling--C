@@ -30,10 +30,10 @@
       "candidate_versions": {
         "V3": {
           "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
-          "status": "P1_REPAIR_ROUND_1",
+          "status": "P1_PASS_DEVELOPMENT_RUN_ALLOWED",
           "formal_use": false,
           "m1_score": 94,
-          "p1_score": 84,
+          "p1_score": 95,
           "official_upstream_allowed": false
         }
       }
