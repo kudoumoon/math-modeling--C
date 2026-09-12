@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "question": "Q2",
+  "version": "V3",
+  "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
+  "status": "P1_REPAIR_ROUND_1",
+  "formal_use": false,
+  "m1": {
+    "status": "PASS",
+    "score": 94,
+    "date": "2026-09-13"
+  },
+  "forecast_arms": {
+    "B0": "Q2V2-SW2-REC5",
+    "B1": "Q2V3-HGBLOAD-HGBPV",
+    "Abl-L": "Q2V3-HGBLOAD-REC5PV",
+    "Abl-PV": "Q2V3-SW2LOAD-HGBPV"
+  },
+  "official_upstream_allowed": false
+}

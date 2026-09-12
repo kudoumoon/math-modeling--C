@@ -26,6 +26,17 @@
         "q2_final_summary_actual_sha256": "FAF99CE8752AECEA399A0AA442EB1FA55A8D72C7BE7F595C51116FCEA018B2B0"
       },
       "reason": "V2_IDENTITY.json disagrees with two archived formal result files; January warm-up and strict interval timing are also unresolved."
+      ,
+      "candidate_versions": {
+        "V3": {
+          "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
+          "status": "P1_REPAIR_ROUND_1",
+          "formal_use": false,
+          "m1_score": 94,
+          "p1_score": 84,
+          "official_upstream_allowed": false
+        }
+      }
     },
     "Q3": {
       "directory": "solutions/Q3_V2_WRONG_UPSTREAM_ARCHIVE",
