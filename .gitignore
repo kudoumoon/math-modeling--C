@@ -28,4 +28,3 @@ wandb/
 *.ckpt
 *.pt
 *.pth
-
