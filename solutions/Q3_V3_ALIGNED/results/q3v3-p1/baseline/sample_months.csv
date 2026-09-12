@@ -1,0 +1,2 @@
+month,base_cost_yuan,up_cost_yuan,down_cost_yuan,ordinary_cost_yuan,emergency_cost_yuan,total_cost_yuan,q0_kwh,qfinal_kwh,u_kwh,r_kwh,charge_kwh,discharge_kwh,emergency_kwh,unused_supply_kwh,asset_adjusted_cost_yuan,daily_cost_p95_yuan,daily_cost_cvar95_yuan
+2025-03,68939.05348459036,0.0,0.0,68939.05348459036,15896.776999002628,84835.83048359299,121557.2273304232,121557.2273304232,0.0,0.0,49011.63918300053,39656.1056573477,2698.1510551205633,24776.218793224267,84813.28374727581,48182.69195402233,51519.75268184281

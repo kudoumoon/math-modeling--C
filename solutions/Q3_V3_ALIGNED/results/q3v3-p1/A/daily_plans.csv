@@ -1,0 +1,4 @@
+day_index,plan_day,issue_time,planned_initial_energy_kwh,executed_initial_energy_kwh,upstream_planned_initial_energy_kwh,planned_initial_source,q0_source
+78,2025-03-20,2025-03-20,4773.1466385065205,4791.36472725652,4776.765977256521,previous_confirmed_contract_and_last_release,Q2_G_direct
+79,2025-03-21,2025-03-21,4458.719293068076,4478.189090568076,4360.146362685184,previous_confirmed_contract_and_last_release,Q2_G_direct
+80,2025-03-22,2025-03-22,4604.641604861112,4595.636096111111,4527.92104618267,previous_confirmed_contract_and_last_release,Q2_G_direct

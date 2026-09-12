@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "bounded local P1, independent review pending",
+  "source_hashes": {
+    "solutions/Q3_V3_ALIGNED/program/q3_api.py": "60b0cbe9f7d9149aebc41367a3fca49c70e749f42e6d4276fe08d3d4e63dba73",
+    "solutions/Q3_V3_ALIGNED/program/q3_outputs.py": "8295207a3b0aa587ba78653f83399937072b8621ff2d27817b8f363da923e936",
+    "solutions/Q3_V3_ALIGNED/program/run_q3_v3.py": "19fd682e4d363b46ee7d25a05954548d39a75c5e80fffeb16f3038d046e46d1e",
+    "solutions/Q3_V3_ALIGNED/program/tests/conftest.py": "bf219e5e2996589ebd27675c2cbe562acb8ce29cbd9371b40066ef80bdd0ff59",
+    "solutions/Q3_V3_ALIGNED/program/tests/test_q3.py": "14a4af2a0b119683510305dffd4840a10590d34d7c48a25e52bae4223f001345"
+  },
+  "run": "solutions/Q3_V3_ALIGNED/results/q3v3-p1",
+  "tests_sha256": "4a00849685fd9a1ff8019a6eb2ebba94e0d753946929b006f3ce408d8459b2a2",
+  "formal_use": false
+}

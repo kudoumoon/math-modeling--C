@@ -1,0 +1,4 @@
+day_index,plan_day,issue_time,planned_initial_energy_kwh,executed_initial_energy_kwh,upstream_planned_initial_energy_kwh,planned_initial_source,q0_source
+0,2025-01-01,2025-01-01,6000.0,6000.0,6000.0,previous_confirmed_contract_and_last_release,Q4_causal_callback
+1,2025-01-02,2025-01-02,3783.278582777777,3869.5352031481475,3916.1970735185178,previous_confirmed_contract_and_last_release,Q4_causal_callback
+2,2025-01-03,2025-01-03,3742.336641481481,3942.699220925925,3863.858335925925,previous_confirmed_contract_and_last_release,Q4_causal_callback
