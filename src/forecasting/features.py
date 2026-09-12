@@ -30,10 +30,9 @@ def build_daily_features(values: pd.DataFrame) -> pd.DataFrame:
     frame = pd.DataFrame(matrix, index=values.index)
     for window in ROLLING_WINDOWS:
         shifted = frame.shift(1)
+        shifted.iloc[:, -1] = frame.iloc[:, -1].shift(2)
         mean = shifted.rolling(window, min_periods=max(2, window // 2)).mean().to_numpy(copy=True)
         std = shifted.rolling(window, min_periods=max(2, window // 2)).std().to_numpy(copy=True)
-        mean[:, -1] = np.nan
-        std[:, -1] = np.nan
         out[f"rolling_mean_{window}d"] = mean.reshape(-1)
         out[f"rolling_std_{window}d"] = std.reshape(-1)
 
@@ -43,7 +42,6 @@ def build_daily_features(values: pd.DataFrame) -> pd.DataFrame:
         candidates = candidates[(i - candidates) % 7 == 0][-4:]
         if len(candidates):
             weekday_mean[i] = np.nanmean(matrix[candidates], axis=0)
-    weekday_mean[:, -1] = np.nan
     out["same_weekday_mean_4"] = weekday_mean.reshape(-1)
 
     doy = out["date"].dt.dayofyear.to_numpy()
@@ -79,7 +77,7 @@ def build_pv_calibration_features(forecasts: pd.DataFrame) -> pd.DataFrame:
 def feature_columns(frame: pd.DataFrame, pv: bool = False) -> list[str]:
     blocked = {
         "target", "date", "actual_pv", "actual_intervals", "issue_time", "target_time",
-        "window_start", "window_end", "raw_pv",
+        "window_start", "window_end", "raw_pv", "completed_at",
     }
     if pv:
         allowed = {
@@ -89,4 +87,3 @@ def feature_columns(frame: pd.DataFrame, pv: bool = False) -> list[str]:
         }
         return [c for c in frame.columns if c in allowed]
     return [c for c in frame.columns if c not in blocked]
-

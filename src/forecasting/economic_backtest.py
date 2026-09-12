@@ -10,7 +10,7 @@ import pandas as pd
 
 from .drift import DriftConfig, adapt_daily_forecasts
 from .data import load_problem_data, daily_to_long
-from .economic import execute_day, plan_day
+from .economic import execute_day, plan_day, project_interval_energy
 
 
 ALPHAS = (0.65, 0.70, 0.75, 0.80, 0.85, 0.90)
@@ -61,7 +61,7 @@ def _causal_residual_quantiles(
     margin = np.zeros_like(residual.to_numpy())
     for i in range(len(residual)):
         for slot in range(residual.shape[1]):
-            end = i - 1 if slot == 143 else i
+            end = max(0, i - 1) if slot == 143 else i
             start = max(0, end - window_days)
             history = residual.iloc[start:end, slot].dropna()
             margin[i, slot] = history.quantile(alpha) if len(history) >= 7 else 0.0
@@ -77,20 +77,21 @@ def _simulate(
     load_actual: pd.DataFrame,
     pv_actual: pd.DataFrame,
 ) -> pd.DataFrame:
-    energy = 6000.0
+    actual_energy = 6000.0
+    estimated_energy = 6000.0
     rows = []
     for date in dates:
         q = plan_day(
             net_forecast.loc[date].to_numpy() + risk_margin.loc[date].to_numpy(),
             decision_price.loc[date].to_numpy(),
-            energy,
+            estimated_energy,
         )
         result = execute_day(
             q,
             load_actual.loc[date].to_numpy(),
             pv_actual.loc[date].to_numpy(),
             settlement_price.loc[date].to_numpy(),
-            energy,
+            actual_energy,
         )
         rows.append({
             "date": date,
@@ -100,8 +101,15 @@ def _simulate(
             "emergency_kwh": result.emergency.sum(),
             "surplus_kwh": result.surplus.sum(),
             "end_energy_kwh": result.end_energy,
+            "actual_initial_energy_kwh": actual_energy,
+            "estimated_initial_energy_kwh": estimated_energy,
+            "energy_before_final": result.energy_before_final,
         })
-        energy = result.end_energy
+        # At the next midnight, the previous row's final interval is still pending.
+        estimated_energy = project_interval_energy(
+            result.energy_before_final, q[-1], net_forecast.loc[date].iloc[-1]
+        )
+        actual_energy = result.end_energy
     return pd.DataFrame(rows)
 
 

@@ -17,20 +17,24 @@ class ModelSpec:
     estimator: object | None
 
 
-def make_models(seed: int, hist_params: dict) -> list[ModelSpec]:
+def make_models(seed: int, hist_params: dict, models: list[str] | None = None) -> list[ModelSpec]:
+    names = ["seasonal_naive", "ridge", "hist_gradient_boosting"] if models is None else models
+    allowed = {"seasonal_naive", "ridge", "hist_gradient_boosting"}
+    if (not isinstance(names, list) or not names
+            or any(not isinstance(name, str) or name not in allowed for name in names)
+            or len(set(names)) != len(names)):
+        raise ValueError("models must be a nonempty list of unique supported model names")
     ridge = make_pipeline(
         SimpleImputer(strategy="median", add_indicator=True),
         StandardScaler(),
         Ridge(alpha=20.0),
     )
-    hist = HistGradientBoostingRegressor(
-        loss="squared_error", random_state=seed, early_stopping=False, **hist_params
-    )
-    return [
-        ModelSpec("seasonal_naive", None),
-        ModelSpec("ridge", ridge),
-        ModelSpec("hist_gradient_boosting", hist),
-    ]
+    estimators = {"seasonal_naive": None, "ridge": ridge}
+    if "hist_gradient_boosting" in names:
+        estimators["hist_gradient_boosting"] = HistGradientBoostingRegressor(
+            loss="squared_error", random_state=seed, early_stopping=False, **hist_params
+        )
+    return [ModelSpec(name, estimators[name]) for name in names]
 
 
 def seasonal_naive(frame) -> np.ndarray:
@@ -39,5 +43,7 @@ def seasonal_naive(frame) -> np.ndarray:
     fallback = frame[[c for c in frame if c.startswith("rolling_mean_")]].median(
         axis=1, skipna=True
     ).to_numpy(dtype=float)
-    return np.where(np.isfinite(pred), pred, fallback)
-
+    result = np.where(np.isfinite(pred), pred, fallback)
+    if not np.isfinite(result).all():
+        raise ValueError("seasonal_naive requires completed historical observations; cold start is unsupported")
+    return result

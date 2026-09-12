@@ -36,11 +36,18 @@ Get-ChildItem -Recurse -File problem,data,plan | Get-FileHash -Algorithm SHA256
 
 ## 当前状态
 
-当前主线已完成：因果预测主干、漂移感知在线自适应、真实 LP 与交易账本、完整 Q3/Q4 逐日滚动回测，以及块 Bootstrap、月度分解和信息消融证据。
+当前主线包含预测主干、漂移感知在线自适应、LP计划与费用回放。2026-09-13开始双Agent优化与独立审核，已修复月初训练标签、首日风险余量及跨日SOC的信息边界。原有经济报告来自修复前版本，不作为新版本通过因果验收的成绩；日内更新尚未实现完整滚动LP。
 
-- 运行预测回测：`PYTHONPATH=src .venv/bin/python -m forecasting.backtest`
-- 运行完整收益验证：`PYTHONPATH=src .venv/bin/python -m forecasting.rolling_backtest`
-- 主要结果：`reports/q3_q4_rolling_summary.csv`、`reports/q3_q4_rolling_daily.csv`、`reports/q3_q4_monthly_decomposition.csv`、`reports/q3_q4_block_bootstrap.csv`、`reports/q3_q4_information_ablation.csv`
-- 方法说明：[Q3/Q4 滚动收益验证](docs/Q3-Q4滚动收益验证.md)
+第三轮独立审核为96/100，已识别硬阻断清零，达到内部90分停止条件。该分数不代表国赛获奖概率，也不表示Q1-Q4最终优化已经完成。
 
-当前推荐候选为“因果预测 + 漂移感知适配 + LP + 经济门控”。H100 统一模型仍属于 challenger：必须在相同随机种子、相同因果边界和相同审计账本上证明现金成本与风险均改善后，才允许替换小模型主线。
+- 冻结验收标准：[预测器双Agent验收规约](docs/预测器双Agent验收规约.md)
+- 迭代与独立评分：[预测器迭代审核](reports/预测器迭代审核.md)
+- 时间语义及接入：[预测输出时间与接入契约](docs/预测输出时间与接入契约.md)
+- 隔离实验：`PYTHONPATH=src OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -m forecasting.experiment --run-id <唯一ID>`
+
+- 仅运行预测：`PYTHONPATH=src .venv/bin/python -m forecasting.cli --output-root runs/<唯一ID>`
+- 本轮完整产物：`runs/round03_causal_soc/`，包括模型、预测、适配轨迹、分层误差和固定控制器代理费用。
+- 独立审核原始结果：`reports/forecast_review_round03.json`。
+- 历史滚动结果及方法说明：[Q3/Q4 滚动收益验证](docs/Q3-Q4滚动收益验证.md)，其中旧费用尚未按全部新边界重新审定。
+
+当前预测候选为“梯度提升树 + 光伏残差校准 + 漂移感知适配”，已在固定控制器代理中验证。完整滚动LP、经济门控和正式结果模板需在接入Q1-Q4时另行审计。H100统一模型仍属于challenger，不能凭模型复杂度替换当前小模型。

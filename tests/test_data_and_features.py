@@ -32,5 +32,6 @@ def test_unfinished_previous_day_final_interval_is_never_a_feature():
     features = build_daily_features(_matrix())
     last_slot = features[features["slot"] == 143]
     assert last_slot["lag_1d"].isna().all()
-    assert last_slot["rolling_mean_7d"].isna().all()
-
+    values = _matrix()
+    row = last_slot[last_slot["date"] == pd.Timestamp("2025-01-15")].iloc[0]
+    assert row["rolling_mean_7d"] == values.loc["2025-01-07":"2025-01-13", 143].mean()

@@ -27,6 +27,7 @@ class DayResult:
     end_energy: float
     normal_cost: float
     emergency_cost: float
+    energy_before_final: float
 
     @property
     def cash_cost(self) -> float:
@@ -87,6 +88,16 @@ def plan_day(
     return result.x[q]
 
 
+def project_interval_energy(initial_energy: float, purchase_kwh: float, net_load_kw: float) -> float:
+    """Project one interval using known purchases and an issued net-load forecast."""
+    available = float(purchase_kwh) - float(net_load_kw) * DT_HOURS
+    if available >= 0:
+        charge = min(available, P_MAX_ENERGY, max(0.0, (E_MAX - initial_energy) / ETA_C))
+        return float(initial_energy + ETA_C * charge)
+    discharge = min(-available, P_MAX_ENERGY, max(0.0, ETA_D * (initial_energy - E_MIN)))
+    return float(initial_energy - discharge / ETA_D)
+
+
 def execute_day(
     planned_purchase: np.ndarray,
     actual_load_kw: np.ndarray,
@@ -105,6 +116,8 @@ def execute_day(
     emergency = np.zeros(N_INTERVALS)
     surplus = np.zeros(N_INTERVALS)
     for t in range(N_INTERVALS):
+        if t == N_INTERVALS - 1:
+            energy_before_final = energy
         available = q[t] + pv[t] - load[t]
         if available >= 0:
             charge[t] = min(available, P_MAX_ENERGY, max(0.0, (E_MAX - energy) / ETA_C))
@@ -124,4 +137,5 @@ def execute_day(
         end_energy=energy,
         normal_cost=float(np.dot(price, q)),
         emergency_cost=float(np.dot(5.0 * price, emergency)),
+        energy_before_final=energy_before_final,
     )

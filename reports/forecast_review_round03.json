@@ -1,0 +1,153 @@
+{
+  "reviewer": "Agent2",
+  "rubric_version": "v1",
+  "run_id": "round03_causal_soc",
+  "review_date": "2026-09-13",
+  "scope": "Forecasting and forecast value under the fixed causal dispatch proxy; not final Q1-Q4 contest solutions.",
+  "total": 96,
+  "passed": true,
+  "stop_condition_met": true,
+  "pass_condition": "total >= 90 and no identified unresolved hard blockers",
+  "dimensions": {
+    "causality": {
+      "score": 30, "maximum": 30,
+      "subscores": {"time_semantics": 6, "training": 8, "online_residuals": 8, "evaluation_discipline": 8}
+    },
+    "prediction_stability": {
+      "score": 21, "maximum": 25,
+      "subscores": {"baseline_gain": 8, "stratified_reporting": 6, "interval_quality": 4, "robustness": 3},
+      "deductions": [
+        {"points": 2, "reason": "Development has 64 overlapping strata with at least 100 valid intervals and coverage deviation above 5 percentage points; no validated conditional calibration or fallback."},
+        {"points": 1, "reason": "Cold start fails explicitly; a functioning cold-start fallback is not provided."},
+        {"points": 1, "reason": "Validated fallback for missing or abnormal inputs is not provided."}
+      ],
+      "new_evidence": "Static/adaptive ablation and development-only cash selection with naive fallback satisfy the previously pending two-point ablation/fallback item."
+    },
+    "economic_proxy": {
+      "score": 15, "maximum": 15,
+      "subscores": {"fixed_causal_proxy": 5, "forecast_value_isolation": 5, "returns_and_risk_evidence": 5},
+      "interpretation": "Full credit is for the frozen evidence requirements, not a claim of uniformly lower risk or statistically significant development savings."
+    },
+    "engineering_reproducibility": {
+      "score": 20, "maximum": 20,
+      "subscores": {"provenance": 6, "tests": 8, "execution_and_reload": 6}
+    },
+    "interface_explanation": {
+      "score": 10, "maximum": 10,
+      "subscores": {"output_contract": 6, "traceability": 4}
+    }
+  },
+  "hard_blockers": [],
+  "resolved_hard_blockers": [
+    "Monthly training excludes labels not complete at the issue cutoff.",
+    "First-day risk residual slicing cannot read future rows.",
+    "Shifted PV hour-block approximation is explicitly documented and consistently tested.",
+    "All 36 unlabeled year-end PV requests remain in prediction output.",
+    "CSV timestamp normalization prevents the drift-adapter runtime failure.",
+    "Planning uses a causal projection of the pending midnight interval; actual execution SOC remains continuous."
+  ],
+  "verification": {
+    "manifest_status": "complete",
+    "output_hashes_checked": 149,
+    "snapshot_hashes_checked": 26,
+    "reused_file_hashes_checked_against_parent_and_child": 138,
+    "input_and_config_hashes_checked": true,
+    "hash_mismatches": [],
+    "daily_proxy_rows": 3674,
+    "days_per_scenario_variant": 334,
+    "summary_recalculation_max_absolute_error": 9.313225746154785e-10,
+    "cash_identity_max_absolute_error": 2.1827872842550278e-11,
+    "actual_soc_continuity_max_absolute_error_kwh": 0.0,
+    "daily_end_energy_range_kwh": [5128.909441374221, 9906.022873537257],
+    "independently_recomputed_adaptive_bootstrap_rows": 12,
+    "bootstrap_max_absolute_error": 5.820766091346741e-11,
+    "previously_independently_run_soc_tests_passed": 17,
+    "full_test_suite_passed_as_reported_by_primary_agent": 59,
+    "model_reload_check_as_reported_by_primary_agent": {"models": 66, "samples_per_model": 1, "max_absolute_error": 1.3642420526593924e-12},
+    "prediction_rows_verified_in_reused_round02_artifact": 128256,
+    "prediction_grid_missing_extra_duplicate_or_nonfinite_counts": [0, 0, 0, 0],
+    "unlabeled_pv_requests_retained": 36
+  },
+  "development_selection": {
+    "eligible_variants": ["naive", "selected", "adaptive"],
+    "criterion": "Minimum development total cash cost only; no audit selection.",
+    "fixed_price_proxy": "adaptive",
+    "variable_price_proxy": "adaptive",
+    "independent_recalculation_matches": true,
+    "ablation_variants_not_eligible_for_selection": ["load_only", "pv_only", "price_only"]
+  },
+  "economic_evidence": {
+    "units": {"cost": "yuan", "energy": "kWh", "bootstrap_interval": "yuan per day"},
+    "fixed_price_proxy_development": {
+      "adaptive_cash_cost": 5786704.437456608,
+      "savings_vs_naive": 46688.234787578695,
+      "emergency_energy_delta_vs_naive": 4552.249584528501,
+      "daily_cost_cvar95_delta_vs_naive": 9584.766750094524,
+      "adaptive_end_energy": 5742.072353046782,
+      "end_energy_delta_vs_naive": -2333.546979397661,
+      "block14_mean_daily_savings_ci95": [-1318.9178920635857, 1356.4347890773133]
+    },
+    "variable_price_proxy_development": {
+      "adaptive_cash_cost": 5876931.067560027,
+      "savings_vs_naive": 51267.88814542536,
+      "emergency_energy_delta_vs_naive": 4385.329423526069,
+      "daily_cost_cvar95_delta_vs_naive": 8215.025351484437,
+      "adaptive_end_energy": 5721.338297254345,
+      "end_energy_delta_vs_naive": -2496.8618395975072,
+      "block14_mean_daily_savings_ci95": [-1221.7882705465604, 1340.294133947311]
+    },
+    "fixed_price_proxy_retrospective_audit": {
+      "adaptive_cash_cost": 8165031.622615421,
+      "savings_vs_naive": 393644.09322186373,
+      "adaptive_end_energy": 5894.572774038939,
+      "end_energy_delta_vs_naive": -203.87494880365466
+    },
+    "variable_price_proxy_retrospective_audit": {
+      "adaptive_cash_cost": 8793345.339023434,
+      "savings_vs_naive": 463517.23857919127,
+      "adaptive_end_energy": 5928.32354677517,
+      "end_energy_delta_vs_naive": -166.21286308594063
+    }
+  },
+  "evidence_paths": [
+    "docs/预测器双Agent验收规约.md",
+    "runs/round03_causal_soc/manifest.json",
+    "runs/round03_causal_soc/config.json",
+    "runs/round03_causal_soc/snapshot/docs/预测输出时间与接入契约.md",
+    "runs/round03_causal_soc/snapshot/tests/test_soc_causality.py",
+    "runs/round03_causal_soc/snapshot/src/forecasting/forecast_value.py",
+    "runs/round03_causal_soc/snapshot/src/forecasting/economic_backtest.py",
+    "runs/round03_causal_soc/reports/forecast_value.json",
+    "runs/round03_causal_soc/reports/forecast_value_daily.csv",
+    "runs/round03_causal_soc/reports/forecast_value_summary.csv",
+    "runs/round03_causal_soc/reports/forecast_value_bootstrap.csv",
+    "runs/round03_causal_soc/reports/adaptation_ablation.csv",
+    "runs/round03_causal_soc/reports/forecast_strata.csv",
+    "runs/round03_causal_soc/reports/forecast_gain_bootstrap.csv",
+    "runs/round03_causal_soc/reports/selected_model_metrics.csv",
+    "runs/round03_causal_soc/predictions/causal_forecasts.csv",
+    "runs/round03_causal_soc/predictions/candidate_predictions.csv",
+    "runs/round03_causal_soc/predictions/load_10min_adaptation.csv",
+    "runs/round03_causal_soc/predictions/price_10min_adaptation.csv"
+  ],
+  "limitations": [
+    "Internal rubric score is not an official contest score, award probability, or certification of completed Q1-Q4 optimization.",
+    "July-December is previously observed retrospective evidence and must not guide iterative candidate or parameter selection.",
+    "Development data selects model identities and deployment variants; same-period gains and bootstrap intervals do not remove selection bias.",
+    "Adaptive development savings have 95% intervals spanning zero for all three block lengths; emergency energy and daily cost CVaR95 increase versus naive.",
+    "Terminal energy differs across variants and is disclosed but not monetized; cash savings are not asset-adjusted economic profit.",
+    "The fixed proxy starts in February with 6000 kWh and has no January warmup; these are not final contest costs.",
+    "Load-only has lower development cash cost than adaptive in both scenarios but is a predeclared ablation, not an eligible deployment variant; selection is optimal only within the declared three-variant set.",
+    "Reported forecast interval quality belongs to the selected static models; it does not establish calibrated intervals for adaptive forecasts.",
+    "The 64 failing coverage strata overlap. No post-hoc audit calibration was performed or credited.",
+    "The parent run was interrupted before final output hashes existed. Reuse hashes verify current parent/child byte equality and training dependencies, not an independently timestamped original artifact signature.",
+    "Final independent checks recomputed daily aggregates, cash identities, boundary SOC continuity and adaptive bootstrap intervals; they did not rerun the full annual LP or independently replay every ten-minute transaction.",
+    "The 66-model reload result was supplied by the primary agent and covers one sample per saved model, not exhaustive prediction equivalence."
+  ],
+  "next_round_required": false,
+  "optional_remaining_work": [
+    "Develop and validate conditional interval calibration using development-only frozen validation rules.",
+    "Implement and test cold-start and abnormal-input fallbacks.",
+    "When integrating Q1-Q4, audit the actual optimizer, transaction ledger and terminal asset treatment separately."
+  ]
+}

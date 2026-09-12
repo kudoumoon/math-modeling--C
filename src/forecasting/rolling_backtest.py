@@ -10,7 +10,7 @@ import pandas as pd
 
 from .data import SLOTS_PER_DAY, daily_to_long, load_problem_data
 from .drift import DriftConfig, adapt_daily_forecasts
-from .economic import DT_HOURS, E_MAX, E_MIN, ETA_C, ETA_D, P_MAX_ENERGY, plan_day
+from .economic import DT_HOURS, E_MAX, E_MIN, ETA_C, ETA_D, P_MAX_ENERGY, plan_day, project_interval_energy
 
 
 ISSUE_HOURS = (6, 12, 18)
@@ -100,6 +100,8 @@ def _execute_contract(
     emergency = np.zeros(SLOTS_PER_DAY)
     surplus = np.zeros(SLOTS_PER_DAY)
     for t in range(SLOTS_PER_DAY):
+        if t == SLOTS_PER_DAY - 1:
+            energy_before_final = energy
         available = q_final[t] + actual_pv[t] * DT_HOURS - actual_load[t] * DT_HOURS
         if available >= 0:
             charge[t] = min(available, P_MAX_ENERGY, max(0.0, (E_MAX - energy) / ETA_C))
@@ -123,6 +125,7 @@ def _execute_contract(
         "emergency_kwh": float(emergency.sum()),
         "surplus_kwh": float(surplus.sum()),
         "end_energy_kwh": float(energy),
+        "energy_before_final": float(energy_before_final),
         "adjustment_up_kwh": float(increase.sum()),
         "adjustment_down_kwh": float(decrease.sum()),
     }
@@ -184,20 +187,22 @@ def _simulate_policy(
     margins = np.zeros_like(residual.to_numpy())
     for i, date in enumerate(date_index):
         for slot in range(SLOTS_PER_DAY):
-            end = i - 1 if slot == 143 else i
+            end = max(0, i - 1) if slot == 143 else i
             history = residual.iloc[max(0, end - 28):end, slot].dropna()
             margins[i, slot] = history.quantile(alpha) if len(history) >= 7 else 0.0
     margins = pd.DataFrame(margins, index=date_index)
 
-    energy = 6000.0
+    actual_energy = 6000.0
+    estimated_energy = 6000.0
     rows = []
     for i, date in enumerate(date_index):
         q0 = plan_day(
             net_pred.loc[date].to_numpy() + margins.loc[date].to_numpy(),
             price_forecast.loc[date].to_numpy(),
-            energy,
+            estimated_energy,
         )
         q_final = q0.copy()
+        pending_net_forecast = net_pred.loc[date].iloc[-1]
         gate_passes = 0
         gate_expected_net = 0.0
         if use_adjustment:
@@ -211,6 +216,8 @@ def _simulate_policy(
                 )
                 times = date + pd.to_timedelta((np.arange(SLOTS_PER_DAY) + 1) * 10, unit="min")
                 block = (times > issue) & (times <= issue + pd.Timedelta(hours=6)) & np.isfinite(new_pv)
+                if block[-1]:
+                    pending_net_forecast = updated_load[-1] - new_pv[-1]
                 delta = (updated_load - load_forecast.loc[date].to_numpy()) - (
                     new_pv - pv_forecast[date]
                 )
@@ -225,12 +232,17 @@ def _simulate_policy(
                     gate_expected_net += expected
         result = _execute_contract(
             q0, q_final, data.load.loc[date].to_numpy(), data.pv_actual.loc[date].to_numpy(),
-            settlement_price.loc[date].to_numpy(), energy,
+            settlement_price.loc[date].to_numpy(), actual_energy,
         )
         result.update({"date": date, "alpha": alpha, "pv_updates": int(pv_updates), "adjustment": int(use_adjustment),
-                       "gate_passes": gate_passes, "gate_expected_net": gate_expected_net})
+                       "gate_passes": gate_passes, "gate_expected_net": gate_expected_net,
+                       "actual_initial_energy_kwh": actual_energy,
+                       "estimated_initial_energy_kwh": estimated_energy})
         rows.append(result)
-        energy = result["end_energy_kwh"]
+        estimated_energy = project_interval_energy(
+            result["energy_before_final"], q_final[-1], pending_net_forecast
+        )
+        actual_energy = result["end_energy_kwh"]
     return pd.DataFrame(rows)
 
 

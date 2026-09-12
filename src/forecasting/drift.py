@@ -44,24 +44,32 @@ def adapt_daily_forecasts(
     config: DriftConfig = DriftConfig(),
 ) -> pd.DataFrame:
     """Update issued forecasts using only residuals complete before each issue."""
+    forecasts = forecasts.copy()
+    actual = actual[["target_time", "actual"]].copy()
+    for column in ("issue_time", "target_time", "completed_at"):
+        if column in forecasts:
+            forecasts[column] = pd.to_datetime(forecasts[column], errors="raise")
+    actual["target_time"] = pd.to_datetime(actual["target_time"], errors="raise")
     frame = forecasts.merge(
         actual[["target_time", "actual"]], on="target_time", how="left", validate="one_to_one"
     ).sort_values(["issue_time", "target_time"]).copy()
     frame["slot"] = ((frame["target_time"] - frame["issue_time"]).dt.total_seconds() / 600 - 1).round().astype(int)
     frame["base_error"] = frame["actual"] - frame["prediction"]
+    if "completed_at" not in frame:
+        frame["completed_at"] = frame["target_time"] + pd.Timedelta(minutes=10)
     frame["online_correction"] = 0.0
     frame["drift_score"] = 0.0
     frame["adaptive_window_days"] = config.long_window_days
     for slot, indices in frame.groupby("slot").groups.items():
         group = frame.loc[indices].sort_values("issue_time")
-        shift = 2 if slot == 143 else 1
         values = []
         scores = []
         windows = []
         for pos in range(len(group)):
-            end = max(0, pos - shift)
+            cutoff = group.iloc[pos]["issue_time"]
+            history = group[(group["completed_at"] <= cutoff) & (group["issue_time"] < cutoff)]
             correction, score, window = _estimate(
-                group["base_error"].iloc[:end].tail(config.long_window_days), config
+                history["base_error"].tail(config.long_window_days), config
             )
             values.append(correction)
             scores.append(score)
