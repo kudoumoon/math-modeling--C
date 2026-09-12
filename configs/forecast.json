@@ -1,0 +1,18 @@
+{
+  "seed": 20260912,
+  "first_forecast_date": "2025-02-01",
+  "development_end": "2025-06-30",
+  "audit_start": "2025-07-01",
+  "last_forecast_date": "2025-12-31",
+  "interval_coverage": 0.80,
+  "residual_window_days": 56,
+  "models": ["seasonal_naive", "ridge", "hist_gradient_boosting"],
+  "hist_gradient_boosting": {
+    "learning_rate": 0.06,
+    "max_iter": 180,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 40,
+    "l2_regularization": 1.0
+  }
+}
+

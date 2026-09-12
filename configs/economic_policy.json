@@ -1,0 +1,9 @@
+{
+  "adopted_policy": "adaptive_alpha70",
+  "risk_alpha": 0.70,
+  "online_window_days": 7,
+  "online_weight": 0.75,
+  "minimum_history_days": 3,
+  "selection_rule": "Keep alpha=0.70 until a rolling audit window shows economic improvement; do not deploy the development-only alpha=0.85 selection.",
+  "reason": "The adaptive alpha=0.70 policy reduced audit cash cost in both fixed and variable price scenarios; development-only alpha=0.85 was not robust in the audit period."
+}

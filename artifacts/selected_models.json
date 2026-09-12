@@ -1,0 +1,5 @@
+{
+  "load_10min": "hist_gradient_boosting",
+  "price_10min": "hist_gradient_boosting",
+  "pv_hourly": "hist_gradient_boosting_residual"
+}

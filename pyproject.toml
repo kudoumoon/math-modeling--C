@@ -1,0 +1,20 @@
+[project]
+name = "causal-microgrid-forecasting"
+version = "0.1.0"
+description = "Leakage-safe forecasting layer for 2026 CUMCM problem C"
+requires-python = ">=3.11"
+dependencies = [
+  "joblib",
+  "matplotlib",
+  "numpy",
+  "openpyxl",
+  "pandas",
+  "scikit-learn",
+  "scipy",
+  "tabulate",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
