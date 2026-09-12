@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "gate": "DEVELOPMENT_SELECTION",
+  "revision": 2,
+  "status": "PASS",
+  "score": 97,
+  "hard_blockers": [],
+  "source_commit": "f5f8c1b92e56f2e63649f14d5649c56bf5144b4d",
+  "evidence": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_v2",
+  "selected_arm": "B0",
+  "selected_model_id": "Q2V2-SW2-REC5",
+  "predictor_upgrade_adopted": false,
+  "block14_upper_95_yuan_per_day": {
+    "Abl-L": 374.357470,
+    "Abl-PV": 918.538664,
+    "B1": 1171.685058
+  },
+  "reason": "No challenger passed the predeclared requirement that the 14-day block-bootstrap upper 95% bound be below zero."
+}

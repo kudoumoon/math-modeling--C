@@ -4,7 +4,7 @@
   "version": "V3",
   "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
   "revision": 2,
-  "status": "CAUSAL_REFREEZE_P1_PASS_DEVELOPMENT_RERUN_ALLOWED",
+  "status": "DEVELOPMENT_V2_PASS_FULL_RUN_ALLOWED",
   "formal_use": false,
   "m1": {
     "status": "PASS",
@@ -28,6 +28,15 @@
     "selected_model_id": "Q2V2-SW2-REC5",
     "predictor_upgrade_adopted": false,
     "reason": "Preserved for audit only. B0 midnight final-slot causality was corrected after this experiment, so all four arms must be rerun."
+  },
+  "development_selection": {
+    "evidence_revision": 2,
+    "status": "PASS",
+    "review_score": 97,
+    "selected_arm": "B0",
+    "selected_model_id": "Q2V2-SW2-REC5",
+    "predictor_upgrade_adopted": false,
+    "reason": "All challengers improved point estimates but every predeclared 14-day block-bootstrap interval crossed zero; HGB PV also worsened MAE."
   },
   "official_upstream_allowed": false
 }

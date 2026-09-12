@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "scope": "2025-02-01 through 2025-06-30 development only",
+  "selected_arm": "B0",
+  "selected_model_id": "Q2V2-SW2-REC5",
+  "predictor_upgrade_adopted": false,
+  "reason": "No challenger passed every predeclared gate; retain B0.",
+  "adoption_rule": {
+    "minimum_asset_adjusted_saving_fraction": 0.001,
+    "block14_upper_95_must_be_below_yuan": 0.0,
+    "maximum_emergency_ratio": 1.01,
+    "maximum_daily_cvar95_ratio": 1.01,
+    "tie_fraction_of_b0": 0.0005,
+    "simplicity_order": [
+      "B0",
+      "Abl-L",
+      "Abl-PV",
+      "B1"
+    ],
+    "asset_value_yuan_per_kwh": 0.4684,
+    "bootstrap_seed": 20260912,
+    "bootstrap_draws": 2000
+  },
+  "january_checks": {
+    "B0": {
+      "forecast_equal": true,
+      "policy_equal": true
+    },
+    "Abl-L": {
+      "forecast_equal": true,
+      "policy_equal": true
+    },
+    "Abl-PV": {
+      "forecast_equal": true,
+      "policy_equal": true
+    },
+    "B1": {
+      "forecast_equal": true,
+      "policy_equal": true
+    }
+  }
+}

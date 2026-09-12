@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-12T22:51:53.974689+00:00",
+  "source_runs": {
+    "B0": {
+      "path": "/root/yuetao_he/math modeling--C/runs/q2v3-r2-dev-b0-20260913-01",
+      "manifest_sha256": "f3a61c562475bd6873ea6d7599cb3b9f5a6b6672393a1f7648c1e81de55e075a",
+      "git_commit": "f5f8c1b92e56f2e63649f14d5649c56bf5144b4d",
+      "summary_sha256": "0280ba65bdf7c6b75a998762ba42b4c8167e6193cbd445bb4276740cf15fdc6a",
+      "daily_ledger_sha256": "7c4f804eaaee608ee6bb2d7044e8eab2289da33669b467b865aff61fff032282"
+    },
+    "Abl-L": {
+      "path": "/root/yuetao_he/math modeling--C/runs/q2v3-r2-dev-abl-l-20260913-01",
+      "manifest_sha256": "069227f61072ce7a9929c5c688479b4730552a90922cadca6cd4652149eec3db",
+      "git_commit": "f5f8c1b92e56f2e63649f14d5649c56bf5144b4d",
+      "summary_sha256": "9b5a3d0fcfbcc1610dddf7c51be743a84e5138886a3237923d796da9aaf2c4b1",
+      "daily_ledger_sha256": "c217b73793cd567c794d8a80d16ecd04b1c3d6a948ec7e8e854406ed8a3263eb"
+    },
+    "Abl-PV": {
+      "path": "/root/yuetao_he/math modeling--C/runs/q2v3-r2-dev-abl-pv-20260913-01",
+      "manifest_sha256": "8a2f4bc5b07443b69eebc99af0c07a5f13cbf71c56e982c186dc1a916e7b978a",
+      "git_commit": "f5f8c1b92e56f2e63649f14d5649c56bf5144b4d",
+      "summary_sha256": "2abebf89469256580a581d89e836e7302235ccad7f29c44626397e5adf731f58",
+      "daily_ledger_sha256": "d79162f168042435d4f08aae27aa27ab1ab859ce65b94fc9ca73e7f735a18ea8"
+    },
+    "B1": {
+      "path": "/root/yuetao_he/math modeling--C/runs/q2v3-r2-dev-b1-20260913-01",
+      "manifest_sha256": "91d63f6c7a971deac4f83dc3c25e691e87177c568d6d9e8a26120f2d7233afc1",
+      "git_commit": "f5f8c1b92e56f2e63649f14d5649c56bf5144b4d",
+      "summary_sha256": "eb79b5b10fc2a2cb4c1b2695d9510f8d8dfcf31a9808cac617e10c0bfa8fe100",
+      "daily_ledger_sha256": "ccef9881ae96322a600e01e03c183df9e7f02170f6cf57c2eae724961bf3e01f"
+    }
+  },
+  "outputs": {
+    "development_bootstrap.csv": "d0dec6576415228e0f1af3557db843edb595d4b2c8a8468acde17ca1f8c0203b",
+    "development_comparison.csv": "2159bfb9ac5f0260ac1787419e505f7da4cab3caa5896a61c546be935d4c55bb",
+    "development_daily_ledger.csv": "afcd60edc61c6543ef20f54f1030a098553a9e9bb151dd7e7c15d69e736cfe26",
+    "development_decision.json": "296f6be9d771efd439457c7de59e6c548ee9444a81b9486bc4871e9d697e1173",
+    "development_forecast_metrics.csv": "a5ebf1e462a18f475c10c8067457f979a9b13666c6a74fc58676c80cd083c6cf"
+  }
+}

@@ -30,13 +30,14 @@
       "candidate_versions": {
         "V3": {
           "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
-          "status": "CAUSAL_REFREEZE_P1_PASS_DEVELOPMENT_RERUN_ALLOWED",
+          "status": "DEVELOPMENT_V2_PASS_FULL_RUN_ALLOWED",
           "formal_use": false,
           "m1_score": 97,
           "p1_score": 96,
-          "selected_forecast_arm": null,
-          "selected_forecast_model_id": null,
-          "predictor_upgrade_adopted": null,
+          "selected_forecast_arm": "B0",
+          "selected_forecast_model_id": "Q2V2-SW2-REC5",
+          "predictor_upgrade_adopted": false,
+          "development_decision": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_v2/development_decision.json",
           "superseded_development_decision": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_v1/development_decision.json",
           "superseded_reason": "B0 midnight final-slot forecast used an unfinished observation; the causal correction requires all four development arms and all full runs to be rerun.",
           "official_upstream_allowed": false
