@@ -1,0 +1,38 @@
+{
+  "route": "C题融合路线与验证规约_v2.md is the only primary specification",
+  "inputs": {
+    "附件\\附件1.xlsx": "66b87134f5ecccd68184d3539bb1293ef039f9e0fdd955a589b9bfa7f227c377",
+    "附件\\附件5\\result1.xlsx": "28360e0974e7d6065394a8aba4e14a86773ae0036cc7d3ea1b211b515b03d688",
+    "C题融合路线与验证规约_v2.md": "803d56edf4aecdf95413529dba47f7b8a7867898633ef677149c48dbae4b28d8"
+  },
+  "outputs": {
+    "Q1\\result\\result1_v2.xlsx": "31ce14097c9e3abba818dbafa9a07ce82741d7a921f1feb73fd5bf1557da1105"
+  },
+  "runtime": {
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.2.5",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "openpyxl": "3.1.5"
+  },
+  "parameters": {
+    "delta_hours": 0.16666666666666666,
+    "capacity_kwh": 12000.0,
+    "energy_min_kwh": 1200.0,
+    "energy_max_kwh": 10800.0,
+    "initial_energy_kwh": 6000.0,
+    "final_energy_kwh": 6000.0,
+    "power_limit_kw": 5000.0,
+    "step_limit_kwh": 833.3333333333333,
+    "eta_charge": 0.9,
+    "eta_discharge": 0.9,
+    "round_trip_efficiency": 0.81
+  },
+  "contracts": {
+    "q1_state_rule": "single-day closed cycle: E0=E144=6000 kWh",
+    "q2_q4_state_rule": "continuous cross-day rolling state; never reset to 6000 each day",
+    "time_rule": "first interval 00:10-00:20; last interval next-day 00:00-00:10"
+  },
+  "command": "python Q1/program/q1_reproduce_v2.py"
+}

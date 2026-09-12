@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "scope": "price-information upper-bound only; not an admissible policy",
+  "same_causal_load_pv_forecasts": true,
+  "same_january_warm_state": true,
+  "q4_2": {
+    "intervals": 48096,
+    "plan_grid_kwh": 20640675.90718282,
+    "plan_cost_actual_yuan": 13082972.843205571,
+    "emergency_kwh": 346563.38612477836,
+    "emergency_cost_actual_yuan": 2120747.5254025683,
+    "total_cash_yuan": 15203720.36860814,
+    "charge_kwh": 6736883.643728288,
+    "discharge_kwh": 5457377.722146813,
+    "unused_supply_kwh": 1768543.8767594544,
+    "start_soc_kwh": 6493.453033407413,
+    "end_soc_kwh": 5935.707781296297,
+    "soc_min_kwh": 1200.0,
+    "soc_max_kwh": 10800.0,
+    "causal_total_yuan": 15275572.202811182,
+    "oracle_saving_yuan": 71851.83420304209,
+    "oracle_saving_rate": 0.004703708198231626
+  },
+  "q4_3_M3": {
+    "intervals": 48096,
+    "q0_kwh": 20926418.085624628,
+    "qfinal_kwh": 20866426.360947605,
+    "base_plan_cost_yuan": 13299374.042472478,
+    "up_adjustment_cost_yuan": 668532.1228421861,
+    "down_refund_B_yuan": -168650.2220890192,
+    "ordinary_cost_B_yuan": 13799255.943225645,
+    "emergency_kwh": 47480.696471979376,
+    "emergency_cost_yuan": 242809.91062577284,
+    "total_cash_B_yuan": 14042065.853851415,
+    "charge_kwh": 6744904.033912521,
+    "discharge_kwh": 5463905.682609,
+    "unused_supply_kwh": 1693719.2111493996,
+    "start_soc_kwh": 6493.453033407413,
+    "end_soc_kwh": 5900.769544675927,
+    "soc_min_kwh": 1200.0,
+    "soc_max_kwh": 10800.0,
+    "causal_total_yuan": 14173883.124980405,
+    "oracle_saving_yuan": 131817.27112898976,
+    "oracle_saving_rate": 0.009300011151966655,
+    "decisions": 1002,
+    "accepted": 464
+  },
+  "physical_audits": {
+    "q4_2": {
+      "status": "PASS",
+      "checks": {
+        "01_plan_window_334x144": true,
+        "02_ten_minute_intervals": true,
+        "03_no_gap_or_duplicate": true,
+        "04_energy_balance": true,
+        "05_soc_balance": true,
+        "06_soc_continuity": true,
+        "07_soc_bounds": true,
+        "08_power_bounds": true,
+        "09_charge_discharge_mutex": true,
+        "10_emergency_not_charging": true,
+        "11_nonnegative_contracts": true
+      },
+      "metrics": {
+        "max_energy_residual_kwh": 2.2737367544323206e-13,
+        "max_soc_residual_kwh": 9.094947017729282e-13,
+        "max_soc_continuity_error_kwh": 0.0
+      }
+    },
+    "q4_3_M3": {
+      "status": "PASS",
+      "checks": {
+        "01_plan_window_334x144": true,
+        "02_ten_minute_intervals": true,
+        "03_no_gap_or_duplicate": true,
+        "04_energy_balance": true,
+        "05_soc_balance": true,
+        "06_soc_continuity": true,
+        "07_soc_bounds": true,
+        "08_power_bounds": true,
+        "09_charge_discharge_mutex": true,
+        "10_emergency_not_charging": true,
+        "11_nonnegative_contracts": true
+      },
+      "metrics": {
+        "max_energy_residual_kwh": 2.2737367544323206e-13,
+        "max_soc_residual_kwh": 9.094947017729282e-13,
+        "max_soc_continuity_error_kwh": 0.0
+      }
+    }
+  },
+  "runtime_seconds": 430.2220385
+}

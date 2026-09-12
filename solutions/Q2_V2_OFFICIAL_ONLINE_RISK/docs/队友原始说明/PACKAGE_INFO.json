@@ -1,0 +1,26 @@
+{
+  "package_name": "2026_C题_Q2_可复现交付包_20260912",
+  "created_at": "2026-09-12T17:00:00+08:00",
+  "source_workspace": "D:\\C题文件代码DEEPSEEK专用\\Q2=Q3",
+  "source_git_commit": "a31220b084153b7a0355119afffe8d1de6a50d5e",
+  "source_worktree_clean": true,
+  "python_reference_version": "3.11.9",
+  "formal_main_model": "ONLINE-RISK-SP",
+  "formal_total_cost_wan": 1380.803333064248,
+  "q2_unconditional_freeze": false,
+  "q2_conditional_freeze": true,
+  "included": [
+    "portable source code",
+    "input attachments and official template",
+    "Q2 experiment outputs and audit evidence",
+    "paper Markdown, figures, and tables",
+    "tests and dependency lock",
+    "portable result2 export"
+  ],
+  "excluded_from_zip": [
+    ".venv",
+    ".git",
+    "Q3",
+    "tmp_qa"
+  ]
+}

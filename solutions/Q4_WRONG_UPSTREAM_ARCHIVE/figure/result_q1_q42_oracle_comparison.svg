@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4pt" height="324pt" viewBox="0 0 518.4 324" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-12T23:30:30.473670</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.5.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 324 
+L 518.4 324 
+L 518.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 43.37024 304.12976 
+L 515.39976 304.12976 
+L 515.39976 17.90274 
+L 43.37024 17.90274 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m5b2ec47be3" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m5b2ec47be3" x="143.588245" y="304.12976" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font: 9px 'serif'; text-anchor: middle" x="143.588245" y="318.32976" transform="rotate(-0, 143.588245, 318.32976)">因果价格预测</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m5b2ec47be3" x="415.181755" y="304.12976" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font: 9px 'serif'; text-anchor: middle" x="415.181755" y="318.32976" transform="rotate(-0, 415.181755, 318.32976)">完全电价信息Oracle</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <path d="M 43.37024 304.12976 
+L 515.39976 304.12976 
+" clip-path="url(#p586840d42f)" style="fill: none; stroke: #d9d9d9; stroke-opacity: 0.7; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <defs>
+       <path id="mb88a802ef9" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mb88a802ef9" x="43.37024" y="304.12976" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font: 9px 'serif'; text-anchor: end" x="36.37024" y="307.72976" transform="rotate(-0, 36.37024, 307.72976)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <path d="M 43.37024 271.823614 
+L 515.39976 271.823614 
+" clip-path="url(#p586840d42f)" style="fill: none; stroke: #d9d9d9; stroke-opacity: 0.7; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mb88a802ef9" x="43.37024" y="271.823614" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font: 9px 'serif'; text-anchor: end" x="36.37024" y="275.423614" transform="rotate(-0, 36.37024, 275.423614)">200</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <path d="M 43.37024 239.517468 
+L 515.39976 239.517468 
+" clip-path="url(#p586840d42f)" style="fill: none; stroke: #d9d9d9; stroke-opacity: 0.7; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mb88a802ef9" x="43.37024" y="239.517468" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font: 9px 'serif'; text-anchor: end" x="36.37024" y="243.117468" transform="rotate(-0, 36.37024, 243.117468)">400</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <path d="M 43.37024 207.211323 
+L 515.39976 207.211323 
+" clip-path="url(#p586840d42f)" style="fill: none; stroke: #d9d9d9; stroke-opacity: 0.7; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mb88a802ef9" x="43.37024" y="207.211323" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font: 9px 'serif'; text-anchor: end" x="36.37024" y="210.811323" transform="rotate(-0, 36.37024, 210.811323)">600</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <path d="M 43.37024 174.905177 
+L 515.39976 174.905177 
+" clip-path="url(#p586840d42f)" style="fill: none; stroke: #d9d9d9; stroke-opacity: 0.7; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mb88a802ef9" x="43.37024" y="174.905177" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font: 9px 'serif'; text-anchor: end" x="36.37024" y="178.505177" transform="rotate(-0, 36.37024, 178.505177)">800</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_13">
+      <path d="M 43.37024 142.599031 
+L 515.39976 142.599031 
+" clip-path="url(#p586840d42f)" style="fill: none; stroke: #d9d9d9; stroke-opacity: 0.7; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mb88a802ef9" x="43.37024" y="142.599031" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font: 9px 'serif'; text-anchor: end" x="36.37024" y="146.199031" transform="rotate(-0, 36.37024, 146.199031)">1000</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_15">
+      <path d="M 43.37024 110.292885 
+L 515.39976 110.292885 
+" clip-path="url(#p586840d42f)" style="fill: none; stroke: #d9d9d9; stroke-opacity: 0.7; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#mb88a802ef9" x="43.37024" y="110.292885" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font: 9px 'serif'; text-anchor: end" x="36.37024" y="113.892885" transform="rotate(-0, 36.37024, 113.892885)">1200</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_17">
+      <path d="M 43.37024 77.98674 
+L 515.39976 77.98674 
+" clip-path="url(#p586840d42f)" style="fill: none; stroke: #d9d9d9; stroke-opacity: 0.7; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#mb88a802ef9" x="43.37024" y="77.98674" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font: 9px 'serif'; text-anchor: end" x="36.37024" y="81.58674" transform="rotate(-0, 36.37024, 81.58674)">1400</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_19">
+      <path d="M 43.37024 45.680594 
+L 515.39976 45.680594 
+" clip-path="url(#p586840d42f)" style="fill: none; stroke: #d9d9d9; stroke-opacity: 0.7; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#mb88a802ef9" x="43.37024" y="45.680594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font: 9px 'serif'; text-anchor: end" x="36.37024" y="49.280594" transform="rotate(-0, 36.37024, 49.280594)">1600</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font: 10px 'serif'; text-anchor: middle" x="10.860396" y="161.01625" transform="rotate(-90, 10.860396, 161.01625)">全年总费用（万元）</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 64.826127 304.12976 
+L 222.350363 304.12976 
+L 222.350363 57.382329 
+L 64.826127 57.382329 
+z
+" clip-path="url(#p586840d42f)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 336.419637 304.12976 
+L 493.943873 304.12976 
+L 493.943873 58.542957 
+L 336.419637 58.542957 
+z
+" clip-path="url(#p586840d42f)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 43.37024 304.12976 
+L 43.37024 17.90274 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 43.37024 304.12976 
+L 515.39976 304.12976 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font: 9px 'serif'; text-anchor: middle" x="143.588245" y="51.341117" transform="rotate(-0, 143.588245, 51.341117)">1527.56万元</text>
+   </g>
+   <g id="text_14">
+    <text style="font: 9px 'serif'; text-anchor: middle" x="415.181755" y="52.501745" transform="rotate(-0, 415.181755, 52.501745)">1520.37万元</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #333333; font: 9px 'serif'; text-anchor: middle" x="279.385" y="52.249982" transform="rotate(-0, 279.385, 52.249982)">电价信息差额：7.19万元（0.47%）</text>
+   </g>
+   <g id="text_16">
+    <text style="font: 11px 'serif'; text-anchor: middle" x="279.385" y="11.90274" transform="rotate(-0, 279.385, 11.90274)">Q4-2因果方案与完全电价信息上界</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p586840d42f">
+   <rect x="43.37024" y="17.90274" width="472.02952" height="286.22702"/>
+  </clipPath>
+ </defs>
+</svg>

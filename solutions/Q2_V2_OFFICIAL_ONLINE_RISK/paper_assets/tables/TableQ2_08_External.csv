@@ -1,0 +1,5 @@
+﻿source,cost_wan,comparability,note
+GT07,1403.9,partially comparable,different time-label mapping
+Douyin Scheme 6,1373.52,not directly comparable,strict-causal strict replica did not reproduce
+Xiaohongshu Scheme 4,1378.24,not directly comparable,requires Q3-style information/recourse
+This work formal candidate,,direct,filled by final decision

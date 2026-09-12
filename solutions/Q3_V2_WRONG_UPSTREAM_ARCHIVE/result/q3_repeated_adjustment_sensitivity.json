@@ -1,0 +1,11 @@
+{
+  "scope": "same-final-contract ledger sensitivity; no physical re-optimization",
+  "reversal_fraction_of_observed_adjustment": 0.1,
+  "eligible_changed_intervals": 6857,
+  "single_reversal_energy_kwh": 84510.4449027429,
+  "monotone_repeated_total_yuan": 13434889.653185176,
+  "single_reversal_extra_yuan": 71990.21729893879,
+  "single_reversal_total_yuan": 13506879.870484114,
+  "all_available_reversals_extra_yuan": 108233.61023975076,
+  "all_available_reversals_total_yuan": 13543123.263424927
+}

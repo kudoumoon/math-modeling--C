@@ -1,0 +1,112 @@
+{
+  "script": "run_q2_online_selector.py",
+  "selection_window_days": 28,
+  "scenario_count": 10,
+  "scenario_window_days": 60,
+  "terminal_lambda": 0.4684,
+  "candidates": [
+    {
+      "candidate_id": "nocvar_g0.00",
+      "tau": null,
+      "rho": 0.0,
+      "gamma": 0.0
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.05_g0.00",
+      "tau": 0.9,
+      "rho": 0.05,
+      "gamma": 0.0
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.20_g0.00",
+      "tau": 0.9,
+      "rho": 0.2,
+      "gamma": 0.0
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.05_g0.00",
+      "tau": 0.95,
+      "rho": 0.05,
+      "gamma": 0.0
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.20_g0.00",
+      "tau": 0.95,
+      "rho": 0.2,
+      "gamma": 0.0
+    },
+    {
+      "candidate_id": "nocvar_g0.02",
+      "tau": null,
+      "rho": 0.0,
+      "gamma": 0.02
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.05_g0.02",
+      "tau": 0.9,
+      "rho": 0.05,
+      "gamma": 0.02
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.20_g0.02",
+      "tau": 0.9,
+      "rho": 0.2,
+      "gamma": 0.02
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.05_g0.02",
+      "tau": 0.95,
+      "rho": 0.05,
+      "gamma": 0.02
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.20_g0.02",
+      "tau": 0.95,
+      "rho": 0.2,
+      "gamma": 0.02
+    },
+    {
+      "candidate_id": "nocvar_g0.05",
+      "tau": null,
+      "rho": 0.0,
+      "gamma": 0.05
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.05_g0.05",
+      "tau": 0.9,
+      "rho": 0.05,
+      "gamma": 0.05
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.20_g0.05",
+      "tau": 0.9,
+      "rho": 0.2,
+      "gamma": 0.05
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.05_g0.05",
+      "tau": 0.95,
+      "rho": 0.05,
+      "gamma": 0.05
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.20_g0.05",
+      "tau": 0.95,
+      "rho": 0.2,
+      "gamma": 0.05
+    }
+  ],
+  "candidate_count": 15,
+  "default_candidate_before_history": "cvar_t0.90_r0.05_g0.00",
+  "daily_decisions_use_same_actual_soc": true,
+  "selection_uses_only_prior_realized_costs": true,
+  "scoring_mode": "A",
+  "time_mapping": "A",
+  "start_day": 31,
+  "end_day": 31,
+  "initial_soc_kwh": 6000.0,
+  "battery_interpretation": "A",
+  "days": 1,
+  "parallel_workers": 1,
+  "config_hash": "24bc32b75fc16fd66ccb35450689af36b1f4e5a499fef9b705dcfb2247c6962c"
+}

@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "font": {
+    "journal": "general",
+    "lang": "zh",
+    "sciplots_used": false,
+    "cjk_font": "Noto Serif SC",
+    "constrained_layout": true
+  },
+  "figures": [
+    {
+      "stem": "raw_q1_q42_price_heatmap",
+      "issues": [
+        [
+          "WARN",
+          "以下文字可能超出画布被裁切：['日内时段', '日期']。跑 finalize_figure(fig) 或导出时 bbox_inches='tight' 兜底；标题/标签过长可换行或缩短。"
+        ]
+      ],
+      "files": [
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\raw_q1_q42_price_heatmap.pdf",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\raw_q1_q42_price_heatmap.svg",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\raw_q1_q42_price_heatmap.png"
+      ],
+      "source_rows": 48096
+    },
+    {
+      "stem": "raw_q2_q43_price_forecast_actual",
+      "issues": [
+        [
+          "WARN",
+          "以下文字可能超出画布被裁切：['实际电价（元/kWh）']。跑 finalize_figure(fig) 或导出时 bbox_inches='tight' 兜底；标题/标签过长可换行或缩短。"
+        ]
+      ],
+      "files": [
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\raw_q2_q43_price_forecast_actual.pdf",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\raw_q2_q43_price_forecast_actual.svg",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\raw_q2_q43_price_forecast_actual.png"
+      ],
+      "source_rows": 48096
+    },
+    {
+      "stem": "raw_q1_q42_representative_day",
+      "issues": [
+        [
+          "WARN",
+          "以下文字可能超出画布被裁切：['电量（kWh/10min）', '日内时段']。跑 finalize_figure(fig) 或导出时 bbox_inches='tight' 兜底；标题/标签过长可换行或缩短。"
+        ]
+      ],
+      "files": [
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\raw_q1_q42_representative_day.pdf",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\raw_q1_q42_representative_day.svg",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\raw_q1_q42_representative_day.png"
+      ],
+      "source_rows": 144
+    },
+    {
+      "stem": "process_q1_q42_soc_heatmap",
+      "issues": [
+        [
+          "WARN",
+          "以下文字可能超出画布被裁切：['日内时段', '日期']。跑 finalize_figure(fig) 或导出时 bbox_inches='tight' 兜底；标题/标签过长可换行或缩短。"
+        ]
+      ],
+      "files": [
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\process_q1_q42_soc_heatmap.pdf",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\process_q1_q42_soc_heatmap.svg",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\process_q1_q42_soc_heatmap.png"
+      ],
+      "source_rows": 48096
+    },
+    {
+      "stem": "process_q2_q43_adjustment_heatmap",
+      "issues": [
+        [
+          "WARN",
+          "以下文字可能超出画布被裁切：['日内时段', '日期']。跑 finalize_figure(fig) 或导出时 bbox_inches='tight' 兜底；标题/标签过长可换行或缩短。"
+        ]
+      ],
+      "files": [
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\process_q2_q43_adjustment_heatmap.pdf",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\process_q2_q43_adjustment_heatmap.svg",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\process_q2_q43_adjustment_heatmap.png"
+      ],
+      "source_rows": 48096
+    },
+    {
+      "stem": "process_q2_q43_release_acceptance",
+      "issues": [
+        [
+          "WARN",
+          "以下文字可能超出画布被裁切：['经济门接受率（%）', '信息发布时间']。跑 finalize_figure(fig) 或导出时 bbox_inches='tight' 兜底；标题/标签过长可换行或缩短。"
+        ]
+      ],
+      "files": [
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\process_q2_q43_release_acceptance.pdf",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\process_q2_q43_release_acceptance.svg",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\process_q2_q43_release_acceptance.png"
+      ],
+      "source_rows": 3
+    },
+    {
+      "stem": "result_q1_q42_oracle_comparison",
+      "issues": [
+        [
+          "WARN",
+          "以下文字可能超出画布被裁切：['全年总费用（万元）']。跑 finalize_figure(fig) 或导出时 bbox_inches='tight' 兜底；标题/标签过长可换行或缩短。"
+        ]
+      ],
+      "files": [
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\result_q1_q42_oracle_comparison.pdf",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\result_q1_q42_oracle_comparison.svg",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\result_q1_q42_oracle_comparison.png"
+      ],
+      "source_rows": 2
+    },
+    {
+      "stem": "result_q2_q43_cost_components",
+      "issues": [
+        [
+          "WARN",
+          "以下文字可能超出画布被裁切：['信息更新策略', '全年费用（万元）']。跑 finalize_figure(fig) 或导出时 bbox_inches='tight' 兜底；标题/标签过长可换行或缩短。"
+        ]
+      ],
+      "files": [
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\result_q2_q43_cost_components.pdf",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\result_q2_q43_cost_components.svg",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\result_q2_q43_cost_components.png"
+      ],
+      "source_rows": 4
+    },
+    {
+      "stem": "result_q2_q43_cumulative_saving",
+      "issues": [
+        [
+          "WARN",
+          "以下文字可能超出画布被裁切：['日期', '累计节省（万元）']。跑 finalize_figure(fig) 或导出时 bbox_inches='tight' 兜底；标题/标签过长可换行或缩短。"
+        ]
+      ],
+      "files": [
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\result_q2_q43_cumulative_saving.pdf",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\result_q2_q43_cumulative_saving.svg",
+        "D:\\鲸吞万物\\新疆大学申报\\数学建模\\2026数模国赛\\C题\\Q4\\figure\\result_q2_q43_cumulative_saving.png"
+      ],
+      "source_rows": 334
+    }
+  ],
+  "figure_count": 9,
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "dpi": 300
+}
