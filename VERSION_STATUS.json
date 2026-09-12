@@ -13,9 +13,12 @@
     "q2_p2_status": "DEFERRED_BY_USER",
     "deferred_issue": "finalize_q2.py rejects declared RESET1 boundary as a continuity error; attempted fix did not apply",
     "minimum_score_per_question": 90,
-    "status": "IMPLEMENTING_JOINT_ROUND_01"
+    "status": "ROUND01_Q3_COMPLETE_Q4_RUNNING",
+    "source_commit": "3f9e6730414af5dc83211b8b655c278a5594f59f",
+    "independent_p1": {"Q3": "PASS", "Q4": "PASS"},
+    "integration_tests_passed": 104
   },
-  "current_gate": "M1_PASS_94_2026-09-13; Q2_V3_MINIMAL_IMPLEMENTATION_ALLOWED; old Q2 remains unreleased",
+  "current_gate": "JOINT_Q3_Q4_P1_PASS; Q3 round01 complete; Q4 first annual execution running; final joint review pending",
   "questions": {
     "Q1": {
       "directory": "solutions/Q1_BASELINE",
@@ -58,16 +61,25 @@
       }
     },
     "Q3": {
-      "directory": "solutions/Q3_V2_WRONG_UPSTREAM_ARCHIVE",
-      "status": "INVALID_FORMAL_UPSTREAM_ARCHIVE_ONLY",
+      "directory": "solutions/Q3_V3_ALIGNED",
+      "status": "ROUND01_FULL_RUN_COMPLETE_JOINT_REVIEW_PENDING",
       "formal_use": false,
-      "reason": "Imports q2_pipeline_v1 through q2_v2_compatible instead of frozen ONLINE-RISK-SP."
+      "version": "Q3_V3_R1",
+      "run": "solutions/Q3_V3_ALIGNED/results/q3v3-r1",
+      "main_total_cost_yuan": 13532323.482237797,
+      "score": null,
+      "reason": "Correct causal Q2 contract used provisionally; independent final joint scoring awaits Q4.",
+      "archive": {"directory": "solutions/Q3_V2_WRONG_UPSTREAM_ARCHIVE", "status": "INVALID_FORMAL_UPSTREAM_ARCHIVE_ONLY", "reason": "Old version imports q2_pipeline_v1 through q2_v2_compatible."}
     },
     "Q4": {
-      "directory": "solutions/Q4_WRONG_UPSTREAM_ARCHIVE",
-      "status": "INVALID_FORMAL_UPSTREAM_ARCHIVE_ONLY",
+      "directory": "solutions/Q4_V1_ALIGNED",
+      "status": "ROUND01_FIRST_ANNUAL_RUN_IN_PROGRESS",
       "formal_use": false,
-      "reason": "Inherits invalid Q3 and directly imports q2_pipeline_v1/q2_v2_compatible."
+      "version": "Q4_V1_R1",
+      "run": "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01",
+      "score": null,
+      "reason": "Real Q2 risk core and aligned Q3 mechanism; independent P1 passed, first full run in progress.",
+      "archive": {"directory": "solutions/Q4_WRONG_UPSTREAM_ARCHIVE", "status": "INVALID_FORMAL_UPSTREAM_ARCHIVE_ONLY", "reason": "Old version inherits invalid Q3 and imports q2_pipeline_v1/q2_v2_compatible."}
     }
   }
 }

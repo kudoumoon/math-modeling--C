@@ -1,0 +1,10 @@
+{
+  "summary": "solutions/Q3_V3_ALIGNED/results/q3v3-r1/summary.json",
+  "summary_sha256": "245dc78dd31dcf2b5955bc68b6d2a8d9cadf60df69d37e4fbc66840dd6054919",
+  "selection_allowed": false,
+  "model_rerun": false,
+  "figures": {
+    "solutions/Q3_Q4_JOINT/figures/round01_q3_release_value/q3_release_value.png": "9b5fda76811f807f5d6ebf884a8343f787a993a68c370e643e7309d135c70b57",
+    "solutions/Q3_Q4_JOINT/figures/round01_q3_release_value/q3_release_value.pdf": "af467e8bf2a070619f05046a445da126074f10178e76c7077f5ba8d393abbe9b"
+  }
+}
