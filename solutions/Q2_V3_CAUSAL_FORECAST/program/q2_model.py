@@ -192,6 +192,59 @@ def settle_causally(g: np.ndarray, load: np.ndarray, pv: np.ndarray, e0: float) 
             "soc": soc, "balance_residual": residual}
 
 
+def settle_one_slot_delayed(
+    g: np.ndarray,
+    load: np.ndarray,
+    pv: np.ndarray,
+    load_forecast: np.ndarray,
+    pv_forecast: np.ndarray,
+    e0: float,
+    previous_load_kw: float | None = None,
+    previous_pv_kw: float | None = None,
+) -> dict[str, np.ndarray]:
+    """Execute Battery A using measurements that arrive one interval late."""
+    steps = np.asarray(g).shape[0]
+    arrays = [np.asarray(value, dtype=float) for value in (load, pv, load_forecast, pv_forecast)]
+    if any(value.shape != (steps,) for value in arrays):
+        raise ValueError("actuals and forecasts must match the grid-plan horizon")
+    c = np.zeros(steps)
+    d = np.zeros(steps)
+    commanded_c = np.zeros(steps)
+    commanded_d = np.zeros(steps)
+    emergency = np.zeros(steps)
+    spill = np.zeros(steps)
+    soc = np.zeros(steps + 1)
+    soc[0] = e0
+    first_load = load_forecast[0] if previous_load_kw is None else previous_load_kw
+    first_pv = pv_forecast[0] if previous_pv_kw is None else previous_pv_kw
+    observed_load = np.concatenate(([first_load], load[:-1]))
+    observed_pv = np.concatenate(([first_pv], pv[:-1]))
+    for k in range(steps):
+        observed_balance = g[k] + observed_pv[k] * DT - observed_load[k] * DT
+        desired_charge = min(
+            max(observed_balance, 0.0), Q_MAX,
+            max(0.0, (E_MAX - soc[k]) / ETA_C),
+        )
+        desired_discharge = min(
+            max(-observed_balance, 0.0), Q_MAX,
+            max(0.0, ETA_D * (soc[k] - E_MIN)),
+        )
+        commanded_c[k] = desired_charge
+        commanded_d[k] = desired_discharge
+        actual_balance = g[k] + pv[k] * DT - load[k] * DT
+        if actual_balance >= 0.0:
+            c[k] = min(desired_charge, actual_balance)
+            spill[k] = actual_balance - c[k]
+        else:
+            d[k] = min(desired_discharge, -actual_balance)
+            emergency[k] = -actual_balance - d[k]
+        soc[k + 1] = soc[k] + ETA_C * c[k] - d[k] / ETA_D
+    residual = g + pv * DT + d + emergency - load * DT - c - spill
+    return {"g": g, "c": c, "d": d, "commanded_c": commanded_c,
+            "commanded_d": commanded_d, "emergency": emergency, "spill": spill,
+            "soc": soc, "balance_residual": residual}
+
+
 def settle_planned_battery(g: np.ndarray, c_plan: np.ndarray, d_plan: np.ndarray,
                            load: np.ndarray, pv: np.ndarray,
                            e0: float) -> dict[str, np.ndarray]:

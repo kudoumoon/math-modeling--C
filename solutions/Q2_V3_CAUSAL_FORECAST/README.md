@@ -1,6 +1,6 @@
 # Q2 V3 Causal Forecast
 
-状态：`DEVELOPMENT_COMPLETE_FULL_RUN_PENDING`。M1 为 94/100，P1 为 95/100。四臂开发期已完成，冻结规则选择 B0；本目录尚不是正式 Q2 或 Q3/Q4 上游。
+状态：`CAUSAL_REFREEZE_M1_PASS_P1_RERUN_PENDING`。末槽因果修复后的 M1 为 97/100；旧 P1、四臂开发期和年度运行均已失效，正在基于新提交重跑。本目录尚不是正式 Q2 或 Q3/Q4 上游。
 
 ## 目录
 
@@ -23,6 +23,6 @@ PYTHONPATH=solutions/Q2_V3_CAUSAL_FORECAST/program \
 
 Battery A 是“区间内连续测量反馈以十分钟平均量等价表示”的条件实现；Battery B 是电池动作日前冻结后的严格敏感性。二者不得混表或择低发布。
 
-## 开发期结论
+## 已失效的开发期结论
 
-2-6月四臂从同一一月轨迹连续运行。Abl-L、Abl-PV和B1的资产调整费用点估计分别比B0低0.647%、0.226%和0.330%，但三者14日连续块Bootstrap的95%上界均大于0，未通过预声明采用门槛。Q2 v3因此保留 `Q2V2-SW2-REC5` 预测通道；完整证据见 `results/development_v1`。
+`results/development_v1` 保留第一次2-6月四臂实验，但其 B0 末槽曾读取零点尚未完成的上一计划日末槽，因此不得继续用于模型选择。修复后还增加了 Time B 因果专用预测、一槽延迟命令/保护分账和2月SOC重置对照；正式结论只读取后续 `development_v2`。

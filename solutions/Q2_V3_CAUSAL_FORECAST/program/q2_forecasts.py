@@ -80,7 +80,35 @@ def build_b0_forecasts(data: Q2Data) -> tuple[np.ndarray, np.ndarray]:
             pv[day] = typical_pv
         else:
             pv[day] = data.pv[day - 5:day].mean(axis=0)
+            # At 00:00, the previous plan day's final 00:00-00:10 interval
+            # has not completed. Use five completed final-slot observations.
+            if day < 6:
+                pv[day, -1] = typical_pv[-1]
+            else:
+                pv[day, -1] = data.pv[day - 6:day - 1, -1].mean()
     return np.maximum(load, 0.0), np.maximum(pv, 0.0)
+
+
+def build_b0_time_b_forecasts(data: Q2Data) -> tuple[np.ndarray, np.ndarray]:
+    """Build right-endpoint B forecasts using only data visible at day d 00:00."""
+    load_a, pv_a = build_b0_forecasts(data)
+    load_b = shift_cross_day(load_a)
+    pv_b = shift_cross_day(pv_a)
+    _, typical_pv = _typical_profiles()
+    for day in range(len(data.dates) - 1):
+        # B[d,142] is the shifted raw 0:00+1 value. Under right-endpoint
+        # semantics it was already complete at issue time, unlike A[d,143].
+        if day < 5:
+            pv_b[day, 142] = typical_pv[-1]
+        else:
+            pv_b[day, 142] = data.pv[day - 5:day, -1].mean()
+        # B[d,143] targets A[d+1,0]. The precomputed A[d+1,0]
+        # forecast may use day-d actual PV, which is future at issue d 00:00.
+        if day < 5:
+            pv_b[day, -1] = typical_pv[0]
+        else:
+            pv_b[day, -1] = data.pv[day - 5:day, 0].mean()
+    return np.maximum(load_b, 0.0), np.maximum(pv_b, 0.0)
 
 
 def build_daily_features(values: np.ndarray, dates: pd.DatetimeIndex) -> pd.DataFrame:
@@ -179,14 +207,24 @@ def _monthly_hgb(
     return predictions, records
 
 
-def build_forecast_bundle(data: Q2Data) -> ForecastBundle:
+def build_forecast_bundle(
+    data: Q2Data, required_arm: str | None = None
+) -> ForecastBundle:
     load_b0, pv_b0 = build_b0_forecasts(data)
-    load_hgb, load_log = _monthly_hgb(
-        data.load, data.dates, load_b0, "load_10min"
-    )
-    pv_hgb, pv_log = _monthly_hgb(
-        data.pv, data.dates, pv_b0, "pv_10min_history"
-    )
+    if required_arm is not None and required_arm not in ARM_MODEL_IDS:
+        raise ValueError(f"unknown forecast arm: {required_arm}")
+    if required_arm is None or required_arm in ("B1", "Abl-L"):
+        load_hgb, load_log = _monthly_hgb(
+            data.load, data.dates, load_b0, "load_10min"
+        )
+    else:
+        load_hgb, load_log = load_b0.copy(), []
+    if required_arm is None or required_arm in ("B1", "Abl-PV"):
+        pv_hgb, pv_log = _monthly_hgb(
+            data.pv, data.dates, pv_b0, "pv_10min_history"
+        )
+    else:
+        pv_hgb, pv_log = pv_b0.copy(), []
     return ForecastBundle(
         load_b0=load_b0,
         pv_b0=pv_b0,

@@ -23,6 +23,7 @@ from q2_forecasts import (
     ARM_MODEL_IDS,
     HGB_PARAMETERS,
     build_forecast_bundle,
+    build_b0_time_b_forecasts,
     shift_cross_day,
 )
 from q2_model import (
@@ -37,6 +38,7 @@ from q2_model import (
     plan_battery_for_fixed_grid,
     save_policy_npz,
     settle_causally,
+    settle_one_slot_delayed,
     settle_planned_battery,
     summarize_policy,
     two_stage_plan,
@@ -128,11 +130,13 @@ def _worker_init(
     load_pred: np.ndarray,
     pv_pred: np.ndarray,
     battery_interpretation: str,
+    observation_delay_slots: int,
 ) -> None:
     _WORKER["data"] = data
     _WORKER["load_pred"] = load_pred
     _WORKER["pv_pred"] = pv_pred
     _WORKER["battery_interpretation"] = battery_interpretation
+    _WORKER["observation_delay_slots"] = observation_delay_slots
 
 
 def _solve_candidate(task: tuple[int, float, float, dict, int]) -> tuple[str, dict]:
@@ -157,9 +161,21 @@ def _solve_candidate(task: tuple[int, float, float, dict, int]) -> tuple[str, di
     )
     if _WORKER["battery_interpretation"] == "A":
         battery_plan = None
-        settled = settle_causally(
-            grid, data.load[day], data.pv[day], executed_e0
-        )
+        if _WORKER["observation_delay_slots"] == 0:
+            settled = settle_causally(
+                grid, data.load[day], data.pv[day], executed_e0
+            )
+        else:
+            settled = settle_one_slot_delayed(
+                grid,
+                data.load[day],
+                data.pv[day],
+                load_pred[day],
+                pv_pred[day],
+                executed_e0,
+                None if day == 0 else float(data.load[day - 1, -1]),
+                None if day == 0 else float(data.pv[day - 1, -1]),
+            )
     else:
         expected_load = np.average(load_sc, axis=0, weights=weights)
         expected_pv = np.average(pv_sc, axis=0, weights=weights)
@@ -197,6 +213,16 @@ def _solve_candidate(task: tuple[int, float, float, dict, int]) -> tuple[str, di
         ),
         "pending_discharge_plan_kwh": (
             None if battery_plan is None else float(battery_plan["d"][-1])
+        ),
+        "commanded_c": (
+            settled.get("commanded_c")
+            if "commanded_c" in settled
+            else (battery_plan["c"] if battery_plan is not None else settled["c"])
+        ),
+        "commanded_d": (
+            settled.get("commanded_d")
+            if "commanded_d" in settled
+            else (battery_plan["d"] if battery_plan is not None else settled["d"])
         ),
     }
 
@@ -247,6 +273,35 @@ def project_planned_pending_energy(
     return float(energy_before - discharge / 0.9)
 
 
+def project_delayed_pending_energy(
+    energy_before: float,
+    grid_kwh: float,
+    observed_load_kw: float,
+    observed_pv_kw: float,
+    pending_load_forecast_kw: float,
+    pending_pv_forecast_kw: float,
+) -> float:
+    """Project the pending interval using the one-slot-delayed control law."""
+    observed_balance = grid_kwh + observed_pv_kw * DT - observed_load_kw * DT
+    desired_charge = min(
+        max(observed_balance, 0.0), Q_MAX,
+        max(0.0, (E_MAX - energy_before) / 0.9),
+    )
+    desired_discharge = min(
+        max(-observed_balance, 0.0), Q_MAX,
+        max(0.0, 0.9 * (energy_before - E_MIN)),
+    )
+    forecast_balance = (
+        grid_kwh + pending_pv_forecast_kw * DT
+        - pending_load_forecast_kw * DT
+    )
+    if forecast_balance >= 0.0:
+        return float(energy_before + 0.9 * min(desired_charge, forecast_balance))
+    return float(
+        energy_before - min(desired_discharge, -forecast_balance) / 0.9
+    )
+
+
 def release_mature_scores(
     pending_scores: list[tuple[int, dict[str, float]]],
     histories: dict[str, list[float]],
@@ -278,6 +333,8 @@ def _daily_rows(
             "spill_kwh": float(arrays["Spill"][day].sum()),
             "charge_kwh": float(arrays["C"][day].sum()),
             "discharge_kwh": float(arrays["D"][day].sum()),
+            "commanded_charge_kwh": float(arrays["CommandedC"][day].sum()),
+            "commanded_discharge_kwh": float(arrays["CommandedD"][day].sum()),
         })
     return pd.DataFrame(rows)
 
@@ -310,6 +367,8 @@ def _interval_rows(
                 "planned_grid_kwh": float(arrays["G"][day, slot]),
                 "charge_kwh": float(arrays["C"][day, slot]),
                 "discharge_kwh": float(arrays["D"][day, slot]),
+                "commanded_charge_kwh": float(arrays["CommandedC"][day, slot]),
+                "commanded_discharge_kwh": float(arrays["CommandedD"][day, slot]),
                 "emergency_kwh": float(arrays["Emergency"][day, slot]),
                 "unused_supply_kwh": float(arrays["Spill"][day, slot]),
                 "actual_soc_before_kwh": float(arrays["SOC"][day, slot]),
@@ -370,30 +429,36 @@ def run(args: argparse.Namespace) -> Path:
     write_json(manifest_path, manifest)
     try:
         data = load_data()
-        bundle = build_forecast_bundle(data)
+        bundle = build_forecast_bundle(data, required_arm=args.arm)
         load_pred, pv_pred = bundle.for_arm(args.arm)
         if args.time_mapping == "B":
             if args.end_day >= len(data.dates) - 1:
                 raise ValueError("time mapping B cannot include 2025-12-31")
+            if args.arm != "B0":
+                raise ValueError("time mapping B sensitivity is frozen to selected arm B0")
+            load_pred, pv_pred = build_b0_time_b_forecasts(data)
             data = replace(
                 data,
                 price=shift_cross_day(np.tile(data.price, (365, 1)))[0],
                 load=shift_cross_day(data.load),
                 pv=shift_cross_day(data.pv),
             )
-            load_pred = shift_cross_day(load_pred)
-            pv_pred = shift_cross_day(pv_pred)
         days = np.arange(args.start_day, args.end_day + 1, dtype=int)
         report_days = days[days >= args.report_start_day]
         if len(days) == 0 or len(report_days) == 0:
             raise ValueError("run and report day ranges must be non-empty")
-        if args.start_day != 0 and not args.compatibility_reset:
+        if args.start_day != 0:
             raise ValueError("continuous Q2 V3 runs must start on January 1")
+        if args.battery_interpretation == "B" and args.observation_delay_slots:
+            raise ValueError("observation-delay sensitivity applies only to Battery A")
 
         candidates = candidate_grid()
         arrays = {
             key: np.zeros((365, 144))
-            for key in ("G", "C", "D", "Emergency", "Spill")
+            for key in (
+                "G", "C", "D", "CommandedC", "CommandedD",
+                "Emergency", "Spill",
+            )
         }
         arrays["SOC"] = np.full((365, 145), np.nan)
         histories = {item["candidate_id"]: [] for item in candidates}
@@ -411,9 +476,13 @@ def run(args: argparse.Namespace) -> Path:
                 load_pred,
                 pv_pred,
                 args.battery_interpretation,
+                args.observation_delay_slots,
             ),
         ) as executor:
             for position, day in enumerate(days):
+                if args.compatibility_reset and day == args.report_start_day:
+                    planned_e0 = float(args.initial_soc)
+                    executed_e0 = float(args.initial_soc)
                 pending_scores = release_mature_scores(
                     pending_scores, histories, int(day)
                 )
@@ -459,10 +528,12 @@ def run(args: argparse.Namespace) -> Path:
                     ("d", "D"),
                     ("emergency", "Emergency"),
                     ("spill", "Spill"),
+                    ("commanded_c", "CommandedC"),
+                    ("commanded_d", "CommandedD"),
                 ):
                     values = (
                         selected[source]
-                        if source == "grid"
+                        if source in {"grid", "commanded_c", "commanded_d"}
                         else settled[source]
                     )
                     arrays[target][day] = values
@@ -511,14 +582,17 @@ def run(args: argparse.Namespace) -> Path:
                         for candidate_id, result in solved.items()
                     },
                 ))
-                if args.battery_interpretation == "A":
+                if (
+                    args.battery_interpretation == "A"
+                    and args.observation_delay_slots == 0
+                ):
                     planned_e0 = project_pending_energy(
                         float(settled["soc"][-2]),
                         float(selected["grid"][-1]),
                         float(load_pred[day, -1]),
                         float(pv_pred[day, -1]),
                     )
-                else:
+                elif args.battery_interpretation == "B":
                     planned_e0 = project_planned_pending_energy(
                         float(settled["soc"][-2]),
                         float(selected["grid"][-1]),
@@ -526,6 +600,15 @@ def run(args: argparse.Namespace) -> Path:
                         float(pv_pred[day, -1]),
                         float(selected["pending_charge_plan_kwh"]),
                         float(selected["pending_discharge_plan_kwh"]),
+                    )
+                else:
+                    planned_e0 = project_delayed_pending_energy(
+                        float(settled["soc"][-2]),
+                        float(selected["grid"][-1]),
+                        float(data.load[day, -2]),
+                        float(data.pv[day, -2]),
+                        float(load_pred[day, -1]),
+                        float(pv_pred[day, -1]),
                     )
                 executed_e0 = float(settled["soc"][-1])
                 if (position + 1) % 5 == 0 or position + 1 == len(days):
@@ -542,7 +625,8 @@ def run(args: argparse.Namespace) -> Path:
             perf_counter() - started,
             (
                 f"ONLINE-RISK-SP-{args.scoring_mode}-S{args.scenario_count}-"
-                f"BAT{args.battery_interpretation}-{ARM_MODEL_IDS[args.arm]}"
+                f"BAT{args.battery_interpretation}-OBS{args.observation_delay_slots}-"
+                f"{ARM_MODEL_IDS[args.arm]}"
             ),
         )
         january_days = days[days < 31]
@@ -555,6 +639,9 @@ def run(args: argparse.Namespace) -> Path:
             "forecast_arm": args.arm,
             "forecast_model_id": ARM_MODEL_IDS[args.arm],
             "hgb_parameters": HGB_PARAMETERS,
+            "trained_hgb_channels": sorted(
+                bundle.fit_log["target_name"].unique().tolist()
+            ) if len(bundle.fit_log) else [],
             "start_day": int(days[0]),
             "end_day": int(days[-1]),
             "report_start_day": int(report_days[0]),
@@ -562,9 +649,15 @@ def run(args: argparse.Namespace) -> Path:
             "initial_soc_kwh": args.initial_soc,
             "time_mapping": args.time_mapping,
             "battery_interpretation": args.battery_interpretation,
+            "observation_delay_slots": args.observation_delay_slots,
             "battery_A_observation_contract": (
-                "within-interval continuous feedback represented by interval averages"
-                if args.battery_interpretation == "A" else None
+                (
+                    "within-interval continuous feedback represented by interval averages"
+                    if args.observation_delay_slots == 0
+                    else "command uses one-slot-delayed measurement; inverter protection clips magnitude using current physical feasibility without changing command direction"
+                )
+                if args.battery_interpretation == "A"
+                else None
             ),
             "scoring_mode": args.scoring_mode,
             "selection_window_days": WINDOW_DAYS,
@@ -575,6 +668,7 @@ def run(args: argparse.Namespace) -> Path:
             "candidate_grid": candidates,
             "candidate_full_score_delay_days": 2,
             "scenario_latest_complete_plan_day": "day_index - 2",
+            "compatibility_reset_on_report_start": args.compatibility_reset,
             "workers": args.workers,
         }
         write_json(run_root / "config.json", config)
@@ -635,6 +729,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--battery-interpretation", choices=["A", "B"], default="A"
     )
+    parser.add_argument("--observation-delay-slots", choices=[0, 1], type=int, default=0)
     parser.add_argument("--scoring-mode", choices=["A", "B"], default="A")
     parser.add_argument("--compatibility-reset", action="store_true")
     return parser.parse_args()

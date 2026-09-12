@@ -3,16 +3,17 @@
   "question": "Q2",
   "version": "V3",
   "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
-  "status": "DEVELOPMENT_COMPLETE_FULL_RUN_PENDING",
+  "revision": 2,
+  "status": "CAUSAL_REFREEZE_M1_PASS_P1_RERUN_PENDING",
   "formal_use": false,
   "m1": {
     "status": "PASS",
-    "score": 94,
+    "score": 97,
     "date": "2026-09-13"
   },
   "p1": {
-    "status": "PASS",
-    "score": 95,
+    "status": "INVALIDATED_BY_CAUSAL_SOURCE_CHANGE",
+    "score": null,
     "date": "2026-09-13",
     "scope": "Allows January warm-up plus February-June four-arm development runs only."
   },
@@ -22,11 +23,11 @@
     "Abl-L": "Q2V3-HGBLOAD-REC5PV",
     "Abl-PV": "Q2V3-SW2LOAD-HGBPV"
   },
-  "development_selection": {
+  "superseded_development_selection": {
     "selected_arm": "B0",
     "selected_model_id": "Q2V2-SW2-REC5",
     "predictor_upgrade_adopted": false,
-    "reason": "All three challengers reduced point-estimate asset-adjusted cost, but every 14-day block-bootstrap 95% interval crossed zero."
+    "reason": "Preserved for audit only. B0 midnight final-slot causality was corrected after this experiment, so all four arms must be rerun."
   },
   "official_upstream_allowed": false
 }

@@ -11,10 +11,12 @@ from q2_forecasts import (
     ForecastBundle,
     HGB_PARAMETERS,
     build_b0_forecasts,
+    build_b0_time_b_forecasts,
+    build_forecast_bundle,
     build_daily_features,
     shift_cross_day,
 )
-from q2_model import load_data
+from q2_model import Q2Data, load_data
 
 
 def test_forecast_arm_ids_are_unique_and_frozen():
@@ -59,8 +61,47 @@ def test_january_cold_start_is_exact_and_finite():
     np.testing.assert_allclose(load[14], (data.load[7] + data.load[0]) / 2)
     np.testing.assert_allclose(pv[0], typical.iloc[:, 3].to_numpy(float))
     np.testing.assert_allclose(pv[5], data.pv[:5].mean(axis=0))
+    assert pv[5, -1] == typical.iloc[-1, 3]
+    assert pv[6, -1] == data.pv[:5, -1].mean()
     assert np.isfinite(load).all()
     assert np.isfinite(pv).all()
+
+
+def test_b0_forecasts_do_not_change_when_issue_day_actuals_change():
+    data = load_data()
+    day = 120
+    load_a, pv_a = build_b0_forecasts(data)
+    changed = Q2Data(
+        dates=data.dates,
+        price=data.price,
+        load=data.load.copy(),
+        pv=data.pv.copy(),
+        source_labels=data.source_labels,
+    )
+    changed.load[day] += 1000.0
+    changed.pv[day] += 1000.0
+    load_changed, pv_changed = build_b0_forecasts(changed)
+    np.testing.assert_array_equal(load_a[day], load_changed[day])
+    np.testing.assert_array_equal(pv_a[day], pv_changed[day])
+
+
+def test_time_b_forecast_does_not_shift_a_future_actual_into_last_slot():
+    data = load_data()
+    day = 120
+    load_b, pv_b = build_b0_time_b_forecasts(data)
+    changed = Q2Data(
+        dates=data.dates,
+        price=data.price,
+        load=data.load.copy(),
+        pv=data.pv.copy(),
+        source_labels=data.source_labels,
+    )
+    changed.load[day] += 1000.0
+    changed.pv[day] += 1000.0
+    load_changed, pv_changed = build_b0_time_b_forecasts(changed)
+    np.testing.assert_array_equal(load_b[day], load_changed[day])
+    np.testing.assert_array_equal(pv_b[day], pv_changed[day])
+    assert pv_b[day, 142] == data.pv[day - 5:day, -1].mean()
 
 
 def test_all_arms_share_the_same_january_forecasts():
@@ -77,3 +118,24 @@ def test_all_arms_share_the_same_january_forecasts():
     for load, pv in forecasts:
         np.testing.assert_array_equal(load[:31], base_load[:31])
         np.testing.assert_array_equal(pv[:31], base_pv[:31])
+
+
+def test_forecast_bundle_trains_only_channels_required_by_arm(monkeypatch):
+    data = load_data()
+    calls = []
+
+    def fake_hgb(values, dates, cold_start, target_name):
+        calls.append(target_name)
+        return cold_start.copy(), [{"target_name": target_name}]
+
+    monkeypatch.setattr(q2_forecasts, "_monthly_hgb", fake_hgb)
+    build_forecast_bundle(data, required_arm="B0")
+    assert calls == []
+    build_forecast_bundle(data, required_arm="Abl-L")
+    assert calls == ["load_10min"]
+    calls.clear()
+    build_forecast_bundle(data, required_arm="Abl-PV")
+    assert calls == ["pv_10min_history"]
+    calls.clear()
+    build_forecast_bundle(data, required_arm="B1")
+    assert calls == ["load_10min", "pv_10min_history"]
