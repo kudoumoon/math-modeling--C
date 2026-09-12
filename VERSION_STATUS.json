@@ -1,7 +1,20 @@
 {
   "schema_version": 2,
   "frozen_at": "2026-09-13 Asia/Shanghai",
-  "authoritative_rule": "Only entries with formal_use=true and a passing current reproduction gate may be used as formal upstreams.",
+  "authoritative_rule": "Only entries with formal_use=true may be described as released formal upstreams. The user-authorized Q3/Q4 joint workflow may use the explicitly provisional Q2 causal main run; see joint_iteration_override.",
+  "joint_iteration_override": {
+    "authorized_on": "2026-09-13",
+    "contract": "reports/q3_q4_joint_iteration_contract.md",
+    "active_questions": ["Q3", "Q4"],
+    "execution_order": ["Q3", "Q4", "independent_joint_review", "joint_revision", "version_and_push"],
+    "duplicate_annual_reproduction": false,
+    "provisional_q2_run": "runs/q2v3-r2-full-b0-a-20260913-01",
+    "provisional_q2_source_commit": "17f25a508deaf7f9248ef18c3b498be12f5c083a",
+    "q2_p2_status": "DEFERRED_BY_USER",
+    "deferred_issue": "finalize_q2.py rejects declared RESET1 boundary as a continuity error; attempted fix did not apply",
+    "minimum_score_per_question": 90,
+    "status": "IMPLEMENTING_JOINT_ROUND_01"
+  },
   "current_gate": "M1_PASS_94_2026-09-13; Q2_V3_MINIMAL_IMPLEMENTATION_ALLOWED; old Q2 remains unreleased",
   "questions": {
     "Q1": {
