@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "release_id": "final-20260913-r1",
-  "source_commit": "c45bca60209f1865b52c120a40aa1d8753fc4636",
+  "source_commit": "c39ff5faeaedb88773268c516aa5921c0e062a28",
   "questions": [
     "Q1_BASELINE",
     "Q2_V3_CAUSAL_FORECAST",
@@ -26,8 +26,8 @@
     {
       "path": "VERSION_STATUS.json",
       "category": "others",
-      "bytes": 7336,
-      "sha256": "ed0739db3dddd6baabf5764591e2834688e487941c4f85b4704b35f22848df00"
+      "bytes": 7323,
+      "sha256": "72e9ae2c63b14c8e41776856e6bbc0110d2a9c74c42916be42b632276edcd564"
     },
     {
       "path": "data/附件1.xlsx",
