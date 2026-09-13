@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "gate": "P2_FIGURE_DELIVERY",
+  "review_scope": "Independent limited visual acceptance of Q1 and Q2 delivery figures; no model execution or re-export.",
+  "review_date": "2026-09-13",
+  "questions": {
+    "Q1": {
+      "logical_figures": 9,
+      "categories": {"raw": 3, "process": 3, "result": 3},
+      "primary_exports": 27,
+      "grayscale_exports": 9,
+      "formats": ["PNG 300 dpi", "SVG", "PDF"],
+      "manifest_sha256": "d2abe042c8511f0764d2993ada219bceb1fc707af8a62d34733dd4e2c74c557a",
+      "author_visual_review": "PASS",
+      "evidence": "solutions/Q1_BASELINE/others/VISUAL_REVIEW.md",
+      "independent_result": "Sampled final color and grayscale figures; no clipping, overlap, missing glyphs, or unreadable labels. SOC endpoints are visible."
+    },
+    "Q2": {
+      "logical_figures": 9,
+      "categories": {"raw": 3, "process": 3, "result": 3},
+      "primary_exports": 36,
+      "formats": ["PNG 300 dpi", "SVG", "PDF", "grayscale PNG 300 dpi"],
+      "manifest_sha256": "96a9cf2c3316f00c3a6f0637a0b68ed34e721fa7d802aca678e528e59a4197ac",
+      "author_visual_review": "PASS_AUTHOR_VISUAL_REVIEW",
+      "evidence": "solutions/Q2_V3_CAUSAL_FORECAST/others/figure_visual_review.json",
+      "independent_result": "Sampled final color and grayscale figures; candidate selection and sensitivity footer/axis layout are readable and separated.",
+      "sensitivity_png_sha256": "2c289acea37b42fb52966dec6e79cf3b0ce5e15d7ebac0034147a2f14098c719",
+      "sensitivity_pdf_sha256": "58f4f2ca7032d8458b3244acddf3ddad0ab74aee5d5f096ccaf1bbeaca6f2ab8"
+    }
+  },
+  "semantic_checks": {
+    "legacy_time_a_declared": true,
+    "q2_main_window_days": 334,
+    "q2_sensitivity_common_days": 333,
+    "sensitivity_not_new_natural_day_convention": true,
+    "footer_and_axis_labels_separated": true,
+    "grayscale_readability_sampled": true
+  },
+  "limitations": "This receipt is a delivery-figure acceptance only. It does not score the models, certify optimality, or authorize publication packaging."
+}

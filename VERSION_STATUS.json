@@ -19,7 +19,7 @@
   "final_delivery": {
     "release_id": "final-20260913-r1",
     "tag": "final-delivery-20260913-r1",
-    "status": "EXPORT_AND_ARCHIVE_P2_PENDING",
+    "status": "DELIVERY_P2_PASS",
     "index": "deliveries/final-20260913-r1/others/DELIVERY_INDEX.md",
     "manifest": "deliveries/final-20260913-r1/others/FILE_MANIFEST.json",
     "directories": ["solutions/Q1_BASELINE", "solutions/Q2_V3_CAUSAL_FORECAST", "solutions/Q3_V3_ALIGNED", "solutions/Q4_V1_ALIGNED"],
