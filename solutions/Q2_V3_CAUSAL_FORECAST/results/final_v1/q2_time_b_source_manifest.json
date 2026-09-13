@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "run_id": "q2v3-r2-full-b0-timeb-20260913-01",
+  "started_at": "2026-09-12T23:01:16.845855+00:00",
+  "git_commit": "17f25a508deaf7f9248ef18c3b498be12f5c083a",
+  "command": [
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/run_q2_v3.py",
+    "--run-id",
+    "q2v3-r2-full-b0-timeb-20260913-01",
+    "--output-root",
+    "runs/q2v3-r2-full-b0-timeb-20260913-01",
+    "--arm",
+    "B0",
+    "--start-day",
+    "0",
+    "--end-day",
+    "363",
+    "--report-start-day",
+    "31",
+    "--workers",
+    "8",
+    "--time-mapping",
+    "B"
+  ],
+  "source_hashes": {
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/run_q2_v3.py": "ae1b96c1d21fd592dd6d6ce9758d9506424a8799054661e45832eaa21acad4b6",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/q2_forecasts.py": "f468efeffa1024b84daa57c8d2ce62feb53c623b430b97fdb87d7b91c5ca772c",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/q2_model.py": "b56dff44c853aad4eee2e3801bc60de76d19550f60ef7ff3b0e614801755e66d",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/q2_deep_core.py": "c10e15a5bdccf545616b6c18f1fbf52592392d7fcb01cb853665869c81a1536f"
+  },
+  "input_hashes": {
+    "data/附件1.xlsx": "03cab394053650f26cfa0930e32693385acbd9045813ee8313581ef2247f31cd",
+    "data/附件2.xlsx": "c442c114af1348ae0f2586cc6b09ee43e7c75f2771e9c424651f775b3cb4d200",
+    "data/附件5/result2.xlsx": "17a84df513dcd8c8bf02e316df801ed01ea5d7cde4ce7f8498b3dbaad7632008"
+  },
+  "python": "3.11.15 (main, Jul 23 2026, 14:43:45) [Clang 22.1.3 ]",
+  "platform": "Linux-6.17.0-29-generic-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "openpyxl": "3.1.5"
+  },
+  "configuration": {
+    "run_id": "q2v3-r2-full-b0-timeb-20260913-01",
+    "forecast_arm": "B0",
+    "forecast_model_id": "Q2V2-SW2-REC5",
+    "hgb_parameters": {
+      "loss": "squared_error",
+      "learning_rate": 0.06,
+      "max_iter": 180,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 40,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 20260912
+    },
+    "trained_hgb_channels": [],
+    "start_day": 0,
+    "end_day": 363,
+    "report_start_day": 31,
+    "report_end_day": 363,
+    "initial_soc_kwh": 6000.0,
+    "time_mapping": "B",
+    "battery_interpretation": "A",
+    "observation_delay_slots": 0,
+    "battery_A_observation_contract": "within-interval continuous feedback represented by interval averages",
+    "scoring_mode": "A",
+    "selection_window_days": 28,
+    "scenario_count": 10,
+    "scenario_window_days": 60,
+    "terminal_lambda_yuan_per_kwh": 0.4684,
+    "default_candidate": "cvar_t0.90_r0.05_g0.00",
+    "candidate_grid": [
+      {
+        "candidate_id": "nocvar_g0.00",
+        "tau": null,
+        "rho": 0.0,
+        "gamma": 0.0
+      },
+      {
+        "candidate_id": "cvar_t0.90_r0.05_g0.00",
+        "tau": 0.9,
+        "rho": 0.05,
+        "gamma": 0.0
+      },
+      {
+        "candidate_id": "cvar_t0.90_r0.20_g0.00",
+        "tau": 0.9,
+        "rho": 0.2,
+        "gamma": 0.0
+      },
+      {
+        "candidate_id": "cvar_t0.95_r0.05_g0.00",
+        "tau": 0.95,
+        "rho": 0.05,
+        "gamma": 0.0
+      },
+      {
+        "candidate_id": "cvar_t0.95_r0.20_g0.00",
+        "tau": 0.95,
+        "rho": 0.2,
+        "gamma": 0.0
+      },
+      {
+        "candidate_id": "nocvar_g0.02",
+        "tau": null,
+        "rho": 0.0,
+        "gamma": 0.02
+      },
+      {
+        "candidate_id": "cvar_t0.90_r0.05_g0.02",
+        "tau": 0.9,
+        "rho": 0.05,
+        "gamma": 0.02
+      },
+      {
+        "candidate_id": "cvar_t0.90_r0.20_g0.02",
+        "tau": 0.9,
+        "rho": 0.2,
+        "gamma": 0.02
+      },
+      {
+        "candidate_id": "cvar_t0.95_r0.05_g0.02",
+        "tau": 0.95,
+        "rho": 0.05,
+        "gamma": 0.02
+      },
+      {
+        "candidate_id": "cvar_t0.95_r0.20_g0.02",
+        "tau": 0.95,
+        "rho": 0.2,
+        "gamma": 0.02
+      },
+      {
+        "candidate_id": "nocvar_g0.05",
+        "tau": null,
+        "rho": 0.0,
+        "gamma": 0.05
+      },
+      {
+        "candidate_id": "cvar_t0.90_r0.05_g0.05",
+        "tau": 0.9,
+        "rho": 0.05,
+        "gamma": 0.05
+      },
+      {
+        "candidate_id": "cvar_t0.90_r0.20_g0.05",
+        "tau": 0.9,
+        "rho": 0.2,
+        "gamma": 0.05
+      },
+      {
+        "candidate_id": "cvar_t0.95_r0.05_g0.05",
+        "tau": 0.95,
+        "rho": 0.05,
+        "gamma": 0.05
+      },
+      {
+        "candidate_id": "cvar_t0.95_r0.20_g0.05",
+        "tau": 0.95,
+        "rho": 0.2,
+        "gamma": 0.05
+      }
+    ],
+    "candidate_full_score_delay_days": 2,
+    "scenario_latest_complete_plan_day": "day_index - 2",
+    "compatibility_reset_on_report_start": false,
+    "workers": 8
+  },
+  "summary": {
+    "model": "ONLINE-RISK-SP-A-S10-TIMEB-BATA-OBS0-RESET0-Q2V2-SW2-REC5",
+    "days": 333,
+    "plan_cost_yuan": 12987834.61970979,
+    "emergency_cost_yuan": 956351.0144741235,
+    "total_cost_yuan": 13944185.634183913,
+    "total_cost_10k_yuan": 1394.4185634183914,
+    "grid_purchase_kwh": 20929493.925136305,
+    "emergency_kwh": 155770.44653870317,
+    "emergency_intervals": 863,
+    "emergency_days": 141,
+    "spill_kwh": 2052249.5348145938,
+    "charge_kwh": 6216897.50646145,
+    "discharge_kwh": 5034613.375551036,
+    "soc_min_kwh": 1200.0,
+    "soc_max_kwh": 10800.0,
+    "end_soc_kwh": 5004.940212506391,
+    "cross_day_soc_residual_kwh": 0.0,
+    "balance_residual_kwh": 1.1368683772161603e-13,
+    "soc_residual_kwh": 9.094947017729282e-13,
+    "simultaneous_actual_intervals": 0,
+    "solver_failures": 0,
+    "runtime_seconds": 171.3139742439962
+  },
+  "outputs": {
+    "config.json": "6d85d1e61c11d0327d8665a3ea140348091abe760f6c006153b22f1e5dbe36b7",
+    "daily_ledger.csv": "597d9e975ed9c4ee2534320023c7414918193c4619fb38945574fe4d39c60460",
+    "forecast_bundle.npz": "cce3ea91a643b68159b230c7d2c6cb6e4957bb3ae5fd6a57a4e15a53be86b434",
+    "forecast_fit_log.csv": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "interval_ledger.csv": "8124887defdba5718721ff541c5ddce30737a909d3eba187dd66e056755c847a",
+    "january_warmup_summary.json": "12af6515b011e54b1bb27905496db00b16a59148d7c91f904d8b086c835ff2aa",
+    "policy_arrays.npz": "fc15495ac2e5f663c4578a32a0d3772ae8bd261624cf4a8440d7039120434088",
+    "solve_diagnostics.csv": "687a220136c59b8f17a6476bdef9445fdbf266b73ddd086b05d5929a7ebfaba4",
+    "summary.json": "0d367c6fe6381a283dbd903217fd00af4429c420e96abb867ecbce01bf33f6ca"
+  },
+  "finished_at": "2026-09-12T23:04:10.250134+00:00",
+  "elapsed_seconds": 173.40433266299078
+}

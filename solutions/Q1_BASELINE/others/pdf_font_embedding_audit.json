@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "figures/raw_q1_01_inputs.pdf",
+      "status": "PASS",
+      "fonts": [
+        {
+          "resource": "/F1",
+          "root_type": "/Type0",
+          "descendant_type": "/CIDFontType2",
+          "base_font": "/CZQBTO+NotoSansSC-Thin",
+          "embedded_stream_bytes": {
+            "/FontFile2": 10132
+          }
+        }
+      ]
+    },
+    {
+      "path": "figures/raw_q1_02_net_load_distribution.pdf",
+      "status": "PASS",
+      "fonts": [
+        {
+          "resource": "/F1",
+          "root_type": "/Type0",
+          "descendant_type": "/CIDFontType2",
+          "base_font": "/FBSKDJ+NotoSansSC-Thin",
+          "embedded_stream_bytes": {
+            "/FontFile2": 6284
+          }
+        }
+      ]
+    },
+    {
+      "path": "figures/raw_q1_03_load_pv_relation.pdf",
+      "status": "PASS",
+      "fonts": [
+        {
+          "resource": "/F1",
+          "root_type": "/Type0",
+          "descendant_type": "/CIDFontType2",
+          "base_font": "/EGJLZN+NotoSansSC-Thin",
+          "embedded_stream_bytes": {
+            "/FontFile2": 5984
+          }
+        }
+      ]
+    },
+    {
+      "path": "figures/process_q1_01_residuals.pdf",
+      "status": "PASS",
+      "fonts": [
+        {
+          "resource": "/F1",
+          "root_type": "/Type0",
+          "descendant_type": "/CIDFontType2",
+          "base_font": "/FEMTKS+NotoSansSC-Thin",
+          "embedded_stream_bytes": {
+            "/FontFile2": 9564
+          }
+        }
+      ]
+    },
+    {
+      "path": "figures/process_q1_02_constraint_activity.pdf",
+      "status": "PASS",
+      "fonts": [
+        {
+          "resource": "/F1",
+          "root_type": "/Type0",
+          "descendant_type": "/CIDFontType2",
+          "base_font": "/CJTTCZ+NotoSansSC-Thin",
+          "embedded_stream_bytes": {
+            "/FontFile2": 11176
+          }
+        }
+      ]
+    },
+    {
+      "path": "figures/process_q1_03_block_flows.pdf",
+      "status": "PASS",
+      "fonts": [
+        {
+          "resource": "/F1",
+          "root_type": "/Type0",
+          "descendant_type": "/CIDFontType2",
+          "base_font": "/GLSTAA+NotoSansSC-Thin",
+          "embedded_stream_bytes": {
+            "/FontFile2": 9704
+          }
+        }
+      ]
+    },
+    {
+      "path": "figures/result_q1_01_dispatch.pdf",
+      "status": "PASS",
+      "fonts": [
+        {
+          "resource": "/F1",
+          "root_type": "/Type0",
+          "descendant_type": "/CIDFontType2",
+          "base_font": "/BPOWKY+NotoSansSC-Thin",
+          "embedded_stream_bytes": {
+            "/FontFile2": 10908
+          }
+        }
+      ]
+    },
+    {
+      "path": "figures/result_q1_02_soc.pdf",
+      "status": "PASS",
+      "fonts": [
+        {
+          "resource": "/F1",
+          "root_type": "/Type0",
+          "descendant_type": "/CIDFontType2",
+          "base_font": "/DGIMFV+NotoSansSC-Thin",
+          "embedded_stream_bytes": {
+            "/FontFile2": 9264
+          }
+        }
+      ]
+    },
+    {
+      "path": "figures/result_q1_03_cost.pdf",
+      "status": "PASS",
+      "fonts": [
+        {
+          "resource": "/F1",
+          "root_type": "/Type0",
+          "descendant_type": "/CIDFontType2",
+          "base_font": "/DDMOIW+NotoSansSC-Thin",
+          "embedded_stream_bytes": {
+            "/FontFile2": 11572
+          }
+        }
+      ]
+    }
+  ],
+  "method": "Inspect each Type0 DescendantFonts FontDescriptor and require nonempty embedded font streams."
+}

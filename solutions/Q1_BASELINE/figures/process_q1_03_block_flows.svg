@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4pt" height="259.2pt" viewBox="0 0 518.4 259.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-13T10:19:35.711389</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.2 
+L 518.4 259.2 
+L 518.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 41.443678 219.516323 
+L 515.39976 219.516323 
+L 515.39976 19.40139 
+L 41.443678 19.40139 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 62.987136 219.516323 
+L 91.412532 219.516323 
+L 91.412532 84.79172 
+L 62.987136 84.79172 
+z
+" clip-path="url(#p39116467c0)" style="fill: #56b4e9; stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 137.79081 219.516323 
+L 166.216207 219.516323 
+L 166.216207 194.567322 
+L 137.79081 194.567322 
+z
+" clip-path="url(#p39116467c0)" style="fill: #56b4e9; stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 212.594485 219.516323 
+L 241.019881 219.516323 
+L 241.019881 76.170414 
+L 212.594485 76.170414 
+z
+" clip-path="url(#p39116467c0)" style="fill: #56b4e9; stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 287.39816 219.516323 
+L 315.823556 219.516323 
+L 315.823556 61.258769 
+L 287.39816 61.258769 
+z
+" clip-path="url(#p39116467c0)" style="fill: #56b4e9; stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 362.201834 219.516323 
+L 390.627231 219.516323 
+L 390.627231 219.516323 
+L 362.201834 219.516323 
+z
+" clip-path="url(#p39116467c0)" style="fill: #56b4e9; stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 437.005509 219.516323 
+L 465.430905 219.516323 
+L 465.430905 59.842719 
+L 437.005509 59.842719 
+z
+" clip-path="url(#p39116467c0)" style="fill: #56b4e9; stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 91.412532 219.516323 
+L 119.837929 219.516323 
+L 119.837929 219.516323 
+L 91.412532 219.516323 
+z
+" clip-path="url(#p39116467c0)" style="fill: url(#hdff4fbe8c3); stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 166.216207 219.516323 
+L 194.641603 219.516323 
+L 194.641603 28.930672 
+L 166.216207 28.930672 
+z
+" clip-path="url(#p39116467c0)" style="fill: url(#hdff4fbe8c3); stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 241.019881 219.516323 
+L 269.445278 219.516323 
+L 269.445278 168.530635 
+L 241.019881 168.530635 
+z
+" clip-path="url(#p39116467c0)" style="fill: url(#hdff4fbe8c3); stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 315.823556 219.516323 
+L 344.248952 219.516323 
+L 344.248952 216.788856 
+L 315.823556 216.788856 
+z
+" clip-path="url(#p39116467c0)" style="fill: url(#hdff4fbe8c3); stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 390.627231 219.516323 
+L 419.052627 219.516323 
+L 419.052627 46.466107 
+L 390.627231 46.466107 
+z
+" clip-path="url(#p39116467c0)" style="fill: url(#hdff4fbe8c3); stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 465.430905 219.516323 
+L 493.856302 219.516323 
+L 493.856302 133.895301 
+L 465.430905 133.895301 
+z
+" clip-path="url(#p39116467c0)" style="fill: url(#hdff4fbe8c3); stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m1d34712316" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m1d34712316" x="91.412532" y="219.516323" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(81.420657 233.556322)">00:10</text>
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(81.420657 241.556322)">04:10</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m1d34712316" x="166.216207" y="219.516323" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(156.224332 233.556322)">04:10</text>
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(156.224332 241.556322)">08:10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m1d34712316" x="241.019881" y="219.516323" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(231.028006 233.556322)">08:10</text>
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(231.028006 241.556322)">12:10</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m1d34712316" x="315.823556" y="219.516323" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(305.831681 233.556322)">12:10</text>
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(305.831681 241.556322)">16:10</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m1d34712316" x="390.627231" y="219.516323" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(380.635356 233.556322)">16:10</text>
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(380.635356 241.556322)">20:10</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m1d34712316" x="465.430905" y="219.516323" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(455.43903 233.556322)">20:10</text>
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif" transform="translate(450.99903 241.556322)">00:10+1</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 9px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="278.421719" y="254.436322" transform="rotate(-0 278.421719 254.436322)">旧Time A连续四小时段 (起点 / 终点)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <defs>
+       <path id="m6168b86450" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m6168b86450" x="41.443678" y="219.516323" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="34.443678" y="223.036322" transform="rotate(-0 34.443678 223.036322)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m6168b86450" x="41.443678" y="189.577522" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="34.443678" y="193.097522" transform="rotate(-0 34.443678 193.097522)">1000</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m6168b86450" x="41.443678" y="159.638721" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="34.443678" y="163.158721" transform="rotate(-0 34.443678 163.158721)">2000</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m6168b86450" x="41.443678" y="129.699921" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="34.443678" y="133.219921" transform="rotate(-0 34.443678 133.219921)">3000</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m6168b86450" x="41.443678" y="99.76112" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="34.443678" y="103.28112" transform="rotate(-0 34.443678 103.28112)">4000</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m6168b86450" x="41.443678" y="69.822319" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="34.443678" y="73.342319" transform="rotate(-0 34.443678 73.342319)">5000</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m6168b86450" x="41.443678" y="39.883519" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="34.443678" y="43.403519" transform="rotate(-0 34.443678 43.403519)">6000</text>
+     </g>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 9px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="10.92024" y="119.458856" transform="rotate(-90 10.92024 119.458856)">组内总电量 (kWh)</text>
+    </g>
+   </g>
+   <g id="patch_15">
+    <path d="M 41.443678 219.516323 
+L 41.443678 19.40139 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 41.443678 219.516323 
+L 515.39976 219.516323 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="legend_1">
+    <g id="patch_17">
+     <path d="M 44.643678 13.24024 
+L 60.643678 13.24024 
+L 60.643678 7.64024 
+L 44.643678 7.64024 
+z
+" style="fill: #56b4e9; stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="67.043678" y="13.24024" transform="rotate(-0 67.043678 13.24024)">充电</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 99.043678 13.24024 
+L 115.043678 13.24024 
+L 115.043678 7.64024 
+L 99.043678 7.64024 
+z
+" style="fill: url(#hdff4fbe8c3); stroke: #333333; stroke-width: 0.3; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 8px; font-family: 'Noto Sans SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="121.443678" y="13.24024" transform="rotate(-0 121.443678 13.24024)">放电</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p39116467c0">
+   <rect x="41.443678" y="19.40139" width="473.956082" height="200.114933"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <pattern id="hdff4fbe8c3" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+   <rect x="0" y="0" width="73" height="73" fill="#d55e00"/>
+   <path d="M -36 36 
+L 36 -36 
+M -30 42 
+L 42 -30 
+M -24 48 
+L 48 -24 
+M -18 54 
+L 54 -18 
+M -12 60 
+L 60 -12 
+M -6 66 
+L 66 -6 
+M 0 72 
+L 72 0 
+M 6 78 
+L 78 6 
+M 12 84 
+L 84 12 
+M 18 90 
+L 90 18 
+M 24 96 
+L 96 24 
+M 30 102 
+L 102 30 
+M 36 108 
+L 108 36 
+" style="fill: #333333; stroke: #333333; stroke-width: 1.0; stroke-linecap: butt; stroke-linejoin: miter"/>
+  </pattern>
+ </defs>
+</svg>

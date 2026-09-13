@@ -1,7 +1,32 @@
 {
   "schema_version": 2,
   "frozen_at": "2026-09-13 Asia/Shanghai",
-  "authoritative_rule": "Only entries with formal_use=true may be described as released formal upstreams. The user-authorized Q3/Q4 joint workflow may use the explicitly provisional Q2 causal main run; see joint_iteration_override.",
+  "convention_update": {
+    "date": "2026-09-13",
+    "source": "explicit_user_confirmation",
+    "document": "solutions/EXPERT_REVIEW_R2/others/CONFIRMED_CONVENTIONS_v1.md",
+    "time": "INTERVAL_END_NATURAL_DAY_V1",
+    "downward_settlement": "CANCEL_ORIGINAL_CHARGE_THEN_PENALTY_50_V1",
+    "execution": "CONTRACT_SCHEDULED_STORAGE_CAUSAL_EMERGENCY_V1",
+    "adjustment_price_timestamp": "PENDING_DISCUSSION",
+    "repeated_revision_billing": "PENDING_DISCUSSION",
+    "purchase_template_label_conflict": "PENDING_EXPORT_CONTRACT",
+    "implementation_status": "CONVENTIONS_ONLY_NO_NEW_ANNUAL_RUN",
+    "prior_runs_conform_to_new_rules": false,
+    "prior_scores_scope": "historical_versions_and_old_rubric_only"
+  },
+  "authoritative_rule": "final_delivery identifies the user-selected handoff directories. Delivery completeness does not change formal_use or certify historical runs under new conventions.",
+  "final_delivery": {
+    "release_id": "final-20260913-r1",
+    "tag": "final-delivery-20260913-r1",
+    "status": "EXPORT_AND_ARCHIVE_P2_PENDING",
+    "index": "deliveries/final-20260913-r1/others/DELIVERY_INDEX.md",
+    "manifest": "deliveries/final-20260913-r1/others/FILE_MANIFEST.json",
+    "directories": ["solutions/Q1_BASELINE", "solutions/Q2_V3_CAUSAL_FORECAST", "solutions/Q3_V3_ALIGNED", "solutions/Q4_V1_ALIGNED"],
+    "model_rerun": false,
+    "new_conventions_implemented": false,
+    "q1_new_model_version_created": false
+  },
   "joint_iteration_override": {
     "authorized_on": "2026-09-13",
     "contract": "reports/q3_q4_joint_iteration_contract.md",
@@ -11,7 +36,7 @@
     "provisional_q2_run": "runs/q2v3-r2-full-b0-a-20260913-01",
     "provisional_q2_source_commit": "17f25a508deaf7f9248ef18c3b498be12f5c083a",
     "q2_p2_status": "DEFERRED_BY_USER",
-    "deferred_issue": "finalize_q2.py rejects declared RESET1 boundary as a continuity error; attempted fix did not apply",
+    "deferred_issue": "Historical model P2 deferred by user; RESET1 export-validator defect fixed during final delivery without rerunning the model",
     "minimum_score_per_question": 90,
     "status": "ROUND01_JOINT_CONTENT_PASS_WITH_LIMITATIONS",
     "scores": {"Q3": 94, "Q4": 91},
@@ -23,7 +48,7 @@
     "independent_p1": {"Q3": "PASS", "Q4": "PASS"},
     "integration_tests_passed": 104
   },
-  "current_gate": "Q3 94 / Q4 91: joint content gate passed; Q2 P2 deferred; formal_use=false",
+  "current_gate": "User stopped model optimization and selected four final directories. Completing missing exports, figures and archival evidence from existing runs; independent delivery P2 pending. New conventions remain unimplemented.",
   "questions": {
     "Q1": {
       "directory": "solutions/Q1_BASELINE",
@@ -32,9 +57,20 @@
       "reason": "Migrated path is repaired and isolated A/B reproductions pass; independent M1/P1/P2 refreeze gates remain."
     },
     "Q2": {
-      "directory": "solutions/Q2_V2_OFFICIAL_ONLINE_RISK",
-      "status": "PENDING_REPRODUCTION_IDENTITY_CONFLICT",
+      "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
+      "status": "ANNUAL_COMPLETE_DELIVERY_P2_PENDING",
       "formal_use": false,
+      "version": "Q2_V3_R2_DELIVERY_R1",
+      "run": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01",
+      "result2": "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/result2.xlsx",
+      "total_cost_yuan": 14012090.207768975,
+      "selected_forecast_arm": "B0",
+      "selected_forecast_model_id": "Q2V2-SW2-REC5",
+      "predictor_upgrade_adopted": false,
+      "reason": "Five completed annual runs archived and exported without reoptimization; this is the same provisional upstream used by Q3 v3 and Q4 v1.",
+      "historical_v2": {
+      "directory": "solutions/Q2_V2_OFFICIAL_ONLINE_RISK",
+      "status": "PENDING_REPRODUCTION_IDENTITY_CONFLICT_ARCHIVE_ONLY",
       "model_id": "ONLINE-RISK-SP-A-S10-BATA",
       "total_cost_yuan": 13808033.330642482,
       "battery_interpretation": "A",
@@ -47,11 +83,11 @@
         "q2_final_summary_actual_sha256": "FAF99CE8752AECEA399A0AA442EB1FA55A8D72C7BE7F595C51116FCEA018B2B0"
       },
       "reason": "V2_IDENTITY.json disagrees with two archived formal result files; January warm-up and strict interval timing are also unresolved."
-      ,
+      },
       "candidate_versions": {
         "V3": {
           "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
-          "status": "DEVELOPMENT_V2_PASS_FULL_RUN_ALLOWED",
+          "status": "ANNUAL_COMPLETE_DELIVERY_P2_PENDING",
           "formal_use": false,
           "m1_score": 97,
           "p1_score": 96,

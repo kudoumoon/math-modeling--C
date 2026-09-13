@@ -1,0 +1,15 @@
+{
+  "prediction_time": "midnight",
+  "intervals_per_model": 48096,
+  "model_rerun": false,
+  "selection_allowed": false,
+  "source_hashes": {
+    "data/\u9644\u4ef64.xlsx": "7774982ab98cd8989fc92439b2647cfdc09a254f62eb6220684e268362479064",
+    "data/\u9644\u4ef61.xlsx": "03cab394053650f26cfa0930e32693385acbd9045813ee8313581ef2247f31cd"
+  },
+  "limitations": [
+    "Prediction error does not establish dispatch savings.",
+    "Fixed-price comparator is diagnostic only; the frozen Q4 policy remains lag7.",
+    "July-December is retrospective, not an untouched validation set."
+  ]
+}

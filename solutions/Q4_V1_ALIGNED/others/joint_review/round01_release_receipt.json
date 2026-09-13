@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "round": 1,
+  "date": "2026-09-13",
+  "status": "JOINT_CONTENT_PASS_WITH_LIMITATIONS",
+  "source_commit": "3f9e6730414af5dc83211b8b655c278a5594f59f",
+  "tags": {"Q3": "q3-v3-r1", "Q4": "q4-v1-r1"},
+  "scores": {"Q3": 94, "Q4": 91},
+  "reviewer": {"name": "Maxwell", "agent_id": "01a097e8-8820-7672-973f-8e5d64e36ba4"},
+  "content_hard_blockers": [],
+  "content_iteration_stop_condition_met": true,
+  "formal_use": false,
+  "q2_p2": "DEFERRED_BY_USER",
+  "dependency": "solutions/Q3_Q4_JOINT/results/q2_provisional",
+  "annual_execution_order": ["Q3", "Q4"],
+  "duplicate_annual_reproduction": false,
+  "integration_tests_passed": 104,
+  "cash_saving_yuan": {"Q3_vs_frozen_Q2": 479766.725531177, "Q4_3_A_vs_Q4_2": 485190.7245173065},
+  "artifacts_sha256": {
+    "solutions/Q3_Q4_JOINT/others/round01_final_independent_review.json": "a8ac302b06ef3e13fb2e8593bb63b71351d900d31a5225cdcf24cd392f3a56ba",
+    "solutions/Q3_Q4_JOINT/others/round01_final_independent_review.md": "de48d980290dfba4ebc51b8e147c450760dd971d96f7e63b99368ce0ed672e3e",
+    "solutions/Q3_V3_ALIGNED/results/q3v3-r1/manifest.json": "2fde03a69ecceade2547666f232369a3cfc93297456001e8ffb47747bf9f92a2",
+    "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/manifest.json": "b8631a5c30315928461e7dfccd97e497a13dd5d3f79c74ac8e0dcf7041a57c54",
+    "solutions/Q3_V3_ALIGNED/results/q3v3-r1/A/result3.xlsx": "f27d75ffe0ac30a7b4bdc0a789f162d03879993dd8f30d651dda38930dd9a686",
+    "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/result4-2.xlsx": "23791e22159be3a2c428fd0d0da12f6260c6e5daa99cd279d9f23def13aa1fc8",
+    "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/result4-3.xlsx": "c8482c4d78391c8878724dac57030d7399659f04257e69dd0c509dc53683251e"
+  },
+  "raw_run_manifests_unchanged": true,
+  "historical_review_fields": "Raw run NOT_REVIEWED fields record execution-time state; this receipt and independent review provide the subsequent content decision.",
+  "limitations": [
+    "Internal rubric score, not official contest grading or award probability.",
+    "Time B and one-slot measurement-delay sensitivities not completed.",
+    "Q4 alternative transaction-time pricing interpretation not validated.",
+    "Rejected candidate contracts and full Q4 historical candidate cash not retained.",
+    "Q3 fixes original Q2 contracts; no midnight official PV reoptimization claim.",
+    "Q4 comparison measures the entire added-information policy, not isolated adjustment or price-predictor value.",
+    "July-December evidence is retrospective; bootstrap does not eliminate selection bias.",
+    "Optional parallel wrapper was not used in the annual run and did not contribute to scores."
+  ]
+}

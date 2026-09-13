@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "files": {
+    "DELIVERY.md": "82cf9dc8cbde6a231b27eaeb92beb02d48feec30245dbc3c15b34f287d4a5990",
+    "Q1_baseline论文报告.md": "af8935db6ddfb77501c18ce8054d8bb50c41cacd7813fd493dad4be50150a0c1",
+    "REPOSITORY_STATUS.md": "6749b3aa6530cbf09b7af32dde33c0ff4fe98346b0281fd4a1fb697b675c6d2e",
+    "program/q1_reproduce_v2.py": "5350abc3851fb491d45aaddf29e1db5755c288e62b42ffd3dc3aea36543219ac",
+    "result/q1_dispatch.csv": "f7218430d3089e0d6b4e0b30f98ec9f7f7c6d432d574d5c34f2b01e73ac4ad0f",
+    "result/q1_four_hour_blocks.csv": "341ed51b6a9531876e274025a4ca027e143740667d9110bcba8bc9f190a8406a",
+    "result/q1_input_manifest.json": "7410a3f37dd6037600d67522e9f1e2b44a99d21514a24af9702e3f85711cb44b",
+    "result/q1_specified_intervals.csv": "d2a0085491ab53a791467105632e868696b30f1e3a072eb388d14996b8dbf41c",
+    "result/q1_summary.json": "8ba4fb6d352c92360b0d3186941b084f2cd350cef4d3f12a14a018d163ecb1e7",
+    "result/q1_time_mapping.csv": "751fcf7ec213818f6dae087ba8742642b835f5949e26a63b1d342bd27672cc97",
+    "result/result1_v2.xlsx": "31ce14097c9e3abba818dbafa9a07ce82741d7a921f1feb73fd5bf1557da1105",
+    "result/历史副本/result1_v2_根目录副本_仅元数据不同.xlsx": "d2a654f6a2f41354bbe8aedf391b0c4527b2111205aff9b0441d70ee90c564f3",
+    "result/复现清单.json": "3b17bd8844a28be5a57110e3ee2bbad95be83736c71c40a5f3c9408d4b102328",
+    "交付清单.md": "946474235c4297901619614be6b4500794843be1cc043ce1ebc3829da9c7dbe3"
+  }
+}

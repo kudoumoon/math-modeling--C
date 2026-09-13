@@ -1,0 +1,60 @@
+{
+  "status": "PASS_AUTHOR_VISUAL_REVIEW",
+  "review_date": "2026-09-13",
+  "scope": "Q2 delivery_r1 figures only; independent review remains assigned to another agent",
+  "logical_figures": 9,
+  "category_counts": {"raw": 3, "process": 3, "result": 3},
+  "primary_exports": 36,
+  "primary_formats": ["PNG 300 dpi", "SVG", "PDF", "grayscale PNG 300 dpi"],
+  "model_execution": false,
+  "training": false,
+  "annual_replay": false,
+  "inspection_method": "Inspected all nine color previews, revisited corrected scatter/risk/sensitivity figures, and inspected final grayscale sheets covering all nine figures.",
+  "checks": {
+    "glyphs_and_units_readable": true,
+    "axes_and_footnotes_not_clipped": true,
+    "scatter_legend_outside_observations": true,
+    "footer_does_not_overlap_axis_labels": true,
+    "axes_and_colorbars_separated": true,
+    "grayscale_series_distinguishable_by_markers_lines_hatches": true,
+    "all_observations_retained_in_declared_windows": true,
+    "B0_and_old_TimeA_scope_declared": true,
+    "sensitivity_uses_common_333_days": true,
+    "TimeB_not_relabelled_as_natural_day": true,
+    "all_file_audits_have_zero_warnings_or_failures": true,
+    "source_inputs_unchanged": true
+  },
+  "corrections": [
+    "Unified bottom margin increased from 0.17 to 0.23 of canvas height; double-line sensitivity x-axis labels retained in full.",
+    "Added explicit footer-versus-x-axis-label/tick bounding-box audit, requiring at least 4 points separation; original skill did not check this overlap.",
+    "Moved raw load/PV scatter legend above the data and used calendar-quarter marker redundancy.",
+    "Candidate trace now labels February through December without a misleading January 2026 tick.",
+    "Corrected portable file checker to follow Type0 PDF descendant font descriptors; embedded TrueType fonts now pass without suppressing warnings.",
+    "MAIN_RUN now points to version-local results/annual_runs; normal generation and portable redraw do not require root runs."
+  ],
+  "minimum_footer_gap_points": {
+    "raw_q2_01_daily_energy": 16.018,
+    "raw_q2_02_diurnal_tariff": 28.654,
+    "raw_q2_03_load_pv_relation": 16.018,
+    "process_q2_01_executed_soc": 30.058,
+    "process_q2_02_candidate_selection": 32.866,
+    "process_q2_03_emergency_distribution": 18.826,
+    "result_q2_01_monthly_cash": 16.018,
+    "result_q2_02_monthly_risk": 24.467,
+    "result_q2_03_common333_sensitivity": 7.461
+  },
+  "final_program_sha256": "c0e57308cb863fbaee808b607f5dc7ca8be29acf396d084fe38202e21ab98040",
+  "corrected_sensitivity_sha256": {
+    "png": "2c289acea37b42fb52966dec6e79cf3b0ce5e15d7ebac0034147a2f14098c719",
+    "svg": "1095f3275543386c301a714c1320a2354b767aa1b5317a392b57f6f0465537f3",
+    "pdf": "58f4f2ca7032d8458b3244acddf3ddad0ab74aee5d5f096ccaf1bbeaca6f2ab8"
+  },
+  "evidence": [
+    "figures/delivery_r1/previews/",
+    "others/figure_contracts.json",
+    "others/figure_eda.json",
+    "others/figure_delivery_manifest.json",
+    "results/figure_data/figure_source_manifest.json"
+  ],
+  "independent_review": "PENDING_OTHER_AGENT"
+}

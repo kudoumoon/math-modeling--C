@@ -4,7 +4,11 @@
   "version": "V3",
   "directory": "solutions/Q2_V3_CAUSAL_FORECAST",
   "revision": 2,
-  "status": "DEVELOPMENT_V2_PASS_FULL_RUN_ALLOWED",
+  "status": "ANNUAL_COMPLETE_DELIVERY_P2_PENDING",
+  "delivery_revision": 1,
+  "delivery_result": "results/final_v1/result2.xlsx",
+  "model_rerun_for_delivery": false,
+  "new_conventions_implemented": false,
   "formal_use": false,
   "m1": {
     "status": "PASS",

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "PROVISIONAL_USER_AUTHORIZED_Q2_P2_DEFERRED",
+  "formal_use": false,
+  "source_run": "runs/q2v3-r2-full-b0-a-20260913-01",
+  "source_commit": "17f25a508deaf7f9248ef18c3b498be12f5c083a",
+  "portable_directory": "solutions/Q3_Q4_JOINT/results/q2_provisional",
+  "files": {
+    "config.json": "ea5665d3444560e6edc2cf5885d73117dfad1fc5263f30c065f41e95891c018c",
+    "daily_ledger.csv": "c39ad945d1b3dc7171091c7769532dcf1a8aca3264751874e4c1ae09110610cc",
+    "forecast_bundle.npz": "cce3ea91a643b68159b230c7d2c6cb6e4957bb3ae5fd6a57a4e15a53be86b434",
+    "forecast_fit_log.csv": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "interval_ledger.csv": "f6e7303bbd0699437e3cc2ab54da63bfa6e58747d28865522de557fd5f8f3725",
+    "january_warmup_summary.json": "edf41464a4480780e82047fcc7a9944b7fd2de04def409220e91ae1fedc9f6dc",
+    "policy_arrays.npz": "90e033a193b7acbc2395e2e53cc1e4a8eb2a4277f72fb822be7e9b618b8b6047",
+    "solve_diagnostics.csv": "042bcbf5032739814216a33ca9409a38ec01f4b65dc8b07e851f6cf2d7bcb7a8",
+    "summary.json": "8d7b3dcd2f01d0f807a083db5cb8477dbe6265befb95943a0ab41f666cb4dae4",
+    "manifest.json": "d3b7453440b36ed32785ef5108a3b908634fa460472826ecfdf84d78f7463728"
+  },
+  "model_rerun": false,
+  "authorization": "reports/q3_q4_joint_iteration_contract.md",
+  "deferred_issue": "Q2 RESET1 finalizer boundary audit; main run is RESET0"
+}

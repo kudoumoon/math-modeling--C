@@ -1,0 +1,23 @@
+{
+  "status": "bounded_equivalence_passed",
+  "used_for_round01_annual": false,
+  "evidence_origin": "Raw output supplied by implementation agent Ohm; parent reviewed source; no repeat benchmark",
+  "days": [
+    {"day_index": 78, "serial": 3.488972779014148, "parallel": 3.793700790964067},
+    {"day_index": 79, "parallel": 1.115170714969281, "serial": 2.450056188972667},
+    {"day_index": 80, "serial": 2.1729773879633285, "parallel": 1.1118078989675269}
+  ],
+  "workers": 2,
+  "candidate_count": 15,
+  "scenario_count": 10,
+  "max_grid_difference_kwh": 0.0,
+  "selected_ids": ["cvar_t0.90_r0.05_g0.00", "cvar_t0.90_r0.05_g0.00", "cvar_t0.90_r0.20_g0.00"],
+  "serial_seconds": 8.112006355950143,
+  "parallel_seconds_including_spawn": 6.020679404900875,
+  "speedup_including_spawn": 1.3473573014611795,
+  "steady_day_speedup": 2.0759218557395527,
+  "active_sources_unchanged": true,
+  "annual_run": false,
+  "tests": {"passed": 3, "failed": 0, "elapsed_seconds": 1.12},
+  "qualification": "Candidate-planning timings on a shared machine; 6000 kWh diagnostic start with initially empty candidate history. Not a whole-pipeline or annual speed guarantee."
+}

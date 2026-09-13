@@ -1,0 +1,237 @@
+{
+  "style": {
+    "journal": "general",
+    "lang": "zh",
+    "sciplots_used": false,
+    "cjk_font": "Noto Sans SC",
+    "constrained_layout": true,
+    "font_sha256": "692acb21c44f84eb0db7c160986b5cd5207ef2527284ef89a34de59ec13d3a56"
+  },
+  "figures": [
+    {
+      "id": "raw_q1_01_inputs",
+      "category": "raw",
+      "question": "q1",
+      "title": "输入时序及电价",
+      "chart_type": "step",
+      "central_claim": "负荷、光伏与电价的时序关系",
+      "evidence_chain": "上下两面板分别展示功率和电价，避免双纵轴造成视觉假相关。",
+      "layout": "quantitative grid",
+      "backend": "Python/matplotlib",
+      "size_inches": [
+        7.2,
+        4.8
+      ],
+      "dpi": 300,
+      "export_formats": [
+        "png",
+        "pdf",
+        "svg"
+      ],
+      "editable_svg_text": true,
+      "source_csv": "results/figure_data/raw_q1_01_inputs.csv",
+      "statistical_scope": "单个确定性序列，不作统计推断；无误差棒、置信区间或显著性检验。",
+      "time_scope": "旧Time A：当天00:10至次日00:10；不代表新自然日口径。"
+    },
+    {
+      "id": "raw_q1_02_net_load_distribution",
+      "category": "raw",
+      "question": "q1",
+      "title": "净负荷分布",
+      "chart_type": "histogram",
+      "central_claim": "净负荷的符号和取值分布",
+      "evidence_chain": "144个相邻时段的净负荷直方图，频数之和为144；不是独立重复试验。",
+      "layout": "single quantitative panel",
+      "backend": "Python/matplotlib",
+      "size_inches": [
+        7.2,
+        3.6
+      ],
+      "dpi": 300,
+      "export_formats": [
+        "png",
+        "pdf",
+        "svg"
+      ],
+      "editable_svg_text": true,
+      "source_csv": "results/figure_data/raw_q1_02_net_load_distribution.csv",
+      "statistical_scope": "单个确定性序列，不作统计推断；无误差棒、置信区间或显著性检验。",
+      "time_scope": "旧Time A：当天00:10至次日00:10；不代表新自然日口径。"
+    },
+    {
+      "id": "raw_q1_03_load_pv_relation",
+      "category": "raw",
+      "question": "q1",
+      "title": "负荷与光伏匹配",
+      "chart_type": "scatter",
+      "central_claim": "光伏对同期负荷的覆盖关系",
+      "evidence_chain": "每点对应一个时段，虚线为光伏等于负荷；不拟合回归或作因果解释。",
+      "layout": "single quantitative panel",
+      "backend": "Python/matplotlib",
+      "size_inches": [
+        7.2,
+        3.6
+      ],
+      "dpi": 300,
+      "export_formats": [
+        "png",
+        "pdf",
+        "svg"
+      ],
+      "editable_svg_text": true,
+      "source_csv": "results/figure_data/raw_q1_03_load_pv_relation.csv",
+      "statistical_scope": "单个确定性序列，不作统计推断；无误差棒、置信区间或显著性检验。",
+      "time_scope": "旧Time A：当天00:10至次日00:10；不代表新自然日口径。"
+    },
+    {
+      "id": "process_q1_01_residuals",
+      "category": "process",
+      "question": "q1",
+      "title": "守恒与状态残差",
+      "chart_type": "line",
+      "central_claim": "现有账本的能量守恒与状态递推一致性",
+      "evidence_chain": "重算残差按10^-12 kWh缩放展示，验收容差为10^-5 kWh，未画入坐标范围；不是收敛轨迹。",
+      "layout": "single quantitative panel",
+      "backend": "Python/matplotlib",
+      "size_inches": [
+        7.2,
+        3.6
+      ],
+      "dpi": 300,
+      "export_formats": [
+        "png",
+        "pdf",
+        "svg"
+      ],
+      "editable_svg_text": true,
+      "source_csv": "results/figure_data/process_q1_01_residuals.csv",
+      "statistical_scope": "单个确定性序列，不作统计推断；无误差棒、置信区间或显著性检验。",
+      "time_scope": "旧Time A：当天00:10至次日00:10；不代表新自然日口径。"
+    },
+    {
+      "id": "process_q1_02_constraint_activity",
+      "category": "process",
+      "question": "q1",
+      "title": "约束触界位置",
+      "chart_type": "heatmap",
+      "central_claim": "容量和功率边界的约束活跃时段",
+      "evidence_chain": "使用绝对容差10^-5 kWh判断触界，容量行表示时段起点状态；最终状态另在SOC图展示。",
+      "layout": "single quantitative panel",
+      "backend": "Python/matplotlib",
+      "size_inches": [
+        7.2,
+        3.6
+      ],
+      "dpi": 300,
+      "export_formats": [
+        "png",
+        "pdf",
+        "svg"
+      ],
+      "editable_svg_text": true,
+      "source_csv": "results/figure_data/process_q1_02_constraint_activity.csv",
+      "statistical_scope": "单个确定性序列，不作统计推断；无误差棒、置信区间或显著性检验。",
+      "time_scope": "旧Time A：当天00:10至次日00:10；不代表新自然日口径。"
+    },
+    {
+      "id": "process_q1_03_block_flows",
+      "category": "process",
+      "question": "q1",
+      "title": "四小时充放电汇总",
+      "chart_type": "grouped_bar",
+      "central_claim": "连续四小时段内的充放电转移",
+      "evidence_chain": "每组为连续24段的总电量，不是样本均值；横轴使用旧Time A实际序列边界。",
+      "layout": "single quantitative panel",
+      "backend": "Python/matplotlib",
+      "size_inches": [
+        7.2,
+        3.6
+      ],
+      "dpi": 300,
+      "export_formats": [
+        "png",
+        "pdf",
+        "svg"
+      ],
+      "editable_svg_text": true,
+      "source_csv": "results/figure_data/process_q1_03_block_flows.csv",
+      "statistical_scope": "单个确定性序列，不作统计推断；无误差棒、置信区间或显著性检验。",
+      "time_scope": "旧Time A：当天00:10至次日00:10；不代表新自然日口径。"
+    },
+    {
+      "id": "result_q1_01_dispatch",
+      "category": "result",
+      "question": "q1",
+      "title": "购电与储能调度",
+      "chart_type": "step",
+      "central_claim": "购电与储能动作共同满足净负荷",
+      "evidence_chain": "上图为购电和净负荷，下图充电为正、放电为负；电量除以1/6 h得到区间平均功率。",
+      "layout": "quantitative grid",
+      "backend": "Python/matplotlib",
+      "size_inches": [
+        7.2,
+        4.8
+      ],
+      "dpi": 300,
+      "export_formats": [
+        "png",
+        "pdf",
+        "svg"
+      ],
+      "editable_svg_text": true,
+      "source_csv": "results/figure_data/result_q1_01_dispatch.csv",
+      "statistical_scope": "单个确定性序列，不作统计推断；无误差棒、置信区间或显著性检验。",
+      "time_scope": "旧Time A：当天00:10至次日00:10；不代表新自然日口径。"
+    },
+    {
+      "id": "result_q1_02_soc",
+      "category": "result",
+      "question": "q1",
+      "title": "储能状态轨迹",
+      "chart_type": "line",
+      "central_claim": "储能状态满足容量边界和序列闭环",
+      "evidence_chain": "145个边界状态；SOC按12000 kWh额定容量计算；首末均为50%。折线只连接边界值。",
+      "layout": "single quantitative panel",
+      "backend": "Python/matplotlib",
+      "size_inches": [
+        7.2,
+        3.6
+      ],
+      "dpi": 300,
+      "export_formats": [
+        "png",
+        "pdf",
+        "svg"
+      ],
+      "editable_svg_text": true,
+      "source_csv": "results/figure_data/result_q1_02_soc.csv",
+      "statistical_scope": "单个确定性序列，不作统计推断；无误差棒、置信区间或显著性检验。",
+      "time_scope": "旧Time A：当天00:10至次日00:10；不代表新自然日口径。"
+    },
+    {
+      "id": "result_q1_03_cost",
+      "category": "result",
+      "question": "q1",
+      "title": "购电费用对比",
+      "chart_type": "bar",
+      "central_claim": "现有储能方案降低该实例的购电费用",
+      "evidence_chain": "两个确定性单序列总费用；无储能参照为sum(p*max(load-PV,0)/6)，不调用优化器。",
+      "layout": "single quantitative panel",
+      "backend": "Python/matplotlib",
+      "size_inches": [
+        7.2,
+        3.6
+      ],
+      "dpi": 300,
+      "export_formats": [
+        "png",
+        "pdf",
+        "svg"
+      ],
+      "editable_svg_text": true,
+      "source_csv": "results/figure_data/result_q1_03_cost.csv",
+      "statistical_scope": "单个确定性序列，不作统计推断；无误差棒、置信区间或显著性检验。",
+      "time_scope": "旧Time A：当天00:10至次日00:10；不代表新自然日口径。"
+    }
+  ]
+}

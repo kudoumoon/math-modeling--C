@@ -1,0 +1,118 @@
+{
+  "ok": true,
+  "directory": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures",
+  "questions": [
+    "q1"
+  ],
+  "files": {
+    "process_q1_01_residuals.png": {
+      "width_px": 2160,
+      "height_px": 1080,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 3.6000072000144003
+    },
+    "process_q1_01_residuals.svg": {
+      "text_count": 20,
+      "embedded_raster": false
+    },
+    "process_q1_02_constraint_activity.png": {
+      "width_px": 2160,
+      "height_px": 1080,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 3.6000072000144003
+    },
+    "process_q1_02_constraint_activity.svg": {
+      "text_count": 15,
+      "embedded_raster": false
+    },
+    "process_q1_03_block_flows.png": {
+      "width_px": 2160,
+      "height_px": 1080,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 3.6000072000144003
+    },
+    "process_q1_03_block_flows.svg": {
+      "text_count": 23,
+      "embedded_raster": false
+    },
+    "raw_q1_01_inputs.png": {
+      "width_px": 2160,
+      "height_px": 1440,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.800009600019201
+    },
+    "raw_q1_01_inputs.svg": {
+      "text_count": 24,
+      "embedded_raster": false
+    },
+    "raw_q1_02_net_load_distribution.png": {
+      "width_px": 2160,
+      "height_px": 1080,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 3.6000072000144003
+    },
+    "raw_q1_02_net_load_distribution.svg": {
+      "text_count": 17,
+      "embedded_raster": false
+    },
+    "raw_q1_03_load_pv_relation.png": {
+      "width_px": 2160,
+      "height_px": 1080,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 3.6000072000144003
+    },
+    "raw_q1_03_load_pv_relation.svg": {
+      "text_count": 21,
+      "embedded_raster": false
+    },
+    "result_q1_01_dispatch.png": {
+      "width_px": 2160,
+      "height_px": 1440,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 4.800009600019201
+    },
+    "result_q1_01_dispatch.svg": {
+      "text_count": 27,
+      "embedded_raster": false
+    },
+    "result_q1_02_soc.png": {
+      "width_px": 2160,
+      "height_px": 1080,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 3.6000072000144003
+    },
+    "result_q1_02_soc.svg": {
+      "text_count": 18,
+      "embedded_raster": false
+    },
+    "result_q1_03_cost.png": {
+      "width_px": 2160,
+      "height_px": 1080,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 7.200014400028801,
+      "height_in": 3.6000072000144003
+    },
+    "result_q1_03_cost.svg": {
+      "text_count": 13,
+      "embedded_raster": false
+    }
+  },
+  "issues": []
+}

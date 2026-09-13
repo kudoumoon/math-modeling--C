@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "gate": "P2_DELIVERY_DATA_EXPORT",
+  "reviewer_role": "independent_read_only_delivery_reviewer",
+  "reviewer_authored_reviewed_outputs": false,
+  "reviewed_at": "2026-09-13T10:27:17+08:00",
+  "status": "PASS",
+  "overall_q2_p2_status": "DATA_EXPORT_PASS_VISUAL_P2_PENDING",
+  "formal_use_must_remain_false": true,
+  "hard_blockers": [],
+  "scope": {
+    "included": [
+      "full cell-level readback of result2.xlsx",
+      "release source, Git blob, template and output SHA-256 verification",
+      "byte-for-byte comparison of five annual and four development archives with original runs",
+      "independent main-cost reconstruction",
+      "independent natural-clock bridge, storage-block and emergency-event reconstruction",
+      "proof that natural-clock projection does not alter the archived Time A main purchase plan"
+    ],
+    "excluded": [
+      "solver or LP execution",
+      "annual or development model reruns",
+      "figure and visual-quality P2 review"
+    ]
+  },
+  "input_snapshot": {
+    "release_commit": "6c6a18114eee3e810ffa2f4fa9da0ae817e85254",
+    "annual_run_commit": "17f25a508deaf7f9248ef18c3b498be12f5c083a",
+    "development_run_commit": "f5f8c1b92e56f2e63649f14d5649c56bf5144b4d",
+    "release_manifest_sha256": "2f88f58334a422a62398732ddb28ff0a3883e01c280ae7611e00ab523e6265ab",
+    "result2_xlsx_sha256": "eb575abe88e9de5c0e579cff15e35307709abd3d86d98228a433e4da7836eee9",
+    "finalize_q2_sha256": "a3ec78fcb35cf2f835c5b22bd99efbc4d38be4df9689e2b9c20ef2f6be410d59",
+    "release_tree_sha256": "cb08b9c30c658612fbec78eea2626c24979029b8ef8f8236edba6014cb37756a",
+    "release_tree_hash_algorithm": "sha256(sorted(relative_path NUL file_sha256 NUL))"
+  },
+  "checks": {
+    "release_files": {
+      "passed": true,
+      "actual_files": 40,
+      "manifest_hashed_outputs": 39,
+      "matched_output_hashes": 39
+    },
+    "release_sources": {
+      "passed": true,
+      "live_and_release_git_blob_hashes_matched": 6,
+      "executed_core_snapshots_matched_run_commit_and_live_files": 4,
+      "template_hash_matched": true
+    },
+    "run_archives": {
+      "passed": true,
+      "annual_runs": 5,
+      "development_runs": 4,
+      "files_compared_byte_for_byte": 90,
+      "mismatches": 0,
+      "run_manifests_with_valid_internal_source_input_output_hashes": 9,
+      "annual_cohort_single_commit": true,
+      "development_cohort_single_commit": true
+    },
+    "workbook_readback": {
+      "passed": true,
+      "sheet_names": [
+        "计划购电量",
+        "充放电量",
+        "紧急购电量"
+      ],
+      "plan_shape": [335, 147],
+      "plan_data_rows": 334,
+      "storage_shape": [2005, 6],
+      "storage_data_rows": 2004,
+      "emergency_shape": [264, 3],
+      "emergency_data_rows": 263,
+      "max_plan_value_difference_kwh": 4.547473508864641e-13,
+      "max_plan_total_difference_kwh": 4.3655745685100555e-11,
+      "max_plan_cost_difference_yuan": 2.1827872842550278e-11,
+      "max_storage_charge_difference_kwh": 5.4569682106375694e-12,
+      "max_storage_discharge_difference_kwh": 1.8189894035458565e-12,
+      "max_storage_soc_difference_kwh": 3.637978807091713e-12,
+      "excel_error_cells": 0,
+      "formula_cells": 0
+    },
+    "main_cost": {
+      "passed": true,
+      "plan_cost_yuan": 13049716.087816667,
+      "emergency_cost_yuan": 962374.1199523073,
+      "total_cost_yuan": 14012090.207768975,
+      "difference_from_frozen_total_yuan": 0.0,
+      "emergency_price_multiplier": 5.0
+    },
+    "window_projection": {
+      "passed": true,
+      "plan_window": "2025-02-01 00:10:00 to 2026-01-01 00:10:00",
+      "natural_window": "2025-02-01 00:00:00 to 2026-01-01 00:00:00",
+      "natural_rows": 48096,
+      "natural_events": 263,
+      "natural_active_emergency_intervals": 860,
+      "natural_emergency_kwh": 156793.1270333883,
+      "max_bridge_value_difference_kwh": 1.8189894035458565e-12,
+      "max_bridge_soc_continuity_difference_kwh": 0.0,
+      "main_interval_ledger_byte_identical_to_archive": true,
+      "main_policy_arrays_byte_identical_to_archive": true,
+      "workbook_plan_grid_sum_matches_main_ledger": true,
+      "workbook_plan_cost_matches_main_ledger": true,
+      "natural_and_plan_storage_windows_are_distinct": true
+    }
+  },
+  "archive_tree_hashes": {
+    "q2v3-r2-full-b0-a-20260913-01": "a28102b306412f7b9bd5dbf78d3be267b8244927a1eba34aee02a629b66dda64",
+    "q2v3-r2-full-b0-batb-20260913-01": "8e1c138e14367bfcb0122386de415444dea3b8c27645964854c0ec8ae3a1457a",
+    "q2v3-r2-full-b0-timeb-20260913-01": "0efe1d482f40c182597efc0076c0ed1798c04a1df53db696078b5db77f70f244",
+    "q2v3-r2-full-b0-delay1-20260913-01": "64b33afff8b0200e8e868ce343444fa4882100d83a54c63556868733e4258da1",
+    "q2v3-r2-full-b0-resetfeb-20260913-01": "93a1d6b929e8821e5f52cddb0eefa3156ec61aa3145b5e3c72035e58d585eb83",
+    "q2v3-r2-dev-abl-l-20260913-01": "1fe899385639e175697a2f3733d812e8e12ce7c091c4d308396aab04db8155bc",
+    "q2v3-r2-dev-abl-pv-20260913-01": "d2a4cc00f81f19f5dcc1ec7a0c3a57075a4a0a7d1d0ade0e979d113c751b7f0a",
+    "q2v3-r2-dev-b0-20260913-01": "4612abfadadd83dff841cd60afdc7c6ef83f4562aa974fe77e5bac9d3d1642de",
+    "q2v3-r2-dev-b1-20260913-01": "3961d0bcb74480d2b204076f967d4ca1e0acf8ce25e8c856af2819136f4c13b3"
+  },
+  "findings": {
+    "P0": [],
+    "P1": [],
+    "P2": [
+      "A future release manifest may directly index the nine archive tree hashes and state the separate annual/development source commits; this receipt supplies both without blocking the frozen release."
+    ]
+  },
+  "rework": [],
+  "decision": "The frozen Q2 data/export deliverable passes independent P2 review. Keep formal_use=false and do not claim complete Q2 P2 until the separate visual receipt passes."
+}

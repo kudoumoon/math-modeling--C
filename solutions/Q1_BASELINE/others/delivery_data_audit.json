@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "Delivery consistency and physical feasibility, no optimization",
+  "time_convention": "LEGACY_TIME_A_00:10_TO_NEXT_00:10",
+  "metrics": {
+    "purchase_cost_yuan": 35126.948589289634,
+    "no_storage_cost_yuan": 48052.04659084666,
+    "saving_yuan": 12925.098001557024,
+    "saving_fraction": 0.2689812176287014,
+    "purchase_kwh": 59482.69899835391,
+    "total_charge_kwh": 20740.66613168725,
+    "total_discharge_kwh": 16799.939566666668,
+    "battery_loss_kwh": 3940.726565020581,
+    "max_balance_residual_kwh": 2.2737367544323206e-13,
+    "max_state_residual_kwh": 8.313350008393172e-13,
+    "soc_min_percent": 10.0,
+    "soc_max_percent": 90.0,
+    "initial_energy_kwh": 6000.0,
+    "final_energy_kwh": 6000.0,
+    "simultaneous_charge_discharge_steps": 0,
+    "first_interval": "00:10-00:20",
+    "last_interval": "00:00+1-00:10+1",
+    "interval_count": 144,
+    "state_count": 145
+  },
+  "numerical_tolerance_kwh": 1e-05,
+  "inputs": {
+    "status": "PASS",
+    "rows": 144,
+    "columns": 4,
+    "explicit_header": [
+      "时间",
+      "电价",
+      "小区负载",
+      "光伏发电预测功率"
+    ],
+    "first_label": "00:10:00",
+    "last_label": "0:00+1",
+    "sha256": "03cab394053650f26cfa0930e32693385acbd9045813ee8313581ef2247f31cd",
+    "template_sha256": "2d231a2e55910b04dde3162cdfdeff2cf0b19361829af816405ebb8fef09f201"
+  },
+  "workbook": {
+    "status": "PASS",
+    "sheets": [
+      "计划购电量",
+      "充放电量"
+    ],
+    "numeric_plan_rows": 144,
+    "max_plan_difference_kwh": 4.547473508864641e-13,
+    "no_formulas_or_error_cells": true,
+    "sha256": "31ce14097c9e3abba818dbafa9a07ce82741d7a921f1feb73fd5bf1557da1105"
+  },
+  "optimality_note": "Historical solver claims preserved; no new dual certificate or optimality run."
+}

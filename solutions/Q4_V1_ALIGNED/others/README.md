@@ -4,8 +4,9 @@ Status: CONTENT_PASS_WITH_LIMITATIONS; score=91/100; formal_use=false.
 Final review: `../../Q3_Q4_JOINT/others/round01_final_independent_review.md`.
 The annual run completed once, after Q3. The implementation status JSON is a
 historical P1 snapshot; current status is in root `VERSION_STATUS.json`.
-The Q2 RESET packaging issue is deferred by explicit user authorization in
-`reports/q3_q4_joint_iteration_contract.md`.
+The Q2 RESET export-validator issue was fixed during final delivery without a
+model rerun. See `DELIVERY.md` for the final artifact paths. New-convention model
+acceptance remains separate from delivery completeness.
 
 Scope is Q4-2 and Q4-3 only. There is no Q4-1 task. Designated tables cover
 2025-03-20, 2025-06-21, 2025-09-23 and 2025-12-21 after the annual execution.

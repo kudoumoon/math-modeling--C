@@ -1,0 +1,46 @@
+# Data profile: <DataFrame>
+
+**Shape:** 144 rows × 17 cols
+
+## Columns
+
+| Column | Type | n | missing | summary |
+|---|---|---|---|---|
+| `step` | continuous | 144 | 0 | mean=71.5, sd=41.7, range=[0, 143], skew=0.00 (approximately symmetric) |
+| `internal_start` | unknown | 144 | 0 |  |
+| `internal_end` | unknown | 144 | 0 |  |
+| `input_time_label` | unknown | 144 | 0 |  |
+| `template_label` | unknown | 144 | 0 |  |
+| `price_yuan_per_kwh` | continuous | 144 | 0 | mean=0.766, sd=0.314, range=[0.371, 1.4], skew=0.32 (approximately symmetric) |
+| `load_kw` | continuous | 144 | 0 | mean=4.63e+03, sd=981, range=[3.31e+03, 5.96e+03], skew=0.06 (approximately symmetric) |
+| `pv_kw` | continuous | 144 | 0 | mean=2.31e+03, sd=2.86e+03, range=[0, 7.61e+03], skew=0.75 (moderately skewed) |
+| `load_kwh` | continuous | 144 | 0 | mean=771, sd=163, range=[552, 993], skew=0.06 (approximately symmetric) |
+| `pv_kwh` | continuous | 144 | 0 | mean=385, sd=477, range=[0, 1.27e+03], skew=0.75 (moderately skewed) |
+| `purchase_kwh` | continuous | 144 | 0 | mean=413, sd=419, range=[0, 1.41e+03], skew=0.79 (moderately skewed) |
+| `charge_kwh` | continuous | 144 | 0 | mean=144, sd=283, range=[0, 833], skew=1.84 (highly skewed); outliers=22 (IQR) |
+| `discharge_kwh` | continuous | 144 | 0 | mean=117, sd=234, range=[0, 716], skew=1.76 (highly skewed); outliers=35 (IQR) |
+| `unused_supply_kwh` | boolean | 144 | 0 | 1 levels: 0.0(144); min_group_n=144 |
+| `energy_before_kwh` | continuous | 144 | 0 | mean=7.26e+03, sd=3.46e+03, range=[1.2e+03, 1.08e+04], skew=-0.49 (approximately symmetric) |
+| `energy_after_kwh` | continuous | 144 | 0 | mean=7.26e+03, sd=3.46e+03, range=[1.2e+03, 1.08e+04], skew=-0.49 (approximately symmetric) |
+| `purchase_cost_yuan` | continuous | 144 | 0 | mean=244, sd=261, range=[0, 875], skew=0.81 (moderately skewed) |
+
+## Correlations (Pearson, sorted by |r|)
+- `pv_kw` ↔ `pv_kwh` : r = 1.000 (very strong)
+- `load_kw` ↔ `load_kwh` : r = 1.000 (very strong)
+- `energy_before_kwh` ↔ `energy_after_kwh` : r = 0.993 (very strong)
+- `load_kw` ↔ `pv_kwh` : r = 0.856 (very strong)
+- `load_kw` ↔ `pv_kw` : r = 0.856 (very strong)
+- `load_kwh` ↔ `pv_kwh` : r = 0.856 (very strong)
+- `pv_kw` ↔ `load_kwh` : r = 0.856 (very strong)
+- `purchase_kwh` ↔ `purchase_cost_yuan` : r = 0.828 (very strong)
+- `load_kw` ↔ `purchase_kwh` : r = -0.604 (strong)
+- `load_kwh` ↔ `purchase_kwh` : r = -0.604 (strong)
+- ... +56 more pairs
+
+## Chart suggestions (preliminary)
+- 分类 vs 连续，样本量充足 → 箱线图 / 小提琴图，或带误差棒的柱状图（误差棒说明 SD/SEM/CI）
+- ≥3 个连续变量 → 相关性热力图（['step', 'price_yuan_per_kwh', 'load_kw', 'pv_kw', 'load_kwh']）或 pairplot 散点矩阵
+- charge_kwh 高度偏态（skew=1.84）→ 考虑对数变换或小提琴图代替均值柱图
+- discharge_kwh 高度偏态（skew=1.76）→ 考虑对数变换或小提琴图代替均值柱图
+
+> 这是基于数据形态的**初步建议**。最终图型选择必须结合**论证目标**（你想说什么）—— 详见 `references/chart_selection.md`。

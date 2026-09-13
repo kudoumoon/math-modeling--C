@@ -1,0 +1,420 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "figures/raw_q1_01_inputs.png",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/raw_q1_01_inputs.png",
+        "ext": "png",
+        "size_bytes": 95313,
+        "category": "raster",
+        "size_px": [
+          2160,
+          1440
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "sha256": "f80f48e638f99de11b3d80c5ec1e2206f3bc04a9ed23c0aa8b45ce51c7caf734"
+    },
+    {
+      "path": "figures/raw_q1_01_inputs.pdf",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /CZQBTO+NotoSansSC-Thin. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/raw_q1_01_inputs.pdf",
+        "ext": "pdf",
+        "size_bytes": 15364,
+        "category": "vector"
+      },
+      "sha256": "875ca83c1d0bbf96588e4ec95875fe191d6755e6f576fdc06b0325485e29005e"
+    },
+    {
+      "path": "figures/raw_q1_01_inputs.svg",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/raw_q1_01_inputs.svg",
+        "ext": "svg",
+        "size_bytes": 28719,
+        "category": "vector"
+      },
+      "sha256": "cc827726bc9735334647e95749c3b228b19ef716b68dfd54f61dde2edae0a480"
+    },
+    {
+      "path": "figures/raw_q1_02_net_load_distribution.png",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/raw_q1_02_net_load_distribution.png",
+        "ext": "png",
+        "size_bytes": 55908,
+        "category": "raster",
+        "size_px": [
+          2160,
+          1080
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "sha256": "07d40347ffb5d7ec611b1d11371706a8fbb29e3905e9051df67d61793e8ff167"
+    },
+    {
+      "path": "figures/raw_q1_02_net_load_distribution.pdf",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /FBSKDJ+NotoSansSC-Thin. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/raw_q1_02_net_load_distribution.pdf",
+        "ext": "pdf",
+        "size_bytes": 8616,
+        "category": "vector"
+      },
+      "sha256": "eaaa134093886688af1a862fc66f70ff7fd38066fc3b24211d5868af29f3a6f1"
+    },
+    {
+      "path": "figures/raw_q1_02_net_load_distribution.svg",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/raw_q1_02_net_load_distribution.svg",
+        "ext": "svg",
+        "size_bytes": 12633,
+        "category": "vector"
+      },
+      "sha256": "6a1d7a463dc197b5ec75fd86972f6b8259267cb97b03883ec1437dbe47038997"
+    },
+    {
+      "path": "figures/raw_q1_03_load_pv_relation.png",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/raw_q1_03_load_pv_relation.png",
+        "ext": "png",
+        "size_bytes": 133861,
+        "category": "raster",
+        "size_px": [
+          2160,
+          1080
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "sha256": "c401ffb9026d02e6f8f60bb2225754d8dafc85d054095e3c911366e79fcfabdd"
+    },
+    {
+      "path": "figures/raw_q1_03_load_pv_relation.pdf",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /EGJLZN+NotoSansSC-Thin. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/raw_q1_03_load_pv_relation.pdf",
+        "ext": "pdf",
+        "size_bytes": 10786,
+        "category": "vector"
+      },
+      "sha256": "8f007d9645b97dd676cec0475e9c2da8703d6566352c63143bfbbdd263a7eabf"
+    },
+    {
+      "path": "figures/raw_q1_03_load_pv_relation.svg",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/raw_q1_03_load_pv_relation.svg",
+        "ext": "svg",
+        "size_bytes": 33997,
+        "category": "vector"
+      },
+      "sha256": "29f9853e7b2a906450cd41d42504f2b1d716f7f5b622c4ea91725da63458dfd5"
+    },
+    {
+      "path": "figures/process_q1_01_residuals.png",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/process_q1_01_residuals.png",
+        "ext": "png",
+        "size_bytes": 171630,
+        "category": "raster",
+        "size_px": [
+          2160,
+          1080
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "sha256": "4e0c146ea033b86361dc1b2b54ee4eefba8d742a46023599d96562e51c8b0307"
+    },
+    {
+      "path": "figures/process_q1_01_residuals.pdf",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /FEMTKS+NotoSansSC-Thin. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/process_q1_01_residuals.pdf",
+        "ext": "pdf",
+        "size_bytes": 12093,
+        "category": "vector"
+      },
+      "sha256": "11e55e7913b9da07136ed55a4b9c00ffeb8d24a46c9ffde494028f930921694f"
+    },
+    {
+      "path": "figures/process_q1_01_residuals.svg",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/process_q1_01_residuals.svg",
+        "ext": "svg",
+        "size_bytes": 13520,
+        "category": "vector"
+      },
+      "sha256": "8441ba91b56e2370a167fcb28aa584351ac50f4dcc6ab638c63ec45bd26c28be"
+    },
+    {
+      "path": "figures/process_q1_02_constraint_activity.png",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/process_q1_02_constraint_activity.png",
+        "ext": "png",
+        "size_bytes": 71575,
+        "category": "raster",
+        "size_px": [
+          2160,
+          1080
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "sha256": "a5fdba45d8c5ff6f15564af4d8e118fdda4fb000745a8aca950f2e69563691b6"
+    },
+    {
+      "path": "figures/process_q1_02_constraint_activity.pdf",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /CJTTCZ+NotoSansSC-Thin. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/process_q1_02_constraint_activity.pdf",
+        "ext": "pdf",
+        "size_bytes": 20255,
+        "category": "vector"
+      },
+      "sha256": "a359b936c1480b91577f7791b95d1d4a633e261a5434f09b9c1dad05f6d51e97"
+    },
+    {
+      "path": "figures/process_q1_02_constraint_activity.svg",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/process_q1_02_constraint_activity.svg",
+        "ext": "svg",
+        "size_bytes": 118543,
+        "category": "vector"
+      },
+      "sha256": "28599f26b2a7373f332c8c9277bd6a45d040e9e9cace48ad96b14b1a397cd3ad"
+    },
+    {
+      "path": "figures/process_q1_03_block_flows.png",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/process_q1_03_block_flows.png",
+        "ext": "png",
+        "size_bytes": 86730,
+        "category": "raster",
+        "size_px": [
+          2160,
+          1080
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "sha256": "7e769e37755f731a9025a638491acf32d1643774d64ecf1014ede3ba5cb9fc8d"
+    },
+    {
+      "path": "figures/process_q1_03_block_flows.pdf",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /GLSTAA+NotoSansSC-Thin. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/process_q1_03_block_flows.pdf",
+        "ext": "pdf",
+        "size_bytes": 11836,
+        "category": "vector"
+      },
+      "sha256": "5ca277ccc1886b5d4226fe1c6f66b97964b939068c4fbee77a1e94c9c542e8b1"
+    },
+    {
+      "path": "figures/process_q1_03_block_flows.svg",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/process_q1_03_block_flows.svg",
+        "ext": "svg",
+        "size_bytes": 13341,
+        "category": "vector"
+      },
+      "sha256": "8e603cabdb30b425136ef8b6f0a9a77f7a0acf65b4ce3698ef95f497491044a3"
+    },
+    {
+      "path": "figures/result_q1_01_dispatch.png",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/result_q1_01_dispatch.png",
+        "ext": "png",
+        "size_bytes": 110953,
+        "category": "raster",
+        "size_px": [
+          2160,
+          1440
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "sha256": "dcf5aec19f1dce242b5afd009715d6b999f5ae3463565299fe3491c6f3f05dbc"
+    },
+    {
+      "path": "figures/result_q1_01_dispatch.pdf",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /BPOWKY+NotoSansSC-Thin. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/result_q1_01_dispatch.pdf",
+        "ext": "pdf",
+        "size_bytes": 15240,
+        "category": "vector"
+      },
+      "sha256": "dae89a5ab0cf2d8316c3ea70329c09bfd0608c1ef5f96352bf9d81327fd926c6"
+    },
+    {
+      "path": "figures/result_q1_01_dispatch.svg",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/result_q1_01_dispatch.svg",
+        "ext": "svg",
+        "size_bytes": 28344,
+        "category": "vector"
+      },
+      "sha256": "e1c61c0bf706ec059dd37974e395e212b01e63f907d4405bc12dbcad2b9d207b"
+    },
+    {
+      "path": "figures/result_q1_02_soc.png",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/result_q1_02_soc.png",
+        "ext": "png",
+        "size_bytes": 113392,
+        "category": "raster",
+        "size_px": [
+          2160,
+          1080
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "sha256": "9a5359651a5795fb7d5c2f514081768a24930ec2e435a6cdd436437a0dbc3e3f"
+    },
+    {
+      "path": "figures/result_q1_02_soc.pdf",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DGIMFV+NotoSansSC-Thin. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/result_q1_02_soc.pdf",
+        "ext": "pdf",
+        "size_bytes": 12096,
+        "category": "vector"
+      },
+      "sha256": "5910f42387f348d10be482ec4ce0b49590e08ce7e8cf9b10c5d65675cac74a25"
+    },
+    {
+      "path": "figures/result_q1_02_soc.svg",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/result_q1_02_soc.svg",
+        "ext": "svg",
+        "size_bytes": 12602,
+        "category": "vector"
+      },
+      "sha256": "ffd22ce64a88389a8830b96bbfb6b9a736fb168dd1f244a3a1fdae6b4efc0ff0"
+    },
+    {
+      "path": "figures/result_q1_03_cost.png",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/result_q1_03_cost.png",
+        "ext": "png",
+        "size_bytes": 91770,
+        "category": "raster",
+        "size_px": [
+          2160,
+          1080
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "sha256": "cfce6e5b068cea6fc506771de81f7f23247d3fc83a3df4c2f2601163a604cdc5"
+    },
+    {
+      "path": "figures/result_q1_03_cost.pdf",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DDMOIW+NotoSansSC-Thin. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/result_q1_03_cost.pdf",
+        "ext": "pdf",
+        "size_bytes": 12979,
+        "category": "vector"
+      },
+      "sha256": "6202f846c5b29cb8db62c966232599d9fb6a1496b7a6fba6b273a598c24864c3"
+    },
+    {
+      "path": "figures/result_q1_03_cost.svg",
+      "issues": [],
+      "metadata": {
+        "path": "/root/yuetao_he/math modeling--C/solutions/Q1_BASELINE/figures/result_q1_03_cost.svg",
+        "ext": "svg",
+        "size_bytes": 7738,
+        "category": "vector"
+      },
+      "sha256": "dc2adbd73c181ca2a0a02f22e22304cc1dc90fc6c2e0fd3660e0929f6d24e106"
+    }
+  ],
+  "warning_resolution": "The unchanged skill checker inspects only the root FontDescriptor, producing Type0 embedding warnings. All descendants are separately verified in pdf_font_embedding_audit.json."
+}

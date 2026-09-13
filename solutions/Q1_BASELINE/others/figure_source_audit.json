@@ -1,0 +1,127 @@
+[
+  {
+    "figure": "raw_q1_01_inputs",
+    "rows": 144,
+    "columns": [
+      "step",
+      "internal_start",
+      "internal_end",
+      "price_yuan_per_kwh",
+      "load_kw",
+      "pv_kw"
+    ],
+    "path": "results/figure_data/raw_q1_01_inputs.csv",
+    "sha256": "887a412b40258c5bbe339ea57c96a6e545de82e4cfeb0386e5a5b9a091508fba",
+    "roundtrip": "PASS"
+  },
+  {
+    "figure": "raw_q1_02_net_load_distribution",
+    "rows": 144,
+    "columns": [
+      "step",
+      "internal_start",
+      "internal_end",
+      "net_load_kw"
+    ],
+    "path": "results/figure_data/raw_q1_02_net_load_distribution.csv",
+    "sha256": "7a66355630f1f45220d44cdb4f482b9d7ffceed94d55e16143abbba487ec08e0",
+    "roundtrip": "PASS"
+  },
+  {
+    "figure": "raw_q1_03_load_pv_relation",
+    "rows": 144,
+    "columns": [
+      "step",
+      "internal_start",
+      "internal_end",
+      "load_kw",
+      "pv_kw"
+    ],
+    "path": "results/figure_data/raw_q1_03_load_pv_relation.csv",
+    "sha256": "d990da602d94ea208e5380df695fe371e4871b8f102902a63b25f133e137e91c",
+    "roundtrip": "PASS"
+  },
+  {
+    "figure": "process_q1_01_residuals",
+    "rows": 144,
+    "columns": [
+      "step",
+      "internal_start",
+      "internal_end",
+      "balance_residual_kwh",
+      "state_residual_kwh"
+    ],
+    "path": "results/figure_data/process_q1_01_residuals.csv",
+    "sha256": "a4bd272fac425e63359dfd224cdfd0b213780165eebd2fd05e38d2631b04ffaa",
+    "roundtrip": "PASS"
+  },
+  {
+    "figure": "process_q1_02_constraint_activity",
+    "rows": 144,
+    "columns": [
+      "step",
+      "internal_start",
+      "internal_end",
+      "energy_at_lower_bound",
+      "energy_at_upper_bound",
+      "charge_at_power_limit",
+      "discharge_at_power_limit"
+    ],
+    "path": "results/figure_data/process_q1_02_constraint_activity.csv",
+    "sha256": "150912fbce2dc5117b7c620b0a38989455ee0e4eba9ccf84022f1f5658f3370f",
+    "roundtrip": "PASS"
+  },
+  {
+    "figure": "process_q1_03_block_flows",
+    "rows": 6,
+    "columns": [
+      "template_block",
+      "actual_sequence_interval",
+      "charge_kwh",
+      "discharge_kwh"
+    ],
+    "path": "results/figure_data/process_q1_03_block_flows.csv",
+    "sha256": "341ed51b6a9531876e274025a4ca027e143740667d9110bcba8bc9f190a8406a",
+    "roundtrip": "PASS"
+  },
+  {
+    "figure": "result_q1_01_dispatch",
+    "rows": 144,
+    "columns": [
+      "step",
+      "internal_start",
+      "internal_end",
+      "grid_purchase_kw",
+      "net_load_kw",
+      "charge_kw",
+      "discharge_kw"
+    ],
+    "path": "results/figure_data/result_q1_01_dispatch.csv",
+    "sha256": "99dd4c52bab9ef410b39a9d413e213f5bd0714ccbe1fa5eaf81e5c0f6964754a",
+    "roundtrip": "PASS"
+  },
+  {
+    "figure": "result_q1_02_soc",
+    "rows": 145,
+    "columns": [
+      "boundary",
+      "legacy_time",
+      "energy_kwh",
+      "soc_percent"
+    ],
+    "path": "results/figure_data/result_q1_02_soc.csv",
+    "sha256": "bb3ae1b20d14647cbc612b0718ea967eae16aa25c49e494688c118cbedd2afd9",
+    "roundtrip": "PASS"
+  },
+  {
+    "figure": "result_q1_03_cost",
+    "rows": 2,
+    "columns": [
+      "scenario",
+      "cost_yuan"
+    ],
+    "path": "results/figure_data/result_q1_03_cost.csv",
+    "sha256": "a515200fc14c4c1da2ff624c576d18d7d7927ec4e0d4d1d2d9fa8cabd3b37bd4",
+    "roundtrip": "PASS"
+  }
+]

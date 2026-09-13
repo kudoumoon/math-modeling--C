@@ -1,0 +1,269 @@
+[
+  {
+    "figure_id": "raw_q2_01_daily_energy",
+    "question": "q2",
+    "category": "raw",
+    "core_conclusion": "Observed load and PV occupy different daily energy ranges.",
+    "evidence_chain": {
+      "raw_daily": "raw_daily.csv"
+    },
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib",
+    "chart_type": "Histogram",
+    "alternative": "Separate single-panel charts; avoided because the paired panels answer complementary parts of one claim.",
+    "dimensions": "7.2-inch double-column width; exact height recorded in the export manifest",
+    "fonts": "DejaVu Sans; 7-11 pt; editable SVG text and embedded TrueType PDF",
+    "exports": [
+      "PNG 300 dpi",
+      "SVG",
+      "PDF",
+      "grayscale PNG 300 dpi"
+    ],
+    "policy": "primary B0; frozen main Time A",
+    "report_window": "365 raw / 334 main / 333 common sensitivity plan dates",
+    "statistical_scope": "Descriptive observed data; no refitting, new policy metrics, inferential errors or causal claim",
+    "data_integrity": "All rows retained in the stated windows; zero counts and outliers retained. No synthetic observations.",
+    "exclusions": "January is warmup, excluded only from main-report plots; December31 excluded only from common sensitivity.",
+    "actual_rows": {
+      "raw_daily": 365
+    }
+  },
+  {
+    "figure_id": "raw_q2_02_diurnal_tariff",
+    "question": "q2",
+    "category": "raw",
+    "core_conclusion": "Within-day load, PV and the known tariff have distinct temporal patterns.",
+    "evidence_chain": {
+      "raw_diurnal": "raw_diurnal.csv"
+    },
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib",
+    "chart_type": "Line and empirical band",
+    "alternative": "Separate single-panel charts; avoided because the paired panels answer complementary parts of one claim.",
+    "dimensions": "7.2-inch double-column width; exact height recorded in the export manifest",
+    "fonts": "DejaVu Sans; 7-11 pt; editable SVG text and embedded TrueType PDF",
+    "exports": [
+      "PNG 300 dpi",
+      "SVG",
+      "PDF",
+      "grayscale PNG 300 dpi"
+    ],
+    "policy": "primary B0; frozen main Time A",
+    "report_window": "365 raw / 334 main / 333 common sensitivity plan dates",
+    "statistical_scope": "Descriptive observed data; no refitting, new policy metrics, inferential errors or causal claim",
+    "data_integrity": "All rows retained in the stated windows; zero counts and outliers retained. No synthetic observations.",
+    "exclusions": "January is warmup, excluded only from main-report plots; December31 excluded only from common sensitivity.",
+    "actual_rows": {
+      "raw_diurnal": 288
+    }
+  },
+  {
+    "figure_id": "raw_q2_03_load_pv_relation",
+    "question": "q2",
+    "category": "raw",
+    "core_conclusion": "Daily PV is not a sufficient description of daily load variation.",
+    "evidence_chain": {
+      "raw_daily": "raw_daily.csv"
+    },
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib",
+    "chart_type": "Scatter",
+    "alternative": "Separate single-panel charts; avoided because the paired panels answer complementary parts of one claim.",
+    "dimensions": "7.2-inch double-column width; exact height recorded in the export manifest",
+    "fonts": "DejaVu Sans; 7-11 pt; editable SVG text and embedded TrueType PDF",
+    "exports": [
+      "PNG 300 dpi",
+      "SVG",
+      "PDF",
+      "grayscale PNG 300 dpi"
+    ],
+    "policy": "primary B0; frozen main Time A",
+    "report_window": "365 raw / 334 main / 333 common sensitivity plan dates",
+    "statistical_scope": "Descriptive observed data; no refitting, new policy metrics, inferential errors or causal claim",
+    "data_integrity": "All rows retained in the stated windows; zero counts and outliers retained. No synthetic observations.",
+    "exclusions": "January is warmup, excluded only from main-report plots; December31 excluded only from common sensitivity.",
+    "actual_rows": {
+      "raw_daily": 365
+    }
+  },
+  {
+    "figure_id": "process_q2_01_executed_soc",
+    "question": "q2",
+    "category": "process",
+    "core_conclusion": "The stored executed SOC shows daily and seasonal battery-state variation within physical bounds.",
+    "evidence_chain": {
+      "soc_plan_grid": "soc_plan_grid.csv.gz"
+    },
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib",
+    "chart_type": "Heatmap",
+    "alternative": "Separate single-panel charts; avoided because the paired panels answer complementary parts of one claim.",
+    "dimensions": "7.2-inch double-column width; exact height recorded in the export manifest",
+    "fonts": "DejaVu Sans; 7-11 pt; editable SVG text and embedded TrueType PDF",
+    "exports": [
+      "PNG 300 dpi",
+      "SVG",
+      "PDF",
+      "grayscale PNG 300 dpi"
+    ],
+    "policy": "primary B0; frozen main Time A",
+    "report_window": "365 raw / 334 main / 333 common sensitivity plan dates",
+    "statistical_scope": "Descriptive observed data; no refitting, new policy metrics, inferential errors or causal claim",
+    "data_integrity": "All rows retained in the stated windows; zero counts and outliers retained. No synthetic observations.",
+    "exclusions": "January is warmup, excluded only from main-report plots; December31 excluded only from common sensitivity.",
+    "actual_rows": {
+      "soc_plan_grid": 334
+    }
+  },
+  {
+    "figure_id": "process_q2_02_candidate_selection",
+    "question": "q2",
+    "category": "process",
+    "core_conclusion": "The recorded selector uses multiple candidates with uneven selection counts.",
+    "evidence_chain": {
+      "candidate_key": "candidate_key.csv",
+      "candidate_trace": "candidate_trace.csv"
+    },
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib",
+    "chart_type": "Categorical trace and count bars",
+    "alternative": "Separate single-panel charts; avoided because the paired panels answer complementary parts of one claim.",
+    "dimensions": "7.2-inch double-column width; exact height recorded in the export manifest",
+    "fonts": "DejaVu Sans; 7-11 pt; editable SVG text and embedded TrueType PDF",
+    "exports": [
+      "PNG 300 dpi",
+      "SVG",
+      "PDF",
+      "grayscale PNG 300 dpi"
+    ],
+    "policy": "primary B0; frozen main Time A",
+    "report_window": "365 raw / 334 main / 333 common sensitivity plan dates",
+    "statistical_scope": "Descriptive observed data; no refitting, new policy metrics, inferential errors or causal claim",
+    "data_integrity": "All rows retained in the stated windows; zero counts and outliers retained. No synthetic observations.",
+    "exclusions": "January is warmup, excluded only from main-report plots; December31 excluded only from common sensitivity.",
+    "actual_rows": {
+      "candidate_key": 15,
+      "candidate_trace": 334
+    }
+  },
+  {
+    "figure_id": "process_q2_03_emergency_distribution",
+    "question": "q2",
+    "category": "process",
+    "core_conclusion": "Emergency energy is uneven across time slots and across report days.",
+    "evidence_chain": {
+      "emergency_by_hour": "emergency_by_hour.csv",
+      "emergency_ecdf": "emergency_ecdf.csv"
+    },
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib",
+    "chart_type": "Histogram and ECDF",
+    "alternative": "Separate single-panel charts; avoided because the paired panels answer complementary parts of one claim.",
+    "dimensions": "7.2-inch double-column width; exact height recorded in the export manifest",
+    "fonts": "DejaVu Sans; 7-11 pt; editable SVG text and embedded TrueType PDF",
+    "exports": [
+      "PNG 300 dpi",
+      "SVG",
+      "PDF",
+      "grayscale PNG 300 dpi"
+    ],
+    "policy": "primary B0; frozen main Time A",
+    "report_window": "365 raw / 334 main / 333 common sensitivity plan dates",
+    "statistical_scope": "Descriptive observed data; no refitting, new policy metrics, inferential errors or causal claim",
+    "data_integrity": "All rows retained in the stated windows; zero counts and outliers retained. No synthetic observations.",
+    "exclusions": "January is warmup, excluded only from main-report plots; December31 excluded only from common sensitivity.",
+    "actual_rows": {
+      "emergency_by_hour": 24,
+      "emergency_ecdf": 334
+    }
+  },
+  {
+    "figure_id": "result_q2_01_monthly_cash",
+    "question": "q2",
+    "category": "result",
+    "core_conclusion": "Scheduled and emergency cash jointly determine observed monthly operating cost.",
+    "evidence_chain": {
+      "monthly_summary": "monthly_summary.csv"
+    },
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib",
+    "chart_type": "Stacked accounting bars",
+    "alternative": "Separate single-panel charts; avoided because the paired panels answer complementary parts of one claim.",
+    "dimensions": "7.2-inch double-column width; exact height recorded in the export manifest",
+    "fonts": "DejaVu Sans; 7-11 pt; editable SVG text and embedded TrueType PDF",
+    "exports": [
+      "PNG 300 dpi",
+      "SVG",
+      "PDF",
+      "grayscale PNG 300 dpi"
+    ],
+    "policy": "primary B0; frozen main Time A",
+    "report_window": "365 raw / 334 main / 333 common sensitivity plan dates",
+    "statistical_scope": "Descriptive observed data; no refitting, new policy metrics, inferential errors or causal claim",
+    "data_integrity": "All rows retained in the stated windows; zero counts and outliers retained. No synthetic observations.",
+    "exclusions": "January is warmup, excluded only from main-report plots; December31 excluded only from common sensitivity.",
+    "actual_rows": {
+      "monthly_summary": 11
+    }
+  },
+  {
+    "figure_id": "result_q2_02_monthly_risk",
+    "question": "q2",
+    "category": "result",
+    "core_conclusion": "The month-specific daily cash tail and emergency frequency vary across the report window.",
+    "evidence_chain": {
+      "main_daily": "main_daily.csv.gz",
+      "monthly_risk": "monthly_risk.csv"
+    },
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib",
+    "chart_type": "Boxplot and frequency points",
+    "alternative": "Separate single-panel charts; avoided because the paired panels answer complementary parts of one claim.",
+    "dimensions": "7.2-inch double-column width; exact height recorded in the export manifest",
+    "fonts": "DejaVu Sans; 7-11 pt; editable SVG text and embedded TrueType PDF",
+    "exports": [
+      "PNG 300 dpi",
+      "SVG",
+      "PDF",
+      "grayscale PNG 300 dpi"
+    ],
+    "policy": "primary B0; frozen main Time A",
+    "report_window": "365 raw / 334 main / 333 common sensitivity plan dates",
+    "statistical_scope": "Descriptive observed data; no refitting, new policy metrics, inferential errors or causal claim",
+    "data_integrity": "All rows retained in the stated windows; zero counts and outliers retained. No synthetic observations.",
+    "exclusions": "January is warmup, excluded only from main-report plots; December31 excluded only from common sensitivity.",
+    "actual_rows": {
+      "main_daily": 334,
+      "monthly_risk": 11
+    }
+  },
+  {
+    "figure_id": "result_q2_03_common333_sensitivity",
+    "question": "q2",
+    "category": "result",
+    "core_conclusion": "Frozen interpretation sensitivities differ on one common 333-plan-date window.",
+    "evidence_chain": {
+      "sensitivity_summary": "sensitivity_summary.csv"
+    },
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib",
+    "chart_type": "Paired baseline-difference dot plots",
+    "alternative": "Separate single-panel charts; avoided because the paired panels answer complementary parts of one claim.",
+    "dimensions": "7.2-inch double-column width; exact height recorded in the export manifest",
+    "fonts": "DejaVu Sans; 7-11 pt; editable SVG text and embedded TrueType PDF",
+    "exports": [
+      "PNG 300 dpi",
+      "SVG",
+      "PDF",
+      "grayscale PNG 300 dpi"
+    ],
+    "policy": "primary B0; frozen main Time A",
+    "report_window": "365 raw / 334 main / 333 common sensitivity plan dates",
+    "statistical_scope": "Descriptive observed data; no refitting, new policy metrics, inferential errors or causal claim",
+    "data_integrity": "All rows retained in the stated windows; zero counts and outliers retained. No synthetic observations.",
+    "exclusions": "January is warmup, excluded only from main-report plots; December31 excluded only from common sensitivity.",
+    "actual_rows": {
+      "sensitivity_summary": 5
+    }
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "reviewer": "Maxwell",
+  "agent_id": "01a097e8-8820-7672-973f-8e5d64e36ba4",
+  "status": "NO_HARD_ISSUES_IN_AVAILABLE_LOGS",
+  "score": null,
+  "scope": "Q4-2 and Q4-3 A logs; actual ledgers and templates pending B completion",
+  "model_rerun": false,
+  "run": "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01",
+  "source_commit": "3f9e6730414af5dc83211b8b655c278a5594f59f",
+  "checks": {
+    "candidate_diagnostics_per_policy": 5475,
+    "selection_rules_checked": 730,
+    "adjustments_checked": 1002,
+    "adjustments_accepted": 299,
+    "adjustments_rejected": 703,
+    "insufficient_history_rejections": 12,
+    "price_forecasts_independently_reconstructed": 73146,
+    "future_price_sources": 0,
+    "q43_planned_vs_executed_initial_soc_different_days": 353,
+    "q43_vs_q42_executed_initial_soc_different_days": 145,
+    "source_hashes_checked": 19,
+    "input_hashes_checked": 6,
+    "numeric_max_difference": 4.55e-13,
+    "checked_logs_unchanged": true
+  },
+  "limitation": "Rolling candidate means and selection rules were checked; per-candidate historic contracts/cash details were not retained, so all historic candidate cash scores cannot be independently reconstructed without reoptimization."
+}

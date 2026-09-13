@@ -165,7 +165,23 @@ def package(output: Path) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=("archive", "package"))
+    parser.add_argument("action", choices=("archive", "workbooks", "package"))
     parser.add_argument("--output", type=Path, default=RELEASE / "Q1-Q4-final-20260913-r1.zip")
     args = parser.parse_args()
-    archive() if args.action == "archive" else package(args.output)
+    if args.action == "archive":
+        archive()
+    elif args.action == "workbooks":
+        sources = {
+            "result1.xlsx": "Q1_BASELINE/results/baseline/result1_v2.xlsx",
+            "result2.xlsx": "Q2_V3_CAUSAL_FORECAST/results/final_v1/result2.xlsx",
+            "result3.xlsx": "Q3_V3_ALIGNED/results/q3v3-r1/A/result3.xlsx",
+            "result4-2.xlsx": "Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/result4-2.xlsx",
+            "result4-3.xlsx": "Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/result4-3.xlsx",
+        }
+        mapping = [copy_verified(ROOT / "solutions" / source, RELEASE / "results" / name)
+                   for name, source in sources.items()]
+        (RELEASE / "others/WORKBOOK_MAPPING.json").write_text(
+            json.dumps({"model_rerun": False, "copies": mapping}, ensure_ascii=False, indent=2) + "\n")
+        print(json.dumps({"workbooks": len(mapping), "all_hashes_match": True}))
+    else:
+        package(args.output)

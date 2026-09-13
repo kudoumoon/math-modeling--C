@@ -1,0 +1,760 @@
+{
+  "model_rerun": false,
+  "copies": [
+    {
+      "source": "runs/q2v3-r2-full-b0-a-20260913-01/config.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01/config.json",
+      "sha256": "ea5665d3444560e6edc2cf5885d73117dfad1fc5263f30c065f41e95891c018c"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-a-20260913-01/daily_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01/daily_ledger.csv",
+      "sha256": "c39ad945d1b3dc7171091c7769532dcf1a8aca3264751874e4c1ae09110610cc"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-a-20260913-01/forecast_bundle.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01/forecast_bundle.npz",
+      "sha256": "cce3ea91a643b68159b230c7d2c6cb6e4957bb3ae5fd6a57a4e15a53be86b434"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-a-20260913-01/forecast_fit_log.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01/forecast_fit_log.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-a-20260913-01/interval_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01/interval_ledger.csv",
+      "sha256": "f6e7303bbd0699437e3cc2ab54da63bfa6e58747d28865522de557fd5f8f3725"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-a-20260913-01/january_warmup_summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01/january_warmup_summary.json",
+      "sha256": "edf41464a4480780e82047fcc7a9944b7fd2de04def409220e91ae1fedc9f6dc"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-a-20260913-01/manifest.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01/manifest.json",
+      "sha256": "d3b7453440b36ed32785ef5108a3b908634fa460472826ecfdf84d78f7463728"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-a-20260913-01/policy_arrays.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01/policy_arrays.npz",
+      "sha256": "90e033a193b7acbc2395e2e53cc1e4a8eb2a4277f72fb822be7e9b618b8b6047"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-a-20260913-01/solve_diagnostics.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01/solve_diagnostics.csv",
+      "sha256": "042bcbf5032739814216a33ca9409a38ec01f4b65dc8b07e851f6cf2d7bcb7a8"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-a-20260913-01/summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-a-20260913-01/summary.json",
+      "sha256": "8d7b3dcd2f01d0f807a083db5cb8477dbe6265befb95943a0ab41f666cb4dae4"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-batb-20260913-01/config.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-batb-20260913-01/config.json",
+      "sha256": "e7350bfc882b5811726f4e15d8e7abf720df6e60fea1cb076099fdc78febebed"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-batb-20260913-01/daily_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-batb-20260913-01/daily_ledger.csv",
+      "sha256": "6eb4e56d5518140d2c0ccdc1968d3b02d510a23e01881bdca8ea90a471bbbb09"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-batb-20260913-01/forecast_bundle.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-batb-20260913-01/forecast_bundle.npz",
+      "sha256": "cce3ea91a643b68159b230c7d2c6cb6e4957bb3ae5fd6a57a4e15a53be86b434"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-batb-20260913-01/forecast_fit_log.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-batb-20260913-01/forecast_fit_log.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-batb-20260913-01/interval_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-batb-20260913-01/interval_ledger.csv",
+      "sha256": "c156fe3ed1b992ad703a3c8bb3a527b478bb181488c4439c3c27cf1f88ac952c"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-batb-20260913-01/january_warmup_summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-batb-20260913-01/january_warmup_summary.json",
+      "sha256": "35124dff5171441553ed417bb1cf61c1e465cc88a59bbb69a97e684ea4eb119b"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-batb-20260913-01/manifest.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-batb-20260913-01/manifest.json",
+      "sha256": "512570d9c72b546d5153f1d713a4314fac19f19b5f9953c56b0f63d612814cf8"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-batb-20260913-01/policy_arrays.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-batb-20260913-01/policy_arrays.npz",
+      "sha256": "9fde14eb57d393888378ae4dcb3aa00e5b0fb594377819d2726f95082a1b6d06"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-batb-20260913-01/solve_diagnostics.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-batb-20260913-01/solve_diagnostics.csv",
+      "sha256": "b34962b850ab5a42f4afe76d1d569fc4d7123fb2b851510fc337e6f8b262ee24"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-batb-20260913-01/summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-batb-20260913-01/summary.json",
+      "sha256": "70ea2dc79e129f4692f979164ed49191ba88877d3d2c51c69c91c65e9b87d165"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-delay1-20260913-01/config.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-delay1-20260913-01/config.json",
+      "sha256": "9174391fe5dba96e3ae11ece93c4f3320def27f50ce255af2adbc456f71b4738"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-delay1-20260913-01/daily_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-delay1-20260913-01/daily_ledger.csv",
+      "sha256": "85d800204bb3980c0a246715e9837d43bc19b0a0a265ad1bf463b7fc74ea10a0"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-delay1-20260913-01/forecast_bundle.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-delay1-20260913-01/forecast_bundle.npz",
+      "sha256": "cce3ea91a643b68159b230c7d2c6cb6e4957bb3ae5fd6a57a4e15a53be86b434"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-delay1-20260913-01/forecast_fit_log.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-delay1-20260913-01/forecast_fit_log.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-delay1-20260913-01/interval_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-delay1-20260913-01/interval_ledger.csv",
+      "sha256": "f615010ef5e06c566b7f336f642627b7707935bee8e3a32582d3fbdd055153f4"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-delay1-20260913-01/january_warmup_summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-delay1-20260913-01/january_warmup_summary.json",
+      "sha256": "8286741a6bf4c022dd0712e19839b90f111987ef8e784215b5c9379f01b46ef3"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-delay1-20260913-01/manifest.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-delay1-20260913-01/manifest.json",
+      "sha256": "e2fa39014ab40e11bba9d093f63c50914c90cc7dfc615e5c3ec00740f79cfee9"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-delay1-20260913-01/policy_arrays.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-delay1-20260913-01/policy_arrays.npz",
+      "sha256": "1b92b12c6632447f3aec7047b11701a602034ea11c6912d71e55504d85a61b13"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-delay1-20260913-01/solve_diagnostics.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-delay1-20260913-01/solve_diagnostics.csv",
+      "sha256": "de41b46dd355e812ac00d42ab5d6f3c476e9334394810b5f0a6bf78e3a7a438b"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-delay1-20260913-01/summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-delay1-20260913-01/summary.json",
+      "sha256": "7b37595555cd0dac5e964bc4a83c538afe089a3693a9129439e057044fd2a68e"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-resetfeb-20260913-01/config.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-resetfeb-20260913-01/config.json",
+      "sha256": "16a9f5c645ed639fa2900749a1f4690f84137cabe351f21f1383e19b23812457"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-resetfeb-20260913-01/daily_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-resetfeb-20260913-01/daily_ledger.csv",
+      "sha256": "972d4051c6973ef24395637a0a945cb9c6314293ea7480c58d9b864afae63f43"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-resetfeb-20260913-01/forecast_bundle.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-resetfeb-20260913-01/forecast_bundle.npz",
+      "sha256": "cce3ea91a643b68159b230c7d2c6cb6e4957bb3ae5fd6a57a4e15a53be86b434"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-resetfeb-20260913-01/forecast_fit_log.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-resetfeb-20260913-01/forecast_fit_log.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-resetfeb-20260913-01/interval_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-resetfeb-20260913-01/interval_ledger.csv",
+      "sha256": "e70db272420ea7efccff7c2af8a71cefb173bad5a76a63143215ff85ad45b865"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-resetfeb-20260913-01/january_warmup_summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-resetfeb-20260913-01/january_warmup_summary.json",
+      "sha256": "edf41464a4480780e82047fcc7a9944b7fd2de04def409220e91ae1fedc9f6dc"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-resetfeb-20260913-01/manifest.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-resetfeb-20260913-01/manifest.json",
+      "sha256": "e4f51433c99ed663e04346056f1dfac30746e1947d9191418b13f17dfd8a6ce7"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-resetfeb-20260913-01/policy_arrays.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-resetfeb-20260913-01/policy_arrays.npz",
+      "sha256": "d81aed19a84afc958cc9e9cb52856d16cb149d9f22022814109725ec7b5db485"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-resetfeb-20260913-01/solve_diagnostics.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-resetfeb-20260913-01/solve_diagnostics.csv",
+      "sha256": "76e67684504524b0986d1efe3a8535ac086212d70e096c6d146d9952669e7631"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-resetfeb-20260913-01/summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-resetfeb-20260913-01/summary.json",
+      "sha256": "20de59ec7c4ade1856e813e2f431dc673b41061e5b6ff26666db5a73da56dbfa"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-timeb-20260913-01/config.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-timeb-20260913-01/config.json",
+      "sha256": "6d85d1e61c11d0327d8665a3ea140348091abe760f6c006153b22f1e5dbe36b7"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-timeb-20260913-01/daily_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-timeb-20260913-01/daily_ledger.csv",
+      "sha256": "597d9e975ed9c4ee2534320023c7414918193c4619fb38945574fe4d39c60460"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-timeb-20260913-01/forecast_bundle.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-timeb-20260913-01/forecast_bundle.npz",
+      "sha256": "cce3ea91a643b68159b230c7d2c6cb6e4957bb3ae5fd6a57a4e15a53be86b434"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-timeb-20260913-01/forecast_fit_log.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-timeb-20260913-01/forecast_fit_log.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-timeb-20260913-01/interval_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-timeb-20260913-01/interval_ledger.csv",
+      "sha256": "8124887defdba5718721ff541c5ddce30737a909d3eba187dd66e056755c847a"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-timeb-20260913-01/january_warmup_summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-timeb-20260913-01/january_warmup_summary.json",
+      "sha256": "12af6515b011e54b1bb27905496db00b16a59148d7c91f904d8b086c835ff2aa"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-timeb-20260913-01/manifest.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-timeb-20260913-01/manifest.json",
+      "sha256": "2c35e718884110f0290d91a138bb29c9a914ac9fc4a2951171b51d80259d2fc3"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-timeb-20260913-01/policy_arrays.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-timeb-20260913-01/policy_arrays.npz",
+      "sha256": "fc15495ac2e5f663c4578a32a0d3772ae8bd261624cf4a8440d7039120434088"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-timeb-20260913-01/solve_diagnostics.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-timeb-20260913-01/solve_diagnostics.csv",
+      "sha256": "687a220136c59b8f17a6476bdef9445fdbf266b73ddd086b05d5929a7ebfaba4"
+    },
+    {
+      "source": "runs/q2v3-r2-full-b0-timeb-20260913-01/summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/annual_runs/q2v3-r2-full-b0-timeb-20260913-01/summary.json",
+      "sha256": "0d367c6fe6381a283dbd903217fd00af4429c420e96abb867ecbce01bf33f6ca"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-l-20260913-01/config.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-l-20260913-01/config.json",
+      "sha256": "478b5719aabdbc238fc63bded86af60bbc32bca2a4babbe156f0a09953d04e56"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-l-20260913-01/daily_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-l-20260913-01/daily_ledger.csv",
+      "sha256": "c217b73793cd567c794d8a80d16ecd04b1c3d6a948ec7e8e854406ed8a3263eb"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-l-20260913-01/forecast_bundle.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-l-20260913-01/forecast_bundle.npz",
+      "sha256": "b72fed26197267c7fb83a07bfe450dd31896462d7ee55cd0f87949fea4eb0856"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-l-20260913-01/forecast_fit_log.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-l-20260913-01/forecast_fit_log.csv",
+      "sha256": "3fe0760bb4dc5d61c2146caf426d6176c7536ad1706befa7f9e4d76b162fb406"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-l-20260913-01/interval_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-l-20260913-01/interval_ledger.csv",
+      "sha256": "54736c8f77014f4135b8eebaa7a750ebfefa063186c9057ff47018679fd340cc"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-l-20260913-01/january_warmup_summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-l-20260913-01/january_warmup_summary.json",
+      "sha256": "edf41464a4480780e82047fcc7a9944b7fd2de04def409220e91ae1fedc9f6dc"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-l-20260913-01/manifest.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-l-20260913-01/manifest.json",
+      "sha256": "069227f61072ce7a9929c5c688479b4730552a90922cadca6cd4652149eec3db"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-l-20260913-01/policy_arrays.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-l-20260913-01/policy_arrays.npz",
+      "sha256": "c8c77434c84bd3041385eeca493de19210bf0956d84ffe3eb953dbad24569f66"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-l-20260913-01/solve_diagnostics.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-l-20260913-01/solve_diagnostics.csv",
+      "sha256": "79e06c0f08c0a9e5dfea8b9c3614d13ce7c0ca2f2f7c4344540ced2b8947d439"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-l-20260913-01/summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-l-20260913-01/summary.json",
+      "sha256": "9b5a3d0fcfbcc1610dddf7c51be743a84e5138886a3237923d796da9aaf2c4b1"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-pv-20260913-01/config.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-pv-20260913-01/config.json",
+      "sha256": "1da3094024c39aa1d6ab674f89a371cbe0ff2afe3fcb96ea5e35893465e8fddc"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-pv-20260913-01/daily_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-pv-20260913-01/daily_ledger.csv",
+      "sha256": "d79162f168042435d4f08aae27aa27ab1ab859ce65b94fc9ca73e7f735a18ea8"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-pv-20260913-01/forecast_bundle.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-pv-20260913-01/forecast_bundle.npz",
+      "sha256": "d64702c528847153322d5ea3e4e7ba6d4c87c5a815c18beb0a6d4249eb942736"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-pv-20260913-01/forecast_fit_log.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-pv-20260913-01/forecast_fit_log.csv",
+      "sha256": "9a7b4cef2bee66bda95326905226ebbac089cba2c475cafc89e85d020e883bdf"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-pv-20260913-01/interval_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-pv-20260913-01/interval_ledger.csv",
+      "sha256": "0f760e70df6cbf2cadb8fc398cc3162ff79538e9d2beac0125f54d0943c3c258"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-pv-20260913-01/january_warmup_summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-pv-20260913-01/january_warmup_summary.json",
+      "sha256": "edf41464a4480780e82047fcc7a9944b7fd2de04def409220e91ae1fedc9f6dc"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-pv-20260913-01/manifest.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-pv-20260913-01/manifest.json",
+      "sha256": "8a2f4bc5b07443b69eebc99af0c07a5f13cbf71c56e982c186dc1a916e7b978a"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-pv-20260913-01/policy_arrays.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-pv-20260913-01/policy_arrays.npz",
+      "sha256": "ee1d0d2730f3cdcb17bc38845db3b59a1c90705abdd110bb29ab9bec20a6d883"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-pv-20260913-01/solve_diagnostics.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-pv-20260913-01/solve_diagnostics.csv",
+      "sha256": "13d401b7ec9a97ad79183f4821b211735efa53477ddf7184737131dc0c908860"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-abl-pv-20260913-01/summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-abl-pv-20260913-01/summary.json",
+      "sha256": "2abebf89469256580a581d89e836e7302235ccad7f29c44626397e5adf731f58"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b0-20260913-01/config.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b0-20260913-01/config.json",
+      "sha256": "8d633791d7a8e6785b472c8fc7bf5430e331c6228ae7bd21fd686b5d0bc2cdb7"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b0-20260913-01/daily_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b0-20260913-01/daily_ledger.csv",
+      "sha256": "7c4f804eaaee608ee6bb2d7044e8eab2289da33669b467b865aff61fff032282"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b0-20260913-01/forecast_bundle.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b0-20260913-01/forecast_bundle.npz",
+      "sha256": "cce3ea91a643b68159b230c7d2c6cb6e4957bb3ae5fd6a57a4e15a53be86b434"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b0-20260913-01/forecast_fit_log.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b0-20260913-01/forecast_fit_log.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b0-20260913-01/interval_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b0-20260913-01/interval_ledger.csv",
+      "sha256": "9db3112de31548a490369bfda0d0708ce7f3dc6cd94c25c3d81e1bcbcac5fccc"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b0-20260913-01/january_warmup_summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b0-20260913-01/january_warmup_summary.json",
+      "sha256": "edf41464a4480780e82047fcc7a9944b7fd2de04def409220e91ae1fedc9f6dc"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b0-20260913-01/manifest.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b0-20260913-01/manifest.json",
+      "sha256": "f3a61c562475bd6873ea6d7599cb3b9f5a6b6672393a1f7648c1e81de55e075a"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b0-20260913-01/policy_arrays.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b0-20260913-01/policy_arrays.npz",
+      "sha256": "55546a20a9481568d20fcc4c62e4781a2240119a5a35c6c9df95f92e36275986"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b0-20260913-01/solve_diagnostics.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b0-20260913-01/solve_diagnostics.csv",
+      "sha256": "fb25e9bd506a8d31b71153662aeaef8f9f64e478087252869361fee70c377c99"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b0-20260913-01/summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b0-20260913-01/summary.json",
+      "sha256": "0280ba65bdf7c6b75a998762ba42b4c8167e6193cbd445bb4276740cf15fdc6a"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b1-20260913-01/config.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b1-20260913-01/config.json",
+      "sha256": "b6fc318d4b93a2ef73adc24463214849903979aec58665e9639ec24eaffb08da"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b1-20260913-01/daily_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b1-20260913-01/daily_ledger.csv",
+      "sha256": "ccef9881ae96322a600e01e03c183df9e7f02170f6cf57c2eae724961bf3e01f"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b1-20260913-01/forecast_bundle.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b1-20260913-01/forecast_bundle.npz",
+      "sha256": "8352aadcefefddf5d8f5f6ee21ed2f5b6507711252df9083b5b30387c0f7db77"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b1-20260913-01/forecast_fit_log.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b1-20260913-01/forecast_fit_log.csv",
+      "sha256": "b6727706b20f21e277e5269a74284105eb0619b298e9162d5f08a4e54ee91c68"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b1-20260913-01/interval_ledger.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b1-20260913-01/interval_ledger.csv",
+      "sha256": "fc202d93d683498a9f97da07c713f2ef9099afb84c60a4f36031f67d4069b161"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b1-20260913-01/january_warmup_summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b1-20260913-01/january_warmup_summary.json",
+      "sha256": "edf41464a4480780e82047fcc7a9944b7fd2de04def409220e91ae1fedc9f6dc"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b1-20260913-01/manifest.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b1-20260913-01/manifest.json",
+      "sha256": "91d63f6c7a971deac4f83dc3c25e691e87177c568d6d9e8a26120f2d7233afc1"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b1-20260913-01/policy_arrays.npz",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b1-20260913-01/policy_arrays.npz",
+      "sha256": "b6ed38368ce9b0e054c0c9e8afc0c0b5b5a90d330f09c295b8ffe85a1da8db3d"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b1-20260913-01/solve_diagnostics.csv",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b1-20260913-01/solve_diagnostics.csv",
+      "sha256": "1d613590906ea8bb8dd42d45b475df208d7cb9c4e65987565c3c967f60366992"
+    },
+    {
+      "source": "runs/q2v3-r2-dev-b1-20260913-01/summary.json",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/results/development_runs/q2v3-r2-dev-b1-20260913-01/summary.json",
+      "sha256": "eb79b5b10fc2a2cb4c1b2695d9510f8d8dfcf31a9808cac617e10c0bfa8fe100"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/parallel_bounded_benchmark.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/parallel_bounded_benchmark.json",
+      "sha256": "34d3da8742cec4eb7e043d0c86dba11f83f1c1e4dd2374d06b90f40167e838d8"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/q2_provisional_provenance.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/q2_provisional_provenance.json",
+      "sha256": "18bca14f03f589e06fa0ca245c461b0a69fab525e64aedde7c8ca9b737e170b8"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_execution.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_execution.json",
+      "sha256": "02e05461d760b42b57fc5c53f7ccac1c94a26e7d55aa8191745bcd71da6f1e4a"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_final_independent_review.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_final_independent_review.json",
+      "sha256": "a8ac302b06ef3e13fb2e8593bb63b71351d900d31a5225cdcf24cd392f3a56ba"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_final_independent_review.md",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_final_independent_review.md",
+      "sha256": "de48d980290dfba4ebc51b8e147c450760dd971d96f7e63b99368ce0ed672e3e"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_provenance_audit.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_provenance_audit.json",
+      "sha256": "f01708a9fe060b3cf8b599899086f26c4e57181f0f5655b9b0b1cd3a1d9eb9ad"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q3_A_ledger_audit.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_q3_A_ledger_audit.json",
+      "sha256": "5b80d342a88bc8bc145f3d800fc19761782819d87c12a7f5f86028d03da07353"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q3_B_ledger_audit.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_q3_B_ledger_audit.json",
+      "sha256": "dbe7fa9061b595ae31590e78106124419064f05cda4fe721f0afcd61d12bf169"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q3_independent_reconstruction.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_q3_independent_reconstruction.json",
+      "sha256": "5f1a65be9319fd717867b53c86a35b0e828e0d3ac624bdc4a19a8802d211f6cc"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q4_2_ledger_audit.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_q4_2_ledger_audit.json",
+      "sha256": "210436c9d6b353621cd16f7edf0f44461866e45ab114614cdc8f5c3f3358f7c1"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q4_3_A_ledger_audit.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_q4_3_A_ledger_audit.json",
+      "sha256": "05b3943213cb26f293a08cd4bcabb30168436a7cab9dc299f4cdd8c159540950"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q4_3_B_ledger_audit.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_q4_3_B_ledger_audit.json",
+      "sha256": "6a5baeb570d6592dcd9255ecf546f8bfc86bf0b2bf01a1908d395bbe6170f923"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q4_partial_log_review.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_q4_partial_log_review.json",
+      "sha256": "776c5d778b9608012958c55d569461c3235b5c1dc5182b46a420605088d4d54c"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_release_receipt.json",
+      "destination": "solutions/Q3_V3_ALIGNED/others/joint_review/round01_release_receipt.json",
+      "sha256": "011820eb80abe39e2254c141f26c99d9b35da3dcd6b3b881b5219fb9e586e915"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/parallel_bounded_benchmark.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/parallel_bounded_benchmark.json",
+      "sha256": "34d3da8742cec4eb7e043d0c86dba11f83f1c1e4dd2374d06b90f40167e838d8"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/q2_provisional_provenance.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/q2_provisional_provenance.json",
+      "sha256": "18bca14f03f589e06fa0ca245c461b0a69fab525e64aedde7c8ca9b737e170b8"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_execution.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_execution.json",
+      "sha256": "02e05461d760b42b57fc5c53f7ccac1c94a26e7d55aa8191745bcd71da6f1e4a"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_final_independent_review.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_final_independent_review.json",
+      "sha256": "a8ac302b06ef3e13fb2e8593bb63b71351d900d31a5225cdcf24cd392f3a56ba"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_final_independent_review.md",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_final_independent_review.md",
+      "sha256": "de48d980290dfba4ebc51b8e147c450760dd971d96f7e63b99368ce0ed672e3e"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_provenance_audit.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_provenance_audit.json",
+      "sha256": "f01708a9fe060b3cf8b599899086f26c4e57181f0f5655b9b0b1cd3a1d9eb9ad"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q3_A_ledger_audit.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_q3_A_ledger_audit.json",
+      "sha256": "5b80d342a88bc8bc145f3d800fc19761782819d87c12a7f5f86028d03da07353"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q3_B_ledger_audit.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_q3_B_ledger_audit.json",
+      "sha256": "dbe7fa9061b595ae31590e78106124419064f05cda4fe721f0afcd61d12bf169"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q3_independent_reconstruction.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_q3_independent_reconstruction.json",
+      "sha256": "5f1a65be9319fd717867b53c86a35b0e828e0d3ac624bdc4a19a8802d211f6cc"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q4_2_ledger_audit.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_q4_2_ledger_audit.json",
+      "sha256": "210436c9d6b353621cd16f7edf0f44461866e45ab114614cdc8f5c3f3358f7c1"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q4_3_A_ledger_audit.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_q4_3_A_ledger_audit.json",
+      "sha256": "05b3943213cb26f293a08cd4bcabb30168436a7cab9dc299f4cdd8c159540950"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q4_3_B_ledger_audit.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_q4_3_B_ledger_audit.json",
+      "sha256": "6a5baeb570d6592dcd9255ecf546f8bfc86bf0b2bf01a1908d395bbe6170f923"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_q4_partial_log_review.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_q4_partial_log_review.json",
+      "sha256": "776c5d778b9608012958c55d569461c3235b5c1dc5182b46a420605088d4d54c"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/others/round01_release_receipt.json",
+      "destination": "solutions/Q4_V1_ALIGNED/others/joint_review/round01_release_receipt.json",
+      "sha256": "011820eb80abe39e2254c141f26c99d9b35da3dcd6b3b881b5219fb9e586e915"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/figures/round01_q3_release_value/q3_release_value.pdf",
+      "destination": "solutions/Q3_V3_ALIGNED/figures/release_value/q3_release_value.pdf",
+      "sha256": "af467e8bf2a070619f05046a445da126074f10178e76c7077f5ba8d393abbe9b"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/figures/round01_q3_release_value/q3_release_value.png",
+      "destination": "solutions/Q3_V3_ALIGNED/figures/release_value/q3_release_value.png",
+      "sha256": "9b5fda76811f807f5d6ebf884a8343f787a993a68c370e643e7309d135c70b57"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/results/round01_price_diagnostics/diagnostic_manifest.json",
+      "destination": "solutions/Q4_V1_ALIGNED/results/price_diagnostics/diagnostic_manifest.json",
+      "sha256": "4645dba6ac3a215f1bbb5f7664705490f693535b25651d5eab26f03ed6ec92a6"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/results/round01_price_diagnostics/price_error_daily.csv",
+      "destination": "solutions/Q4_V1_ALIGNED/results/price_diagnostics/price_error_daily.csv",
+      "sha256": "f4d6f9e2788045fb015133b9a4c5ef623ecb30cc8e78da0b4b2ab4b72cf055cc"
+    },
+    {
+      "source": "solutions/Q3_Q4_JOINT/results/round01_price_diagnostics/price_error_summary.csv",
+      "destination": "solutions/Q4_V1_ALIGNED/results/price_diagnostics/price_error_summary.csv",
+      "sha256": "ae8cf7617f8346602b5e2403447abe3bc03c19dafe450fdf02f74b956fa29d6b"
+    },
+    {
+      "source": "git:17f25a508deaf7f9248ef18c3b498be12f5c083a:solutions/Q2_V3_CAUSAL_FORECAST/program/run_q2_v3.py",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/others/executed_source/solutions/Q2_V3_CAUSAL_FORECAST/program/run_q2_v3.py",
+      "sha256": "ae1b96c1d21fd592dd6d6ce9758d9506424a8799054661e45832eaa21acad4b6"
+    },
+    {
+      "source": "git:17f25a508deaf7f9248ef18c3b498be12f5c083a:solutions/Q2_V3_CAUSAL_FORECAST/program/q2_forecasts.py",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/others/executed_source/solutions/Q2_V3_CAUSAL_FORECAST/program/q2_forecasts.py",
+      "sha256": "f468efeffa1024b84daa57c8d2ce62feb53c623b430b97fdb87d7b91c5ca772c"
+    },
+    {
+      "source": "git:17f25a508deaf7f9248ef18c3b498be12f5c083a:solutions/Q2_V3_CAUSAL_FORECAST/program/q2_model.py",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/others/executed_source/solutions/Q2_V3_CAUSAL_FORECAST/program/q2_model.py",
+      "sha256": "b56dff44c853aad4eee2e3801bc60de76d19550f60ef7ff3b0e614801755e66d"
+    },
+    {
+      "source": "git:17f25a508deaf7f9248ef18c3b498be12f5c083a:solutions/Q2_V3_CAUSAL_FORECAST/program/q2_deep_core.py",
+      "destination": "solutions/Q2_V3_CAUSAL_FORECAST/others/executed_source/solutions/Q2_V3_CAUSAL_FORECAST/program/q2_deep_core.py",
+      "sha256": "c10e15a5bdccf545616b6c18f1fbf52592392d7fcb01cb853665869c81a1536f"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q3_V3_ALIGNED/program/q3_api.py",
+      "destination": "solutions/Q3_V3_ALIGNED/others/executed_source/solutions/Q3_V3_ALIGNED/program/q3_api.py",
+      "sha256": "60b0cbe9f7d9149aebc41367a3fca49c70e749f42e6d4276fe08d3d4e63dba73"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q3_V3_ALIGNED/program/q3_outputs.py",
+      "destination": "solutions/Q3_V3_ALIGNED/others/executed_source/solutions/Q3_V3_ALIGNED/program/q3_outputs.py",
+      "sha256": "8295207a3b0aa587ba78653f83399937072b8621ff2d27817b8f363da923e936"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q3_V3_ALIGNED/program/run_q3_v3.py",
+      "destination": "solutions/Q3_V3_ALIGNED/others/executed_source/solutions/Q3_V3_ALIGNED/program/run_q3_v3.py",
+      "sha256": "19fd682e4d363b46ee7d25a05954548d39a75c5e80fffeb16f3038d046e46d1e"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q3_V3_ALIGNED/program/tests/conftest.py",
+      "destination": "solutions/Q3_V3_ALIGNED/others/executed_source/solutions/Q3_V3_ALIGNED/program/tests/conftest.py",
+      "sha256": "bf219e5e2996589ebd27675c2cbe562acb8ce29cbd9371b40066ef80bdd0ff59"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q3_V3_ALIGNED/program/tests/test_q3.py",
+      "destination": "solutions/Q3_V3_ALIGNED/others/executed_source/solutions/Q3_V3_ALIGNED/program/tests/test_q3.py",
+      "sha256": "14a4af2a0b119683510305dffd4840a10590d34d7c48a25e52bae4223f001345"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:reports/q3_q4_joint_iteration_contract.md",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/reports/q3_q4_joint_iteration_contract.md",
+      "sha256": "0534adb5ea47486de4e623c842b9eef4c0017d1e7b27d9713fd2d4f93ca6a90f"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q2_V3_CAUSAL_FORECAST/program/evaluate_development.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q2_V3_CAUSAL_FORECAST/program/evaluate_development.py",
+      "sha256": "6395386fd4ed4caecf9a53c23da09001f18bced0302193a48a71fdef733dd67d"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q2_V3_CAUSAL_FORECAST/program/finalize_q2.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q2_V3_CAUSAL_FORECAST/program/finalize_q2.py",
+      "sha256": "89c46f2db30f5f0c96e7ae90028a45bc0094f91c8a24081ffc75b1eaa02dc098"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q2_V3_CAUSAL_FORECAST/program/q2_deep_core.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q2_V3_CAUSAL_FORECAST/program/q2_deep_core.py",
+      "sha256": "c10e15a5bdccf545616b6c18f1fbf52592392d7fcb01cb853665869c81a1536f"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q2_V3_CAUSAL_FORECAST/program/q2_forecasts.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q2_V3_CAUSAL_FORECAST/program/q2_forecasts.py",
+      "sha256": "f468efeffa1024b84daa57c8d2ce62feb53c623b430b97fdb87d7b91c5ca772c"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q2_V3_CAUSAL_FORECAST/program/q2_model.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q2_V3_CAUSAL_FORECAST/program/q2_model.py",
+      "sha256": "b56dff44c853aad4eee2e3801bc60de76d19550f60ef7ff3b0e614801755e66d"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q2_V3_CAUSAL_FORECAST/program/run_q2_v3.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q2_V3_CAUSAL_FORECAST/program/run_q2_v3.py",
+      "sha256": "ae1b96c1d21fd592dd6d6ce9758d9506424a8799054661e45832eaa21acad4b6"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q3_V3_ALIGNED/program/q3_api.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q3_V3_ALIGNED/program/q3_api.py",
+      "sha256": "60b0cbe9f7d9149aebc41367a3fca49c70e749f42e6d4276fe08d3d4e63dba73"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q3_V3_ALIGNED/program/q3_outputs.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q3_V3_ALIGNED/program/q3_outputs.py",
+      "sha256": "8295207a3b0aa587ba78653f83399937072b8621ff2d27817b8f363da923e936"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q3_V3_ALIGNED/program/run_q3_v3.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q3_V3_ALIGNED/program/run_q3_v3.py",
+      "sha256": "19fd682e4d363b46ee7d25a05954548d39a75c5e80fffeb16f3038d046e46d1e"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q4_V1_ALIGNED/program/q4_core.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q4_V1_ALIGNED/program/q4_core.py",
+      "sha256": "3c655bfc55f4f644b4b8f8e6bdb706b2dc224e5e27da48b651ede4c1b1113cd4"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q4_V1_ALIGNED/program/q4_delivery.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q4_V1_ALIGNED/program/q4_delivery.py",
+      "sha256": "dbbf9b24558995411fab1aa4e038dead6d61ee4f766347e3f971c3571a83440f"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q4_V1_ALIGNED/program/q4_prices.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q4_V1_ALIGNED/program/q4_prices.py",
+      "sha256": "4184befd9fb1a44eec76d01838be6d5b97fe8bcfc1bf768d37a988c16105b1b6"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q4_V1_ALIGNED/program/q4_provenance.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q4_V1_ALIGNED/program/q4_provenance.py",
+      "sha256": "ebe6c10900e3fd9bfb9fab44380c352d4fca27d9cfb58da240790767add2d6cb"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q4_V1_ALIGNED/program/run_q4.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q4_V1_ALIGNED/program/run_q4.py",
+      "sha256": "97011749680b9eb57b033fe38a1b3464fb2c06bc016fac1192040157709a2d72"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q4_V1_ALIGNED/program/tests/conftest.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q4_V1_ALIGNED/program/tests/conftest.py",
+      "sha256": "5304ee5bfdb9cac1d7288cf7ecfc7534e844cea22a8d4f3e2e41c78029a5d860"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:solutions/Q4_V1_ALIGNED/program/tests/test_q4.py",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/solutions/Q4_V1_ALIGNED/program/tests/test_q4.py",
+      "sha256": "399ee69ce86dacc0ca5f1c942746141e362466b92ce278922abdf11744557323"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:术语表格.md",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/术语表格.md",
+      "sha256": "89fd59eee4c7f79dec42448a2df8cadf99d7224f4931b4e3efc35e5662dd3261"
+    },
+    {
+      "source": "git:3f9e6730414af5dc83211b8b655c278a5594f59f:题目分析报告.md",
+      "destination": "solutions/Q4_V1_ALIGNED/others/executed_source/题目分析报告.md",
+      "sha256": "7b135683a2f5f5d989f5a93ce93b9a209f750be89c7a4a9aafd6227d592a17ab"
+    }
+  ]
+}

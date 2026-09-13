@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "review_id": "round01_final_independent_review",
+  "review_date": "2026-09-13",
+  "reviewer_role": "独立模型与交付审核；不声称真实竞赛评委经历",
+  "rubric": "reports/q3_q4_joint_iteration_contract.md",
+  "rubric_frozen": true,
+  "score_interpretation": "内部内容交付完整度评分，不是获奖概率、真实评委评分或全依赖正式放行。",
+  "source_commit": "3f9e6730414af5dc83211b8b655c278a5594f59f",
+  "model_rerun": false,
+  "annual_rerun": false,
+  "review_process": {
+    "independent_reconstruction": true,
+    "parent_audit_helpers_invoked": false,
+    "reused_completed_reviews": [
+      "Q3五方案完整重建",
+      "Q4-2与Q4-3 A已落盘元数据审核"
+    ],
+    "writes": "仅按用户最新授权保存本JSON与Markdown；未修改模型、运行产物或上游。",
+    "parallel_wrapper_in_annual": false,
+    "parallel_wrapper_speed_credited": false
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "P2",
+      "questions": [
+        "Q3",
+        "Q4"
+      ],
+      "title": "Time B 独立敏感性未完成",
+      "hard_blocker": false,
+      "dimension": "经济证据与稳健性",
+      "deductions": {
+        "Q3": 2,
+        "Q4": 2
+      },
+      "evidence": [
+        "题目分析报告.md:43",
+        "题目分析报告.md:142",
+        "solutions/Q3_V3_ALIGNED/others/ROUND01_PAPER_NOTES.md",
+        "solutions/Q4_V1_ALIGNED/others/ROUND01_METHOD_NOTES.md:53"
+      ],
+      "impact": "已验证 Time A 的账本及模板，尚不能量化附件端点替代解释对本题策略收益的影响。结算 B 不等于时间映射 B。",
+      "acceptance": "若后续补证，按已声明的跨日映射及共同可用窗口单独评价；本审核不要求追加或重复当前全年运行。"
+    },
+    {
+      "id": "F2",
+      "severity": "P2",
+      "questions": [
+        "Q3",
+        "Q4"
+      ],
+      "title": "一槽观测延迟敏感性未完成",
+      "hard_blocker": false,
+      "dimension": "经济证据与稳健性",
+      "deductions": {
+        "Q3": 2,
+        "Q4": 2
+      },
+      "evidence": [
+        "题目分析报告.md:131",
+        "solutions/Q3_V3_ALIGNED/program/q3_api.py:321",
+        "solutions/Q4_V1_ALIGNED/others/ROUND01_METHOD_NOTES.md:53"
+      ],
+      "impact": "理想实时反馈主模型在声明的信息集下因果成立，但未验证存在观测延迟时的费用及紧急购电稳健性。",
+      "acceptance": "保留即时测量假设与当前缺口；不得以 Q2 的延迟实验替代 Q3/Q4 证据。"
+    },
+    {
+      "id": "F3",
+      "severity": "P2",
+      "questions": [
+        "Q4"
+      ],
+      "title": "动态电价交易时点的替代结算解释未验证",
+      "hard_blocker": false,
+      "dimension": "经济证据与稳健性",
+      "deductions": {
+        "Q4": 2
+      },
+      "evidence": [
+        "problem/C题.pdf:2",
+        "题目分析报告.md:43",
+        "solutions/Q4_V1_ALIGNED/others/ROUND01_METHOD_NOTES.md",
+        "solutions/Q4_V1_ALIGNED/program/q4_core.py"
+      ],
+      "impact": "交付时段实际价格的主账本正确；现有 A/B 仅改变下调费正负，未覆盖交易时刻定价与交付时段定价的解释差异。",
+      "acceptance": "最终主张限定于已声明的交付实价规则；如补充替代解释，应先明确可得价格、成交时点及重计价规则，避免把未知价格补作当时信息。"
+    },
+    {
+      "id": "F4",
+      "severity": "P2",
+      "questions": [
+        "Q4"
+      ],
+      "title": "未保留逐候选合同及逐日候选现金，限制选择分数的独立重建",
+      "hard_blocker": false,
+      "dimension": "可追溯与交付",
+      "deductions": {
+        "Q4": 3
+      },
+      "evidence": [
+        "solutions/Q4_V1_ALIGNED/program/q4_core.py:26",
+        "solutions/Q4_V1_ALIGNED/program/q4_core.py:44",
+        "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/q4_2_candidates.csv",
+        "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/q4_3_A_candidates.csv",
+        "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/q4_3_B_candidates.csv"
+      ],
+      "impact": "已验证冻结成熟规则、P1 测试、完整候选诊断及记录分数 argmin，但在禁止重优化的本次审核中不能从原始现金重算全部滚动候选分数。已接受日内候选分数可独立重建，拒绝候选完整合同未落盘。",
+      "acceptance": "保留此审计范围限制；后续新版本宜保存候选合同、逐日现金及完成时间，不为本次补造历史日志。"
+    },
+    {
+      "id": "F5",
+      "severity": "P2",
+      "questions": [
+        "Q3"
+      ],
+      "title": "拒绝候选的完整调整合同未保存",
+      "hard_blocker": false,
+      "dimension": "可追溯与交付",
+      "deductions": {
+        "Q3": 2
+      },
+      "evidence": [
+        "solutions/Q3_V3_ALIGNED/program/q3_api.py",
+        "solutions/Q3_V3_ALIGNED/results/q3v3-r1/A/decisions.csv"
+      ],
+      "impact": "全部 keep 分数和已接受候选分数均重建吻合；拒绝候选仅保存分数，无法在不重优化的情况下重建其 new_score。正式执行合同及账本仍完整可追溯，不构成无法追溯结果的硬阻断。",
+      "acceptance": "保持原始产物不变，明确未覆盖的反事实审计范围；后续版本可增加候选合同记录。"
+    }
+  ],
+  "questions": {
+    "Q3": {
+      "status": "CONTENT_PASS_WITH_LIMITATIONS",
+      "total": 94,
+      "maximum": 100,
+      "threshold": 90,
+      "content_threshold_met": true,
+      "dimensions": [
+        {
+          "name": "赛题与跨题一致性",
+          "maximum": 20,
+          "score": 20,
+          "deduction": 0,
+          "evidence": "授权受限基线、实际Q2核心、附件权限、非重叠窗口、单位及结算说明与冻结范围一致。"
+        },
+        {
+          "name": "因果时序",
+          "maximum": 25,
+          "score": 25,
+          "deduction": 0,
+          "evidence": "结合冻结源码、P1未来扰动测试、发布/成熟时序和跨日投影重建，未发现未来信息进入正式决策；评分不声称已重建缺失的全部候选历史现金。"
+        },
+        {
+          "name": "物理和现金账本",
+          "maximum": 20,
+          "score": 20,
+          "deduction": 0,
+          "evidence": "从附件及逐槽合同独立重建执行、能量/SOC/功率/互斥、真实价格现金，全部通过。"
+        },
+        {
+          "name": "经济证据与稳健性",
+          "maximum": 15,
+          "score": 11,
+          "deduction": 4,
+          "evidence": "同窗基线、期初期末SOC、分月尾部风险、结算A/B和分期Bootstrap均核验；未完成的替代解释敏感性按F1-F3扣分。"
+        },
+        {
+          "name": "可追溯与交付",
+          "maximum": 20,
+          "score": 18,
+          "deduction": 2,
+          "evidence": "冻结源码、输入/输出/图像哈希、首次运行、完整模板与自然日桥接通过；按F4/F5扣除反事实候选日志缺口。"
+        }
+      ],
+      "deduction_ids": [
+        "F1",
+        "F2",
+        "F5"
+      ],
+      "deduction_total": 6,
+      "hard_blockers": [],
+      "formal_use": false,
+      "scope": "q3v3-r1 的 baseline/A/B/A_6/A_6_12；Q3 q0直接冻结Q2 G，未评价零点附件3重优化价值。",
+      "evidence": {
+        "run": "solutions/Q3_V3_ALIGNED/results/q3v3-r1",
+        "variants": 5,
+        "raw_rows_per_variant": 52560,
+        "report_rows_per_variant": 48096,
+        "report_days": 334,
+        "source_files_checked": 5,
+        "output_entries_checked": 82,
+        "separate_figures_checked": 1,
+        "source_and_output_mismatches": [],
+        "filled_workbook_cells_checked": 532003,
+        "natural_midnight_bridges_per_variant": 334,
+        "natural_four_hour_blocks_per_variant": 2004,
+        "physics_summary_max_abs_difference": 1.862645149230957e-9,
+        "template_max_abs_difference": 4.3655745685100555e-11,
+        "midnight_projections_rebuilt": 1820,
+        "keep_scores_rebuilt": 2970,
+        "accepted_candidate_scores_rebuilt": 1261,
+        "gate_and_projection_max_abs_difference": 7.275957614183426e-11,
+        "paired_variant_rows_rebuilt": 36,
+        "joint_paired_days": 334,
+        "joint_paired_months": 11,
+        "p1_test_cases_previously_verified": 10,
+        "results": [
+          {
+            "variant": "baseline",
+            "cash_yuan": 14012090.207768975,
+            "emergency_kwh": 156793.12703338824,
+            "accepted": 0
+          },
+          {
+            "variant": "A",
+            "cash_yuan": 13532323.482237797,
+            "emergency_kwh": 7653.658282127716,
+            "accepted": 321,
+            "rejected": 681
+          },
+          {
+            "variant": "B",
+            "cash_yuan": 13412538.025340995,
+            "emergency_kwh": 16060.231257002837,
+            "accepted": 576,
+            "rejected": 426
+          },
+          {
+            "variant": "A_6",
+            "cash_yuan": 13692223.162904598,
+            "emergency_kwh": 59492.35170172423,
+            "accepted": 129,
+            "rejected": 205
+          },
+          {
+            "variant": "A_6_12",
+            "cash_yuan": 13628245.664428176,
+            "emergency_kwh": 35188.13412603049,
+            "accepted": 235,
+            "rejected": 433
+          }
+        ],
+        "common_initial_soc_kwh": 3717.349490203704,
+        "common_end_soc_kwh": 4407.270645740739,
+        "main_cash_saving_yuan": 479766.725531177,
+        "main_cash_saving_percent": 3.4239483076206003,
+        "main_emergency_reduction_percent": 95.11862641753555
+      },
+      "limitations": [
+        "Time B 与一槽延迟未完成，不能视为全部稳健性要求通过。",
+        "拒绝候选 new_score 未从完整候选合同重建。",
+        "7-12月为已观察后的回顾性披露；Bootstrap不消除选择偏差。",
+        "两套Bootstrap分别采用库存调整费用差/现金节省及不同种子；均复算正确，引用时不可混用。"
+      ]
+    },
+    "Q4": {
+      "status": "CONTENT_PASS_WITH_LIMITATIONS",
+      "total": 91,
+      "maximum": 100,
+      "threshold": 90,
+      "content_threshold_met": true,
+      "dimensions": [
+        {
+          "name": "赛题与跨题一致性",
+          "maximum": 20,
+          "score": 20,
+          "deduction": 0,
+          "evidence": "授权受限基线、实际Q2核心、附件权限、非重叠窗口、单位及结算说明与冻结范围一致。"
+        },
+        {
+          "name": "因果时序",
+          "maximum": 25,
+          "score": 25,
+          "deduction": 0,
+          "evidence": "结合冻结源码、P1未来扰动测试、发布/成熟时序和跨日投影重建，未发现未来信息进入正式决策；评分不声称已重建缺失的全部候选历史现金。"
+        },
+        {
+          "name": "物理和现金账本",
+          "maximum": 20,
+          "score": 20,
+          "deduction": 0,
+          "evidence": "从附件及逐槽合同独立重建执行、能量/SOC/功率/互斥、真实价格现金，全部通过。"
+        },
+        {
+          "name": "经济证据与稳健性",
+          "maximum": 15,
+          "score": 9,
+          "deduction": 6,
+          "evidence": "同窗基线、期初期末SOC、分月尾部风险、结算A/B和分期Bootstrap均核验；未完成的替代解释敏感性按F1-F3扣分。"
+        },
+        {
+          "name": "可追溯与交付",
+          "maximum": 20,
+          "score": 17,
+          "deduction": 3,
+          "evidence": "冻结源码、输入/输出/图像哈希、首次运行、完整模板与自然日桥接通过；按F4/F5扣除反事实候选日志缺口。"
+        }
+      ],
+      "deduction_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "deduction_total": 9,
+      "hard_blockers": [],
+      "formal_use": false,
+      "scope": "q4-v1-annual-20260913-01 的 Q4-2/Q4-3 A/Q4-3 B；冻结Q2动态预测价风险核心与Q3调整。",
+      "evidence": {
+        "run": "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01",
+        "status": "complete_provisional",
+        "trajectories": 3,
+        "raw_rows_per_trajectory": 52560,
+        "report_rows_per_trajectory": 48096,
+        "report_days": 334,
+        "source_files_checked": 19,
+        "input_files_checked": 6,
+        "output_entries_checked": 44,
+        "source_and_output_mismatches": [],
+        "sources_unchanged_during_run": true,
+        "filled_workbook_cells_checked": 271541,
+        "filled_cells_by_workbook": {
+          "result4-2.xlsx": 58630,
+          "result4-3.xlsx": 106282,
+          "result4-3-B-sensitivity.xlsx": 106629
+        },
+        "natural_midnight_bridges_per_trajectory": 334,
+        "natural_four_hour_blocks_per_trajectory": 2004,
+        "physics_summary_max_abs_difference": 1.862645149230957e-9,
+        "template_max_abs_difference": 4.3655745685100555e-11,
+        "candidate_diagnostic_entries_checked": 16425,
+        "selected_argmin_days_checked": 1095,
+        "midnight_projections_rebuilt": 1092,
+        "keep_scores_rebuilt": 1980,
+        "accepted_candidate_scores_rebuilt": 869,
+        "release_price_rows_rebuilt": 146292,
+        "gate_and_projection_max_abs_difference": 7.275957614183426e-11,
+        "midnight_price_values_rebuilt_per_trajectory": 52560,
+        "p1_test_cases_previously_verified": 8,
+        "results": [
+          {
+            "trajectory": "Q4-2",
+            "cash_yuan": 14812380.927696154,
+            "emergency_kwh": 156378.0132501492,
+            "daily_cvar95_yuan": 88676.42847616524
+          },
+          {
+            "trajectory": "Q4-3 A",
+            "cash_yuan": 14327190.203178847,
+            "emergency_kwh": 10780.27409896379,
+            "daily_cvar95_yuan": 76532.52585039807,
+            "accepted": 299,
+            "rejected": 703
+          },
+          {
+            "trajectory": "Q4-3 B",
+            "cash_yuan": 14217047.322125785,
+            "emergency_kwh": 16440.099639811142,
+            "daily_cvar95_yuan": 76032.34102773073,
+            "accepted": 570,
+            "rejected": 432
+          }
+        ],
+        "common_initial_soc_kwh": 10300.422321388887,
+        "common_end_soc_kwh": 7174.897846148145,
+        "main_cash_saving_yuan": 485190.7245173065,
+        "main_cash_saving_percent": 3.2755755262146935,
+        "main_emergency_reduction_percent": 93.10627250282353,
+        "development_cash_saving_yuan": 278536.7588077959,
+        "retrospective_cash_saving_yuan": 206653.96571,
+        "bootstrap_14day_mean_daily_cash_saving_ci95_yuan": [
+          687.9984583677519,
+          2549.5436847660926
+        ],
+        "joint_comparison_independently_rebuilt": true,
+        "first_annual_elapsed_seconds": 3378.7514042149996,
+        "elapsed_seconds_scope": "原首次串行运行清单记录；不使用未来并行wrapper速度加分。"
+      },
+      "limitations": [
+        "未独立重算全部逐候选历史现金：仅保存滚动分数、求解诊断与最终合同。",
+        "拒绝日内候选缺完整合同，不能重建其new_score。",
+        "Time B、一槽延迟及动态价交易时点替代结算未验证。",
+        "A与Q4-2差异包含额外PV信息、跨日投影、策略状态和调整交易；不能单独归因于价格预测或调整机制。",
+        "零点/日内lag7价格不会随发布时刻自动更新；本次不评价更复杂价格预测器。",
+        "场景追索规划目标不等于实际在线最优成本。"
+      ]
+    }
+  },
+  "price_diagnostics": {
+    "path": "solutions/Q3_Q4_JOINT/results/round01_price_diagnostics",
+    "independently_reconstructed": true,
+    "midnight_intervals_per_model": 48096,
+    "models": 2,
+    "split_summary_rows": 6,
+    "daily_metric_rows": 668,
+    "lag7_mae_yuan_per_kwh": 0.04715118305056554,
+    "fixed_attachment1_mae_yuan_per_kwh": 0.0963227253825682,
+    "mae_rmse_bias_and_splits_verified": true,
+    "strategy_changed": false,
+    "economic_attribution_evidence": false
+  },
+  "dependency": {
+    "upstream": "q2v3-r2-full-b0-a-20260913-01",
+    "source_commit": "17f25a508deaf7f9248ef18c3b498be12f5c083a",
+    "status": "PROVISIONAL_USER_AUTHORIZED_Q2_P2_PENDING",
+    "parked_issue": "Q2 finalizer RESET兼容边界汇总",
+    "deducted_from_content_score": false,
+    "hard_blocker_of_current_question": false,
+    "formal_use": false,
+    "requires_repeating_Q2_or_annual_runs": false
+  },
+  "joint_conclusion": {
+    "both_content_scores_at_least_90": true,
+    "current_question_hard_blockers": [],
+    "content_iteration_stop_condition_met": true,
+    "all_formal_release_requirements_met": false,
+    "formal_use": false,
+    "interpretation": "满足本轮冻结内容分数与本题零硬阻断条件；保留明确稳健性扣分、反事实审计限制及Q2暂定依赖，不宣称完整正式放行。"
+  },
+  "evidence_snapshots": {
+    "solutions/Q3_V3_ALIGNED/results/q3v3-r1/manifest.json": "2fde03a69ecceade2547666f232369a3cfc93297456001e8ffb47747bf9f92a2",
+    "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/manifest.json": "b8631a5c30315928461e7dfccd97e497a13dd5d3f79c74ac8e0dcf7041a57c54",
+    "solutions/Q3_Q4_JOINT/results/round01_q4_comparison/comparison.json": "1c4a9d7b5f504e9a665b21d4f0126f28ddeea9750ba02c8eafdd6c909a25500f",
+    "solutions/Q3_Q4_JOINT/results/round01_price_diagnostics/diagnostic_manifest.json": "4645dba6ac3a215f1bbb5f7664705490f693535b25651d5eab26f03ed6ec92a6",
+    "solutions/Q3_V3_ALIGNED/others/ROUND01_PAPER_NOTES.md": "7d0e0a1dd08eb4412df7848a6224d90162b0ed41f07ff86a569195f66883ea17",
+    "solutions/Q4_V1_ALIGNED/others/ROUND01_METHOD_NOTES.md": "bb004bbed3ad951a26fcfc848150a7c7199154a350f1f4557dba896aead75797"
+  },
+  "audit_limits": [
+    "哈希核验图像文件及其冻结制图源码，未将图像视觉样式计作模型评分依据。",
+    "模板填充值计数不含空单元格，因此不同于writer记录的全部检查单元格数；本审核同时检查必需空白、表头和额外填充。",
+    "已完成的Q3独立重建沿用原结果，避免重复审计；最终评审新增Q4完整执行、模板、因果和比较重建。",
+    "任何后续模型或策略实质变更须另立版本；本报告不覆盖未来wrapper。"
+  ]
+}

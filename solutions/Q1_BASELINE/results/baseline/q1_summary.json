@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "evidence_scope": "Q1 only; no Q2-Q4 annual result is claimed",
+  "solver": {
+    "lp_objective_yuan": 35126.94858928963,
+    "solve_seconds": 0.00729210000281455,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  },
+  "result": {
+    "total_purchase_kwh": 59482.69899835391,
+    "total_purchase_cost_yuan": 35126.948589289634,
+    "no_storage_cost_yuan": 48052.046590846665,
+    "saving_fraction": 0.26898121762870153,
+    "specified_intervals": [
+      {
+        "internal_interval": "10:00-10:10",
+        "purchase_kwh": 0.0
+      },
+      {
+        "internal_interval": "12:00-12:10",
+        "purchase_kwh": 486.40289999999993
+      },
+      {
+        "internal_interval": "14:00-14:10",
+        "purchase_kwh": 0.0
+      },
+      {
+        "internal_interval": "16:00-16:10",
+        "purchase_kwh": 394.9314833333333
+      },
+      {
+        "internal_interval": "18:00-18:10",
+        "purchase_kwh": 636.9826166666667
+      },
+      {
+        "internal_interval": "20:00-20:10",
+        "purchase_kwh": 0.0
+      }
+    ],
+    "four_hour_blocks": [
+      {
+        "template_block": "00:00-04:00",
+        "actual_sequence_interval": "00:10-04:10",
+        "charge_kwh": 4499.999999999999,
+        "discharge_kwh": 0.0
+      },
+      {
+        "template_block": "04:00-08:00",
+        "actual_sequence_interval": "04:10-08:10",
+        "charge_kwh": 833.3333333333333,
+        "discharge_kwh": 6365.8412
+      },
+      {
+        "template_block": "08:00-12:00",
+        "actual_sequence_interval": "08:10-12:10",
+        "charge_kwh": 4787.964288065848,
+        "discharge_kwh": 1702.9969833333334
+      },
+      {
+        "template_block": "12:00-16:00",
+        "actual_sequence_interval": "12:10-16:10",
+        "charge_kwh": 5286.0351769547315,
+        "discharge_kwh": 91.1013833333335
+      },
+      {
+        "template_block": "16:00-20:00",
+        "actual_sequence_interval": "16:10-20:10",
+        "charge_kwh": 0.0,
+        "discharge_kwh": 5780.1318833333335
+      },
+      {
+        "template_block": "20:00-24:00",
+        "actual_sequence_interval": "20:10-00:10+1",
+        "charge_kwh": 5333.333333333333,
+        "discharge_kwh": 2859.8681166666665
+      }
+    ],
+    "initial_energy_kwh": 6000.0,
+    "final_energy_kwh": 6000.0,
+    "charge_efficiency": 0.9,
+    "discharge_efficiency": 0.9,
+    "round_trip_efficiency": 0.81
+  },
+  "audit": {
+    "max_balance_residual_kwh": 2.2737367544323206e-13,
+    "max_state_residual_kwh": 8.313350008393172e-13,
+    "normalized_max_residual": 6.552552475535571e-16,
+    "minimum_flow_kwh": 0.0,
+    "minimum_energy_kwh": 1200.0,
+    "maximum_energy_kwh": 10800.0,
+    "maximum_charge_kwh": 833.3333333333333,
+    "maximum_discharge_kwh": 715.6530333333333,
+    "simultaneous_charge_discharge_steps": [],
+    "initial_energy_kwh": 6000.0,
+    "final_energy_kwh": 6000.0,
+    "cash_recalculated_yuan": 35126.948589289634,
+    "objective_cash_difference_yuan": 7.275957614183426e-12,
+    "no_storage_cash_yuan": 48052.046590846665,
+    "saving_vs_no_storage_yuan": 12925.098001557031,
+    "saving_vs_no_storage_fraction": 0.26898121762870153
+  },
+  "checks": {
+    "time_count_144": true,
+    "state_count_145": true,
+    "absolute_residual_pass": true,
+    "normalized_residual_pass": true,
+    "nonnegative_pass": true,
+    "energy_bounds_pass": true,
+    "power_bounds_pass": true,
+    "mutual_exclusion_pass": true,
+    "endpoint_pass": true,
+    "cash_recalculation_pass": true
+  },
+  "milp_optimality_certificate": {
+    "method": "LP-relaxation lower bound plus an LP optimum that already satisfies every binary mutual-exclusion constraint",
+    "lp_lower_bound_yuan": 35126.948589289634,
+    "milp_feasible_solution_yuan": 35126.948589289634,
+    "certified_milp_optimum_yuan": 35126.948589289634,
+    "proof": "MILP feasible set is a subset of the LP relaxation; the LP optimum is mutually exclusive and therefore MILP-feasible, so both bounds coincide.",
+    "instance_only": true
+  },
+  "template_readback": {
+    "sheet_names_preserved": true,
+    "plan_rows": 144,
+    "plan_max_abs_difference_kwh": 4.547473508864641e-13,
+    "plan_total_difference_kwh": 0.0,
+    "cash_difference_yuan": 0.0,
+    "charge_blocks_max_abs_difference_kwh": 9.094947017729282e-13,
+    "discharge_blocks_max_abs_difference_kwh": 9.094947017729282e-13,
+    "initial_energy_difference_kwh": 0.0,
+    "final_energy_difference_kwh": 0.0,
+    "pass": true
+  },
+  "manifest": {
+    "route": "C题融合路线与验证规约_v2.md is the only primary specification",
+    "inputs": {
+      "附件\\附件1.xlsx": "66b87134f5ecccd68184d3539bb1293ef039f9e0fdd955a589b9bfa7f227c377",
+      "附件\\附件5\\result1.xlsx": "28360e0974e7d6065394a8aba4e14a86773ae0036cc7d3ea1b211b515b03d688",
+      "C题融合路线与验证规约_v2.md": "803d56edf4aecdf95413529dba47f7b8a7867898633ef677149c48dbae4b28d8"
+    },
+    "outputs": {
+      "Q1\\result\\result1_v2.xlsx": "31ce14097c9e3abba818dbafa9a07ce82741d7a921f1feb73fd5bf1557da1105"
+    },
+    "runtime": {
+      "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "numpy": "2.2.5",
+      "pandas": "3.0.2",
+      "scipy": "1.17.1",
+      "openpyxl": "3.1.5"
+    },
+    "parameters": {
+      "delta_hours": 0.16666666666666666,
+      "capacity_kwh": 12000.0,
+      "energy_min_kwh": 1200.0,
+      "energy_max_kwh": 10800.0,
+      "initial_energy_kwh": 6000.0,
+      "final_energy_kwh": 6000.0,
+      "power_limit_kw": 5000.0,
+      "step_limit_kwh": 833.3333333333333,
+      "eta_charge": 0.9,
+      "eta_discharge": 0.9,
+      "round_trip_efficiency": 0.81
+    },
+    "contracts": {
+      "q1_state_rule": "single-day closed cycle: E0=E144=6000 kWh",
+      "q2_q4_state_rule": "continuous cross-day rolling state; never reset to 6000 each day",
+      "time_rule": "first interval 00:10-00:20; last interval next-day 00:00-00:10"
+    },
+    "command": "python Q1/program/q1_reproduce_v2.py"
+  }
+}

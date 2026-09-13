@@ -1,0 +1,863 @@
+{
+  "source": "<DataFrame>",
+  "n_rows": 144,
+  "n_cols": 17,
+  "columns": {
+    "step": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 71.5,
+      "median": 71.5,
+      "sd": 41.71330722922842,
+      "min": 0.0,
+      "max": 143.0,
+      "skewness": 0.0,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -71.5,
+      "outlier_hi": 214.5,
+      "needs_log_axis": false
+    },
+    "internal_start": {
+      "type": "unknown",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "internal_end": {
+      "type": "unknown",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "input_time_label": {
+      "type": "unknown",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "template_label": {
+      "type": "unknown",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "price_yuan_per_kwh": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 0.7661972222222223,
+      "median": 0.80735,
+      "sd": 0.31438561684044336,
+      "min": 0.3713,
+      "max": 1.3952,
+      "skewness": 0.32211973796953625,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.3859624999999999,
+      "outlier_hi": 1.8067374999999999,
+      "needs_log_axis": false
+    },
+    "load_kw": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 4626.0336708333325,
+      "median": 4377.57425,
+      "sd": 980.8829091130873,
+      "min": 3309.3934,
+      "max": 5958.9696,
+      "skewness": 0.05888578160820493,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": 355.70349999999917,
+      "outlier_hi": 8863.209900000002,
+      "needs_log_axis": false
+    },
+    "pv_kw": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 2311.7848194444446,
+      "median": 387.61125,
+      "sd": 2864.3631945018074,
+      "min": 0.0,
+      "max": 7612.316,
+      "skewness": 0.7547869251827606,
+      "skew_label": "moderately skewed",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -7519.144875,
+      "outlier_hi": 12531.908125,
+      "needs_log_axis": false
+    },
+    "load_kwh": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 771.0056118055555,
+      "median": 729.5957083333333,
+      "sd": 163.4804848521812,
+      "min": 551.5655666666667,
+      "max": 993.1616,
+      "skewness": 0.05888578160820211,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": 59.28391666666653,
+      "outlier_hi": 1477.2016500000002,
+      "needs_log_axis": false
+    },
+    "pv_kwh": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 385.2974699074074,
+      "median": 64.60187499999999,
+      "sd": 477.39386575030125,
+      "min": 0.0,
+      "max": 1268.7193333333332,
+      "skewness": 0.7547869251827604,
+      "skew_label": "moderately skewed",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -1253.1908125,
+      "outlier_hi": 2088.6513541666664,
+      "needs_log_axis": false
+    },
+    "purchase_kwh": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 413.07429859967993,
+      "median": 496.9836583333332,
+      "sd": 419.08354751458245,
+      "min": 0.0,
+      "max": 1409.8045499999998,
+      "skewness": 0.7863731776914238,
+      "skew_label": "moderately skewed",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -891.0530812499999,
+      "outlier_hi": 1485.0884687499997,
+      "needs_log_axis": false
+    },
+    "charge_kwh": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 144.03240369227257,
+      "median": 0.0,
+      "sd": 282.7631738342723,
+      "min": 0.0,
+      "max": 833.3333333333333,
+      "skewness": 1.837684030457397,
+      "skew_label": "highly skewed",
+      "n_outliers_iqr": 22,
+      "outlier_lo": -190.03713749999974,
+      "outlier_hi": 316.7285624999996,
+      "needs_log_axis": false
+    },
+    "discharge_kwh": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 116.66624699074075,
+      "median": 0.0,
+      "sd": 234.4911231351037,
+      "min": 0.0,
+      "max": 715.6530333333333,
+      "skewness": 1.7583477507475145,
+      "skew_label": "highly skewed",
+      "n_outliers_iqr": 35,
+      "outlier_lo": -34.30054374999996,
+      "outlier_hi": 57.1675729166666,
+      "needs_log_axis": false
+    },
+    "unused_supply_kwh": {
+      "type": "boolean",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "n_unique": 1,
+      "categories": [
+        [
+          "0.0",
+          144
+        ]
+      ],
+      "min_group_n": 144,
+      "max_group_n": 144,
+      "small_groups_flag": false
+    },
+    "energy_before_kwh": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 7264.3598095048865,
+      "median": 9055.34136111111,
+      "sd": 3461.7059128602073,
+      "min": 1200.0,
+      "max": 10800.0,
+      "skewness": -0.4855234208119767,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -4739.404668981485,
+      "outlier_hi": 18926.64107546297,
+      "needs_log_axis": false
+    },
+    "energy_after_kwh": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 7264.359809504887,
+      "median": 9055.34136111111,
+      "sd": 3461.7059128602073,
+      "min": 1200.0,
+      "max": 10800.0,
+      "skewness": -0.4855234208119776,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -4739.404668981485,
+      "outlier_hi": 18926.64107546297,
+      "needs_log_axis": false
+    },
+    "purchase_cost_yuan": {
+      "type": "continuous",
+      "n_total": 144,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 144,
+      "mean": 243.937142981178,
+      "median": 242.4234861016666,
+      "sd": 261.43713064874083,
+      "min": 0.0,
+      "max": 875.2213375166665,
+      "skewness": 0.8087821852276705,
+      "skew_label": "moderately skewed",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -557.996605129375,
+      "outlier_hi": 929.9943418822917,
+      "needs_log_axis": false
+    }
+  },
+  "correlation": {
+    "columns": [
+      "step",
+      "price_yuan_per_kwh",
+      "load_kw",
+      "pv_kw",
+      "load_kwh",
+      "pv_kwh",
+      "purchase_kwh",
+      "charge_kwh",
+      "discharge_kwh",
+      "energy_before_kwh",
+      "energy_after_kwh",
+      "purchase_cost_yuan"
+    ],
+    "matrix": {
+      "step": {
+        "step": 1.0,
+        "price_yuan_per_kwh": 0.425,
+        "load_kw": 0.159,
+        "pv_kw": -0.01,
+        "load_kwh": 0.159,
+        "pv_kwh": -0.01,
+        "purchase_kwh": 0.008,
+        "charge_kwh": -0.001,
+        "discharge_kwh": 0.116,
+        "energy_before_kwh": -0.284,
+        "energy_after_kwh": -0.293,
+        "purchase_cost_yuan": 0.236
+      },
+      "price_yuan_per_kwh": {
+        "step": 0.425,
+        "price_yuan_per_kwh": 1.0,
+        "load_kw": 0.443,
+        "pv_kw": 0.084,
+        "load_kwh": 0.443,
+        "pv_kwh": 0.084,
+        "purchase_kwh": -0.555,
+        "charge_kwh": -0.446,
+        "discharge_kwh": 0.592,
+        "energy_before_kwh": -0.135,
+        "energy_after_kwh": -0.212,
+        "purchase_cost_yuan": -0.164
+      },
+      "load_kw": {
+        "step": 0.159,
+        "price_yuan_per_kwh": 0.443,
+        "load_kw": 1.0,
+        "pv_kw": 0.856,
+        "load_kwh": 1.0,
+        "pv_kwh": 0.856,
+        "purchase_kwh": -0.604,
+        "charge_kwh": -0.063,
+        "discharge_kwh": -0.043,
+        "energy_before_kwh": -0.135,
+        "energy_after_kwh": -0.136,
+        "purchase_cost_yuan": -0.359
+      },
+      "pv_kw": {
+        "step": -0.01,
+        "price_yuan_per_kwh": 0.084,
+        "load_kw": 0.856,
+        "pv_kw": 1.0,
+        "load_kwh": 0.856,
+        "pv_kwh": 1.0,
+        "purchase_kwh": -0.526,
+        "charge_kwh": 0.225,
+        "discharge_kwh": -0.227,
+        "energy_before_kwh": -0.185,
+        "energy_after_kwh": -0.151,
+        "purchase_cost_yuan": -0.49
+      },
+      "load_kwh": {
+        "step": 0.159,
+        "price_yuan_per_kwh": 0.443,
+        "load_kw": 1.0,
+        "pv_kw": 0.856,
+        "load_kwh": 1.0,
+        "pv_kwh": 0.856,
+        "purchase_kwh": -0.604,
+        "charge_kwh": -0.063,
+        "discharge_kwh": -0.043,
+        "energy_before_kwh": -0.135,
+        "energy_after_kwh": -0.136,
+        "purchase_cost_yuan": -0.359
+      },
+      "pv_kwh": {
+        "step": -0.01,
+        "price_yuan_per_kwh": 0.084,
+        "load_kw": 0.856,
+        "pv_kw": 1.0,
+        "load_kwh": 0.856,
+        "pv_kwh": 1.0,
+        "purchase_kwh": -0.526,
+        "charge_kwh": 0.225,
+        "discharge_kwh": -0.227,
+        "energy_before_kwh": -0.185,
+        "energy_after_kwh": -0.151,
+        "purchase_cost_yuan": -0.49
+      },
+      "purchase_kwh": {
+        "step": 0.008,
+        "price_yuan_per_kwh": -0.555,
+        "load_kw": -0.604,
+        "pv_kw": -0.526,
+        "load_kwh": -0.604,
+        "pv_kwh": -0.526,
+        "purchase_kwh": 1.0,
+        "charge_kwh": 0.537,
+        "discharge_kwh": -0.49,
+        "energy_before_kwh": 0.08,
+        "energy_after_kwh": 0.156,
+        "purchase_cost_yuan": 0.828
+      },
+      "charge_kwh": {
+        "step": -0.001,
+        "price_yuan_per_kwh": -0.446,
+        "load_kw": -0.063,
+        "pv_kw": 0.225,
+        "load_kwh": -0.063,
+        "pv_kwh": 0.225,
+        "purchase_kwh": 0.537,
+        "charge_kwh": 1.0,
+        "discharge_kwh": -0.255,
+        "energy_before_kwh": -0.207,
+        "energy_after_kwh": -0.115,
+        "purchase_cost_yuan": 0.227
+      },
+      "discharge_kwh": {
+        "step": 0.116,
+        "price_yuan_per_kwh": 0.592,
+        "load_kw": -0.043,
+        "pv_kw": -0.227,
+        "load_kwh": -0.043,
+        "pv_kwh": -0.227,
+        "purchase_kwh": -0.49,
+        "charge_kwh": -0.255,
+        "discharge_kwh": 1.0,
+        "energy_before_kwh": -0.11,
+        "energy_after_kwh": -0.204,
+        "purchase_cost_yuan": -0.459
+      },
+      "energy_before_kwh": {
+        "step": -0.284,
+        "price_yuan_per_kwh": -0.135,
+        "load_kw": -0.135,
+        "pv_kw": -0.185,
+        "load_kwh": -0.135,
+        "pv_kwh": -0.185,
+        "purchase_kwh": 0.08,
+        "charge_kwh": -0.207,
+        "discharge_kwh": -0.11,
+        "energy_before_kwh": 1.0,
+        "energy_after_kwh": 0.993,
+        "purchase_cost_yuan": 0.124
+      },
+      "energy_after_kwh": {
+        "step": -0.293,
+        "price_yuan_per_kwh": -0.212,
+        "load_kw": -0.136,
+        "pv_kw": -0.151,
+        "load_kwh": -0.136,
+        "pv_kwh": -0.151,
+        "purchase_kwh": 0.156,
+        "charge_kwh": -0.115,
+        "discharge_kwh": -0.204,
+        "energy_before_kwh": 0.993,
+        "energy_after_kwh": 1.0,
+        "purchase_cost_yuan": 0.175
+      },
+      "purchase_cost_yuan": {
+        "step": 0.236,
+        "price_yuan_per_kwh": -0.164,
+        "load_kw": -0.359,
+        "pv_kw": -0.49,
+        "load_kwh": -0.359,
+        "pv_kwh": -0.49,
+        "purchase_kwh": 0.828,
+        "charge_kwh": 0.227,
+        "discharge_kwh": -0.459,
+        "energy_before_kwh": 0.124,
+        "energy_after_kwh": 0.175,
+        "purchase_cost_yuan": 1.0
+      }
+    },
+    "pairs_sorted": [
+      {
+        "a": "pv_kw",
+        "b": "pv_kwh",
+        "r": 0.9999999999999999,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "load_kw",
+        "b": "load_kwh",
+        "r": 0.9999999999999992,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "energy_before_kwh",
+        "b": "energy_after_kwh",
+        "r": 0.9930533084848603,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "load_kw",
+        "b": "pv_kwh",
+        "r": 0.8564479077447952,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "load_kw",
+        "b": "pv_kw",
+        "r": 0.8564479077447951,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "load_kwh",
+        "b": "pv_kwh",
+        "r": 0.8564479077447951,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "pv_kw",
+        "b": "load_kwh",
+        "r": 0.8564479077447948,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "purchase_kwh",
+        "b": "purchase_cost_yuan",
+        "r": 0.828471085667552,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "load_kw",
+        "b": "purchase_kwh",
+        "r": -0.6037763656741191,
+        "magnitude": "strong"
+      },
+      {
+        "a": "load_kwh",
+        "b": "purchase_kwh",
+        "r": -0.6037763656741186,
+        "magnitude": "strong"
+      },
+      {
+        "a": "price_yuan_per_kwh",
+        "b": "discharge_kwh",
+        "r": 0.5918744230084221,
+        "magnitude": "strong"
+      },
+      {
+        "a": "price_yuan_per_kwh",
+        "b": "purchase_kwh",
+        "r": -0.55456937464561,
+        "magnitude": "strong"
+      },
+      {
+        "a": "purchase_kwh",
+        "b": "charge_kwh",
+        "r": 0.5367920795535175,
+        "magnitude": "strong"
+      },
+      {
+        "a": "pv_kw",
+        "b": "purchase_kwh",
+        "r": -0.5261409118919115,
+        "magnitude": "strong"
+      },
+      {
+        "a": "pv_kwh",
+        "b": "purchase_kwh",
+        "r": -0.5261409118919115,
+        "magnitude": "strong"
+      },
+      {
+        "a": "pv_kwh",
+        "b": "purchase_cost_yuan",
+        "r": -0.48991672823011306,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "pv_kw",
+        "b": "purchase_cost_yuan",
+        "r": -0.4899167282301126,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "purchase_kwh",
+        "b": "discharge_kwh",
+        "r": -0.4896890040907704,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "discharge_kwh",
+        "b": "purchase_cost_yuan",
+        "r": -0.4591449581291135,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "price_yuan_per_kwh",
+        "b": "charge_kwh",
+        "r": -0.4458035945842848,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "price_yuan_per_kwh",
+        "b": "load_kwh",
+        "r": 0.4425349664766875,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "price_yuan_per_kwh",
+        "b": "load_kw",
+        "r": 0.4425349664766874,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "step",
+        "b": "price_yuan_per_kwh",
+        "r": 0.425365790563425,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "load_kw",
+        "b": "purchase_cost_yuan",
+        "r": -0.3585323006811196,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "load_kwh",
+        "b": "purchase_cost_yuan",
+        "r": -0.35853230068111913,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "step",
+        "b": "energy_after_kwh",
+        "r": -0.29318362393358377,
+        "magnitude": "weak"
+      },
+      {
+        "a": "step",
+        "b": "energy_before_kwh",
+        "r": -0.284366390414368,
+        "magnitude": "weak"
+      },
+      {
+        "a": "charge_kwh",
+        "b": "discharge_kwh",
+        "r": -0.2552011552573902,
+        "magnitude": "weak"
+      },
+      {
+        "a": "step",
+        "b": "purchase_cost_yuan",
+        "r": 0.2355491003217957,
+        "magnitude": "weak"
+      },
+      {
+        "a": "charge_kwh",
+        "b": "purchase_cost_yuan",
+        "r": 0.22726784883228077,
+        "magnitude": "weak"
+      },
+      {
+        "a": "pv_kwh",
+        "b": "discharge_kwh",
+        "r": -0.22721704221390604,
+        "magnitude": "weak"
+      },
+      {
+        "a": "pv_kw",
+        "b": "discharge_kwh",
+        "r": -0.22721704221390596,
+        "magnitude": "weak"
+      },
+      {
+        "a": "pv_kwh",
+        "b": "charge_kwh",
+        "r": 0.2249372377834098,
+        "magnitude": "weak"
+      },
+      {
+        "a": "pv_kw",
+        "b": "charge_kwh",
+        "r": 0.2249372377834096,
+        "magnitude": "weak"
+      },
+      {
+        "a": "price_yuan_per_kwh",
+        "b": "energy_after_kwh",
+        "r": -0.21230692717263236,
+        "magnitude": "weak"
+      },
+      {
+        "a": "charge_kwh",
+        "b": "energy_before_kwh",
+        "r": -0.20730902538426932,
+        "magnitude": "weak"
+      },
+      {
+        "a": "discharge_kwh",
+        "b": "energy_after_kwh",
+        "r": -0.20421807190082153,
+        "magnitude": "weak"
+      },
+      {
+        "a": "pv_kwh",
+        "b": "energy_before_kwh",
+        "r": -0.18472969024046715,
+        "magnitude": "weak"
+      },
+      {
+        "a": "pv_kw",
+        "b": "energy_before_kwh",
+        "r": -0.18472969024046687,
+        "magnitude": "weak"
+      },
+      {
+        "a": "energy_after_kwh",
+        "b": "purchase_cost_yuan",
+        "r": 0.17499338929912056,
+        "magnitude": "weak"
+      },
+      {
+        "a": "price_yuan_per_kwh",
+        "b": "purchase_cost_yuan",
+        "r": -0.16442841363823968,
+        "magnitude": "weak"
+      },
+      {
+        "a": "step",
+        "b": "load_kwh",
+        "r": 0.15928143977873682,
+        "magnitude": "weak"
+      },
+      {
+        "a": "step",
+        "b": "load_kw",
+        "r": 0.15928143977873618,
+        "magnitude": "weak"
+      },
+      {
+        "a": "purchase_kwh",
+        "b": "energy_after_kwh",
+        "r": 0.15603432835860215,
+        "magnitude": "weak"
+      },
+      {
+        "a": "pv_kw",
+        "b": "energy_after_kwh",
+        "r": -0.15109194195801937,
+        "magnitude": "weak"
+      },
+      {
+        "a": "pv_kwh",
+        "b": "energy_after_kwh",
+        "r": -0.15109194195801934,
+        "magnitude": "weak"
+      },
+      {
+        "a": "load_kw",
+        "b": "energy_after_kwh",
+        "r": -0.13595172445750886,
+        "magnitude": "weak"
+      },
+      {
+        "a": "load_kwh",
+        "b": "energy_after_kwh",
+        "r": -0.13595172445750872,
+        "magnitude": "weak"
+      },
+      {
+        "a": "price_yuan_per_kwh",
+        "b": "energy_before_kwh",
+        "r": -0.13498623805051768,
+        "magnitude": "weak"
+      },
+      {
+        "a": "load_kw",
+        "b": "energy_before_kwh",
+        "r": -0.13457857778502588,
+        "magnitude": "weak"
+      },
+      {
+        "a": "load_kwh",
+        "b": "energy_before_kwh",
+        "r": -0.13457857778502552,
+        "magnitude": "weak"
+      },
+      {
+        "a": "energy_before_kwh",
+        "b": "purchase_cost_yuan",
+        "r": 0.12372822527192529,
+        "magnitude": "weak"
+      },
+      {
+        "a": "step",
+        "b": "discharge_kwh",
+        "r": 0.11620813859150955,
+        "magnitude": "weak"
+      },
+      {
+        "a": "charge_kwh",
+        "b": "energy_after_kwh",
+        "r": -0.11458641225033153,
+        "magnitude": "weak"
+      },
+      {
+        "a": "discharge_kwh",
+        "b": "energy_before_kwh",
+        "r": -0.11019187778444141,
+        "magnitude": "weak"
+      },
+      {
+        "a": "price_yuan_per_kwh",
+        "b": "pv_kwh",
+        "r": 0.08360097835104457,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "price_yuan_per_kwh",
+        "b": "pv_kw",
+        "r": 0.08360097835104432,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "purchase_kwh",
+        "b": "energy_before_kwh",
+        "r": 0.07971562995913296,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "load_kwh",
+        "b": "charge_kwh",
+        "r": -0.06276708129167378,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "load_kw",
+        "b": "charge_kwh",
+        "r": -0.0627670812916737,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "load_kwh",
+        "b": "discharge_kwh",
+        "r": -0.04306333813848361,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "load_kw",
+        "b": "discharge_kwh",
+        "r": -0.04306333813848338,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "step",
+        "b": "pv_kwh",
+        "r": -0.00982560932071942,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "step",
+        "b": "pv_kw",
+        "r": -0.009825609320719386,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "step",
+        "b": "purchase_kwh",
+        "r": 0.007654651449128334,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "step",
+        "b": "charge_kwh",
+        "r": -0.0009632697080288219,
+        "magnitude": "negligible"
+      }
+    ]
+  },
+  "group_summary": null,
+  "warnings": [],
+  "suggestions": [
+    "分类 vs 连续，样本量充足 → 箱线图 / 小提琴图，或带误差棒的柱状图（误差棒说明 SD/SEM/CI）",
+    "≥3 个连续变量 → 相关性热力图（['step', 'price_yuan_per_kwh', 'load_kw', 'pv_kw', 'load_kwh']）或 pairplot 散点矩阵",
+    "charge_kwh 高度偏态（skew=1.84）→ 考虑对数变换或小提琴图代替均值柱图",
+    "discharge_kwh 高度偏态（skew=1.76）→ 考虑对数变换或小提琴图代替均值柱图"
+  ],
+  "scope_note": "Single ordered 144-slot series; no independence, confidence intervals, or outlier removal assumed.",
+  "label_columns": [
+    "internal_start",
+    "internal_end",
+    "input_time_label",
+    "template_label"
+  ]
+}

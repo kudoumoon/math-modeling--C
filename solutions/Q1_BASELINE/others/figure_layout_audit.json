@@ -1,0 +1,119 @@
+[
+  {
+    "figure": "raw_q1_01_inputs",
+    "layout_issues": [],
+    "size_inches": [
+      7.2,
+      4.8
+    ],
+    "formats": [
+      ".png",
+      ".pdf",
+      ".svg"
+    ]
+  },
+  {
+    "figure": "raw_q1_02_net_load_distribution",
+    "layout_issues": [],
+    "size_inches": [
+      7.2,
+      3.6
+    ],
+    "formats": [
+      ".png",
+      ".pdf",
+      ".svg"
+    ]
+  },
+  {
+    "figure": "raw_q1_03_load_pv_relation",
+    "layout_issues": [],
+    "size_inches": [
+      7.2,
+      3.6
+    ],
+    "formats": [
+      ".png",
+      ".pdf",
+      ".svg"
+    ]
+  },
+  {
+    "figure": "process_q1_01_residuals",
+    "layout_issues": [],
+    "size_inches": [
+      7.2,
+      3.6
+    ],
+    "formats": [
+      ".png",
+      ".pdf",
+      ".svg"
+    ]
+  },
+  {
+    "figure": "process_q1_02_constraint_activity",
+    "layout_issues": [],
+    "size_inches": [
+      7.2,
+      3.6
+    ],
+    "formats": [
+      ".png",
+      ".pdf",
+      ".svg"
+    ]
+  },
+  {
+    "figure": "process_q1_03_block_flows",
+    "layout_issues": [],
+    "size_inches": [
+      7.2,
+      3.6
+    ],
+    "formats": [
+      ".png",
+      ".pdf",
+      ".svg"
+    ]
+  },
+  {
+    "figure": "result_q1_01_dispatch",
+    "layout_issues": [],
+    "size_inches": [
+      7.2,
+      4.8
+    ],
+    "formats": [
+      ".png",
+      ".pdf",
+      ".svg"
+    ]
+  },
+  {
+    "figure": "result_q1_02_soc",
+    "layout_issues": [],
+    "size_inches": [
+      7.2,
+      3.6
+    ],
+    "formats": [
+      ".png",
+      ".pdf",
+      ".svg"
+    ]
+  },
+  {
+    "figure": "result_q1_03_cost",
+    "layout_issues": [],
+    "size_inches": [
+      7.2,
+      3.6
+    ],
+    "formats": [
+      ".png",
+      ".pdf",
+      ".svg"
+    ]
+  }
+]

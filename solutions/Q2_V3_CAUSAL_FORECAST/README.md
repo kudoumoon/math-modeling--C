@@ -1,6 +1,10 @@
 # Q2 V3 Causal Forecast
 
-状态：`DEVELOPMENT_V2_PASS_FULL_RUN_ALLOWED`。末槽因果修复后的 M1 为 97/100，P1 为 96/100，开发期审核为97/100；冻结选择 B0 并允许五项年度运行，但尚不是正式 Q2 或 Q3/Q4 上游。
+当前为用户选定的最终交付目录：五项年度运行已经完成，本轮仅补齐结果工作簿、图件和归档，模型仍为冻结B0。新口径未重新建模，历史模型评分不等于本次导出审核。交付入口见`results/final_v1/result2.xlsx`和根目录最终交付索引。
+
+年度原始运行在`results/annual_runs/`，开发期原始运行在`results/development_runs/`；Q3 v3和Q4 v1都使用其中的`q2v3-r2-full-b0-a-20260913-01`。`others/executed_source/`保留该运行的原源码。
+
+工作簿购电表保留历史Time A合同标签，储能及紧急表由同一已存轨迹转换为实际自然时钟统计。`results/final_v1/q2_plan_day_storage_blocks.csv`和`q2_natural_day_storage_blocks.csv`分别保留两套窗口；这不是新的自然日模型。主成本为14,012,090.207768975元，模型与策略未重跑。
 
 ## 目录
 

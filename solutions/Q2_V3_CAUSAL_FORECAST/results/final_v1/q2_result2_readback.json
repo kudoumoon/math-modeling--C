@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "sheet_names_preserved": true,
+    "plan_shape": true,
+    "plan_dates_match": true,
+    "plan_values_match": true,
+    "plan_totals_match": true,
+    "plan_costs_match": true,
+    "storage_rows": true,
+    "storage_charge_match": true,
+    "storage_discharge_match": true,
+    "storage_soc_start_match": true,
+    "storage_soc_end_match": true,
+    "emergency_events_match": true
+  },
+  "passed": true,
+  "plan_rows": 334,
+  "storage_rows": 2004,
+  "emergency_rows": 263,
+  "max_plan_value_difference_kwh": 4.547473508864641e-13
+}

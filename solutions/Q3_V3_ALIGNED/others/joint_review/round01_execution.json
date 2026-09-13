@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "round": 1,
+  "source_commit": "3f9e6730414af5dc83211b8b655c278a5594f59f",
+  "source_verification": {"q3_q4_program_files": 12, "live_git_hash_mismatches": []},
+  "integration_tests": {"passed": 104, "failed": 0, "runtime_seconds": 24.01},
+  "independent_p1": {
+    "reviewer": "Maxwell",
+    "agent_id": "01a097e8-8820-7672-973f-8e5d64e36ba4",
+    "Q3": "PASS",
+    "Q4": "PASS",
+    "scope": "First full execution allowed; not final P2 or score",
+    "q3_run": "solutions/Q3_V3_ALIGNED/results/q3v3-p1",
+    "q4_run": "solutions/Q4_V1_ALIGNED/results/q4-p1-20260913-01",
+    "checks": ["Source hashes match frozen commit", "Inputs and P1 output hashes match", "Q3 accepted/rejected adjustments exercised", "Q3 ten tests and Q4 eight tests pass", "All six template readbacks pass", "Emergency charging and completion callback blockers resolved"],
+    "duplicate_p1_required": false
+  },
+  "planned_execution_order": [
+    {"question": "Q3", "version": "Q3_V3_R1", "run_id": "q3v3-r1", "command": ".venv/bin/python -B solutions/Q3_V3_ALIGNED/program/run_q3_v3.py --run-id q3v3-r1"},
+    {"question": "Q4", "version": "Q4_V1_R1", "run_id": "q4-v1-annual-20260913-01", "command": ".venv/bin/python -B solutions/Q4_V1_ALIGNED/program/run_q4.py --mode annual --run-id q4-v1-annual-20260913-01"}
+  ],
+  "duplicate_annual_reproduction": false,
+  "formal_use": false,
+  "q2_p2": "DEFERRED_BY_USER"
+}

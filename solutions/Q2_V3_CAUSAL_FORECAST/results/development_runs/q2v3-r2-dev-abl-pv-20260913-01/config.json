@@ -1,0 +1,129 @@
+{
+  "run_id": "q2v3-r2-dev-abl-pv-20260913-01",
+  "forecast_arm": "Abl-PV",
+  "forecast_model_id": "Q2V3-SW2LOAD-HGBPV",
+  "hgb_parameters": {
+    "loss": "squared_error",
+    "learning_rate": 0.06,
+    "max_iter": 180,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 40,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "random_state": 20260912
+  },
+  "trained_hgb_channels": [
+    "pv_10min_history"
+  ],
+  "start_day": 0,
+  "end_day": 180,
+  "report_start_day": 31,
+  "report_end_day": 180,
+  "initial_soc_kwh": 6000.0,
+  "time_mapping": "A",
+  "battery_interpretation": "A",
+  "observation_delay_slots": 0,
+  "battery_A_observation_contract": "within-interval continuous feedback represented by interval averages",
+  "scoring_mode": "A",
+  "selection_window_days": 28,
+  "scenario_count": 10,
+  "scenario_window_days": 60,
+  "terminal_lambda_yuan_per_kwh": 0.4684,
+  "default_candidate": "cvar_t0.90_r0.05_g0.00",
+  "candidate_grid": [
+    {
+      "candidate_id": "nocvar_g0.00",
+      "tau": null,
+      "rho": 0.0,
+      "gamma": 0.0
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.05_g0.00",
+      "tau": 0.9,
+      "rho": 0.05,
+      "gamma": 0.0
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.20_g0.00",
+      "tau": 0.9,
+      "rho": 0.2,
+      "gamma": 0.0
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.05_g0.00",
+      "tau": 0.95,
+      "rho": 0.05,
+      "gamma": 0.0
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.20_g0.00",
+      "tau": 0.95,
+      "rho": 0.2,
+      "gamma": 0.0
+    },
+    {
+      "candidate_id": "nocvar_g0.02",
+      "tau": null,
+      "rho": 0.0,
+      "gamma": 0.02
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.05_g0.02",
+      "tau": 0.9,
+      "rho": 0.05,
+      "gamma": 0.02
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.20_g0.02",
+      "tau": 0.9,
+      "rho": 0.2,
+      "gamma": 0.02
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.05_g0.02",
+      "tau": 0.95,
+      "rho": 0.05,
+      "gamma": 0.02
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.20_g0.02",
+      "tau": 0.95,
+      "rho": 0.2,
+      "gamma": 0.02
+    },
+    {
+      "candidate_id": "nocvar_g0.05",
+      "tau": null,
+      "rho": 0.0,
+      "gamma": 0.05
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.05_g0.05",
+      "tau": 0.9,
+      "rho": 0.05,
+      "gamma": 0.05
+    },
+    {
+      "candidate_id": "cvar_t0.90_r0.20_g0.05",
+      "tau": 0.9,
+      "rho": 0.2,
+      "gamma": 0.05
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.05_g0.05",
+      "tau": 0.95,
+      "rho": 0.05,
+      "gamma": 0.05
+    },
+    {
+      "candidate_id": "cvar_t0.95_r0.20_g0.05",
+      "tau": 0.95,
+      "rho": 0.2,
+      "gamma": 0.05
+    }
+  ],
+  "candidate_full_score_delay_days": 2,
+  "scenario_latest_complete_plan_day": "day_index - 2",
+  "compatibility_reset_on_report_start": false,
+  "workers": 8
+}

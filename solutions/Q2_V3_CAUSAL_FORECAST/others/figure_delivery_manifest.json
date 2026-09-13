@@ -1,0 +1,796 @@
+{
+  "status": "complete_author_reviewed",
+  "complete": true,
+  "created_at": "2026-09-13T02:26:37.244630+00:00",
+  "solver_called": false,
+  "training_called": false,
+  "annual_replay": false,
+  "source_hashes": {
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/figure_tools/__init__.py": "990f2e574ad51df3c871141c7194d6f3f84d1e4c41c0adf62f98a90b7e06d8ed",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/figure_tools/check_figure.py": "203bc5b3a9d9b418fc50f3457057b439b79d562fbebadd21e082f590cd928879",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/figure_tools/export_figure.py": "40ce3bcd31dfc4b33e38a1cb180c75dc730ee6fa046f04934c79f285c6f890c1",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/figure_tools/profile_data.py": "d8a2a72c2607c390f2d3ed1508209d515ad4fbf833fa1602ab9da519b3596ec4",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/figure_tools/requirements.txt": "a2e67ac69060a259a055e006f2a24314ed46d84d80cbb96577b128816970ec70",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/figure_tools/setup_style.py": "d58ef81684577bb605a92733dd2ca48ade03b4f819b3d255fd62f319be7fea82",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/figure_tools/vendor_manifest.json": "58af46295a006de003b4687e7dee06f8f3f9fd358605a66530e4fa19f201ff5a",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/figure_tools/visual_qa.py": "67675709e523c76e2748d50749de7bc6332f07df865379b26d024321fb40120f",
+    "solutions/Q2_V3_CAUSAL_FORECAST/program/q2_delivery_figures.py": "c0e57308cb863fbaee808b607f5dc7ca8be29acf396d084fe38202e21ab98040"
+  },
+  "git_source_commit": "6c6a18114eee3e810ffa2f4fa9da0ae817e85254",
+  "input_hashes": {
+    "data/附件1.xlsx": "03cab394053650f26cfa0930e32693385acbd9045813ee8313581ef2247f31cd",
+    "data/附件2.xlsx": "c442c114af1348ae0f2586cc6b09ee43e7c75f2771e9c424651f775b3cb4d200",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_battery_b_daily_ledger_all.csv": "6eb4e56d5518140d2c0ccdc1968d3b02d510a23e01881bdca8ea90a471bbbb09",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_daily_ledger.csv": "399c6c2f08fe73d329afc7118238dfcb10c691a20369a9d1aa67a88b901cfbe5",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_delay_1_daily_ledger_all.csv": "85d800204bb3980c0a246715e9837d43bc19b0a0a265ad1bf463b7fc74ea10a0",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_interval_ledger.csv": "f6e7303bbd0699437e3cc2ab54da63bfa6e58747d28865522de557fd5f8f3725",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_main_config.json": "e58a52234d2a330dc5fd6f71fc8420e06f07772dc8934262278e9b7c90d92756",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_main_source_manifest.json": "af220be6092b2eb808713e444cef6f0108c92f2ffa1092de6a3998a76bef6fd0",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_monthly_summary.csv": "5ea4b49e00868a8df3a4255bb7424c09264ebeb8b4f0e7b423170842f608badc",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_release_manifest.json": "2f88f58334a422a62398732ddb28ff0a3883e01c280ae7611e00ab523e6265ab",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_reset_feb_daily_ledger_all.csv": "972d4051c6973ef24395637a0a945cb9c6314293ea7480c58d9b864afae63f43",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_sensitivity_summary.csv": "a69d355d46766358a8810a02bbecdc020b896c1eb9e64bc0b8bb97ba49197111",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/final_v1/q2_time_b_daily_ledger_all.csv": "597d9e975ed9c4ee2534320023c7414918193c4619fb38945574fe4d39c60460"
+  },
+  "figure_data_hashes": {
+    "main_daily.csv.gz": "f81e1d3e5429c54167a234f2864bcbced4ef05b64ac3b01aa4f5d5350906734b",
+    "main_interval.csv.gz": "7dbdf21d6d1f81a0bbb535e082f5e40bf48cc96280883af0256e5e20fda6baa6",
+    "monthly_summary.csv": "7d49c9b3c1838fe475f3248e2c95dfa815d061bb46362ffd77be2537eb943374",
+    "sensitivity_summary.csv": "aea0a40ecc3ee56fe925bc1c980dfe333fa1325a53bd6899fdc4f6a0124c4fd5",
+    "raw_daily.csv": "12f3a387e77e1a0cc867060d4ddb836667f13af5f42c792792454f9122c9e6e9",
+    "raw_diurnal.csv": "89be23679aaed5f2d5add873c5cd4190f59dff817f3e5089a8105f1254542e31",
+    "raw_observations.csv.gz": "6b3d52ff8c3ab1ed5a28443b1507008caf182cd3a60e74ca63dc03b7e56da109",
+    "candidate_key.csv": "c35ac572142cc571190cc957c4530a4594d49fa6e59d030729c1e9b25ad68e7c",
+    "candidate_trace.csv": "0be1b1b0d59d6a19c33141c29530abd993b2daa6db658540bd20547245f5881a",
+    "soc_plan_grid.csv.gz": "247a148732757967b84bda82c6f76cdc6c938757e55a18ebed1a263668058170",
+    "emergency_by_hour.csv": "278b7f4b08c177eaac018dee1ee320ddc3f0cbc9b60fe9d6177ba24dc1371bd8",
+    "emergency_ecdf.csv": "9f20ad939d64d8d6845286c7047732be0f5af125db8a8deb5cee69994cab82cb",
+    "monthly_risk.csv": "8ffa066a8b90bc890196ad971b479ab3613248ad3843abb4a71a35e84536ab14"
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.2",
+    "openpyxl": "3.1.5",
+    "Pillow": "12.3.0"
+  },
+  "policy": "B0",
+  "main_days": 334,
+  "sensitivity_common_days": 333,
+  "time_scope": "old Time A plan dates; Time B remains the legacy right-endpoint sensitivity",
+  "figures": {
+    "raw_q2_01_daily_energy": {
+      "category": "raw",
+      "dimensions_inches": [
+        7.2,
+        4.5
+      ],
+      "layout_issues": [],
+      "footer_audit": {
+        "passed": true,
+        "minimum_gap_points": 16.018125,
+        "required_gap_points": 4.0
+      },
+      "file_checks": [
+        {
+          "path": "figures/delivery_r1/raw_q2_01_daily_energy.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.png",
+            "ext": "png",
+            "size_bytes": 154319,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1350
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        },
+        {
+          "path": "figures/delivery_r1/raw_q2_01_daily_energy.svg",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.svg",
+            "ext": "svg",
+            "size_bytes": 31554,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/raw_q2_01_daily_energy.pdf",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.pdf",
+            "ext": "pdf",
+            "size_bytes": 23935,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/raw_q2_01_daily_energy_grayscale.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy_grayscale.png",
+            "ext": "png",
+            "size_bytes": 68643,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1350
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        }
+      ],
+      "preview": "figures/delivery_r1/previews/raw_q2_01_daily_energy.png",
+      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+    },
+    "raw_q2_02_diurnal_tariff": {
+      "category": "raw",
+      "dimensions_inches": [
+        7.2,
+        5.4
+      ],
+      "layout_issues": [],
+      "footer_audit": {
+        "passed": true,
+        "minimum_gap_points": 28.65412499999998,
+        "required_gap_points": 4.0
+      },
+      "file_checks": [
+        {
+          "path": "figures/delivery_r1/raw_q2_02_diurnal_tariff.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.png",
+            "ext": "png",
+            "size_bytes": 243610,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1620
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        },
+        {
+          "path": "figures/delivery_r1/raw_q2_02_diurnal_tariff.svg",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.svg",
+            "ext": "svg",
+            "size_bytes": 44295,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/raw_q2_02_diurnal_tariff.pdf",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.pdf",
+            "ext": "pdf",
+            "size_bytes": 38253,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/raw_q2_02_diurnal_tariff_grayscale.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff_grayscale.png",
+            "ext": "png",
+            "size_bytes": 103852,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1620
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        }
+      ],
+      "preview": "figures/delivery_r1/previews/raw_q2_02_diurnal_tariff.png",
+      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+    },
+    "raw_q2_03_load_pv_relation": {
+      "category": "raw",
+      "dimensions_inches": [
+        7.2,
+        4.5
+      ],
+      "layout_issues": [],
+      "footer_audit": {
+        "passed": true,
+        "minimum_gap_points": 16.018125,
+        "required_gap_points": 4.0
+      },
+      "file_checks": [
+        {
+          "path": "figures/delivery_r1/raw_q2_03_load_pv_relation.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.png",
+            "ext": "png",
+            "size_bytes": 211671,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1350
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        },
+        {
+          "path": "figures/delivery_r1/raw_q2_03_load_pv_relation.svg",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.svg",
+            "ext": "svg",
+            "size_bytes": 76321,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/raw_q2_03_load_pv_relation.pdf",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.pdf",
+            "ext": "pdf",
+            "size_bytes": 34133,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/raw_q2_03_load_pv_relation_grayscale.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation_grayscale.png",
+            "ext": "png",
+            "size_bytes": 94987,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1350
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        }
+      ],
+      "preview": "figures/delivery_r1/previews/raw_q2_03_load_pv_relation.png",
+      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+    },
+    "process_q2_01_executed_soc": {
+      "category": "process",
+      "dimensions_inches": [
+        7.2,
+        5.5
+      ],
+      "layout_issues": [],
+      "footer_audit": {
+        "passed": true,
+        "minimum_gap_points": 30.058124999999976,
+        "required_gap_points": 4.0
+      },
+      "file_checks": [
+        {
+          "path": "figures/delivery_r1/process_q2_01_executed_soc.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.png",
+            "ext": "png",
+            "size_bytes": 281749,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1650
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        },
+        {
+          "path": "figures/delivery_r1/process_q2_01_executed_soc.svg",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.svg",
+            "ext": "svg",
+            "size_bytes": 9009507,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/process_q2_01_executed_soc.pdf",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.pdf",
+            "ext": "pdf",
+            "size_bytes": 974638,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/process_q2_01_executed_soc_grayscale.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc_grayscale.png",
+            "ext": "png",
+            "size_bytes": 118985,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1650
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        }
+      ],
+      "preview": "figures/delivery_r1/previews/process_q2_01_executed_soc.png",
+      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+    },
+    "process_q2_02_candidate_selection": {
+      "category": "process",
+      "dimensions_inches": [
+        7.2,
+        5.7
+      ],
+      "layout_issues": [],
+      "footer_audit": {
+        "passed": true,
+        "minimum_gap_points": 32.86612499999997,
+        "required_gap_points": 4.0
+      },
+      "file_checks": [
+        {
+          "path": "figures/delivery_r1/process_q2_02_candidate_selection.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.png",
+            "ext": "png",
+            "size_bytes": 186935,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1710
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        },
+        {
+          "path": "figures/delivery_r1/process_q2_02_candidate_selection.svg",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.svg",
+            "ext": "svg",
+            "size_bytes": 63516,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/process_q2_02_candidate_selection.pdf",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.pdf",
+            "ext": "pdf",
+            "size_bytes": 25660,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/process_q2_02_candidate_selection_grayscale.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection_grayscale.png",
+            "ext": "png",
+            "size_bytes": 83407,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1710
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        }
+      ],
+      "preview": "figures/delivery_r1/previews/process_q2_02_candidate_selection.png",
+      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+    },
+    "process_q2_03_emergency_distribution": {
+      "category": "process",
+      "dimensions_inches": [
+        7.2,
+        4.7
+      ],
+      "layout_issues": [],
+      "footer_audit": {
+        "passed": true,
+        "minimum_gap_points": 18.826124999999983,
+        "required_gap_points": 4.0
+      },
+      "file_checks": [
+        {
+          "path": "figures/delivery_r1/process_q2_03_emergency_distribution.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.png",
+            "ext": "png",
+            "size_bytes": 157301,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1410
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        },
+        {
+          "path": "figures/delivery_r1/process_q2_03_emergency_distribution.svg",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.svg",
+            "ext": "svg",
+            "size_bytes": 38499,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/process_q2_03_emergency_distribution.pdf",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.pdf",
+            "ext": "pdf",
+            "size_bytes": 31934,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/process_q2_03_emergency_distribution_grayscale.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution_grayscale.png",
+            "ext": "png",
+            "size_bytes": 69997,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1410
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        }
+      ],
+      "preview": "figures/delivery_r1/previews/process_q2_03_emergency_distribution.png",
+      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+    },
+    "result_q2_01_monthly_cash": {
+      "category": "result",
+      "dimensions_inches": [
+        7.2,
+        4.5
+      ],
+      "layout_issues": [],
+      "footer_audit": {
+        "passed": true,
+        "minimum_gap_points": 16.018125,
+        "required_gap_points": 4.0
+      },
+      "file_checks": [
+        {
+          "path": "figures/delivery_r1/result_q2_01_monthly_cash.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.png",
+            "ext": "png",
+            "size_bytes": 133950,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1350
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        },
+        {
+          "path": "figures/delivery_r1/result_q2_01_monthly_cash.svg",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.svg",
+            "ext": "svg",
+            "size_bytes": 18740,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/result_q2_01_monthly_cash.pdf",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.pdf",
+            "ext": "pdf",
+            "size_bytes": 28221,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/result_q2_01_monthly_cash_grayscale.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash_grayscale.png",
+            "ext": "png",
+            "size_bytes": 59864,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1350
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        }
+      ],
+      "preview": "figures/delivery_r1/previews/result_q2_01_monthly_cash.png",
+      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+    },
+    "result_q2_02_monthly_risk": {
+      "category": "result",
+      "dimensions_inches": [
+        7.2,
+        5.8
+      ],
+      "layout_issues": [],
+      "footer_audit": {
+        "passed": true,
+        "minimum_gap_points": 24.467390624999982,
+        "required_gap_points": 4.0
+      },
+      "file_checks": [
+        {
+          "path": "figures/delivery_r1/result_q2_02_monthly_risk.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.png",
+            "ext": "png",
+            "size_bytes": 228108,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1740
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        },
+        {
+          "path": "figures/delivery_r1/result_q2_02_monthly_risk.svg",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.svg",
+            "ext": "svg",
+            "size_bytes": 41611,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/result_q2_02_monthly_risk.pdf",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.pdf",
+            "ext": "pdf",
+            "size_bytes": 31973,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/result_q2_02_monthly_risk_grayscale.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk_grayscale.png",
+            "ext": "png",
+            "size_bytes": 100060,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1740
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        }
+      ],
+      "preview": "figures/delivery_r1/previews/result_q2_02_monthly_risk.png",
+      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+    },
+    "result_q2_03_common333_sensitivity": {
+      "category": "result",
+      "dimensions_inches": [
+        7.2,
+        4.7
+      ],
+      "layout_issues": [],
+      "footer_audit": {
+        "passed": true,
+        "minimum_gap_points": 7.461124999999987,
+        "required_gap_points": 4.0
+      },
+      "file_checks": [
+        {
+          "path": "figures/delivery_r1/result_q2_03_common333_sensitivity.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.png",
+            "ext": "png",
+            "size_bytes": 142601,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1410
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        },
+        {
+          "path": "figures/delivery_r1/result_q2_03_common333_sensitivity.svg",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.svg",
+            "ext": "svg",
+            "size_bytes": 21011,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/result_q2_03_common333_sensitivity.pdf",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.pdf",
+            "ext": "pdf",
+            "size_bytes": 28430,
+            "category": "vector"
+          }
+        },
+        {
+          "path": "figures/delivery_r1/result_q2_03_common333_sensitivity_grayscale.png",
+          "issues": [],
+          "info": {
+            "path": "/root/yuetao_he/math modeling--C/solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity_grayscale.png",
+            "ext": "png",
+            "size_bytes": 64070,
+            "category": "raster",
+            "size_px": [
+              2160,
+              1410
+            ],
+            "dpi": [
+              299.9994,
+              299.9994
+            ]
+          }
+        }
+      ],
+      "preview": "figures/delivery_r1/previews/result_q2_03_common333_sensitivity.png",
+      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+    }
+  },
+  "independent_review": "PENDING_OTHER_AGENT",
+  "category_counts": {
+    "raw": 3,
+    "process": 3,
+    "result": 3
+  },
+  "output_hashes": {
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/grayscale_process.png": "e5371c811848040099b1d6bbeacaeaaeabb511e5f1fdc65080e79308b1c8ac03",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/grayscale_raw.png": "618be097ecef1d205ee6c096fb96ba3108fc9ccce6de220f0f3476dd0494c792",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/grayscale_result.png": "2d68bfa90378bd7347c0ad0e9698b6140fcfbdaf4d186dccc95ebe74915ea5ea",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/process_q2_01_executed_soc.png": "1d42b591a34131c38dbd8eaa5ead61a817cefb9a9da3b132b2112eb71579e010",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/process_q2_02_candidate_selection.png": "238d6ba0890bf9919846c91e873650962f4f4e53b02a4a8e31784732b600ba02",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/process_q2_03_emergency_distribution.png": "b862154ebbb1bde1204de1510216a9ce70e4f600045ef6a3d8d324e9bb91cbe8",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/raw_q2_01_daily_energy.png": "4c75c10b4ba39b465d21e4e99f7c4afb119cbfefad843ae1605642d132e95e08",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/raw_q2_02_diurnal_tariff.png": "f80def5deb4409de0651f3514d424df0cba3d47de64c1815ff48289840791658",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/raw_q2_03_load_pv_relation.png": "06148e926a3ca708bd11fb72ccaa669c0121544b49eaa109a786a31bfe40561a",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/result_q2_01_monthly_cash.png": "797c675647b25d4609b8197f3a1c0a51efc1c0e02d196fb8da6b4f43e863431e",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/result_q2_02_monthly_risk.png": "f2df851ee89d989c3ad464b38f22796a73c0a62615917bf16a7ede63c102724c",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/result_q2_03_common333_sensitivity.png": "c9d7b6f9adb5ac09b56588a57e790c4b188eadf52394b0c187894b946af395ac",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.pdf": "8df29f286d120410b4ba15511addd395287fdc3f9788cd787e5c84c4e11767a2",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.png": "c3b9394e6c6aa4a8d1ceba6727e78a38bad50f09a293edae5c432ae4916a0353",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.svg": "7e646cf9e4579dacb91c19f658e23ca175d4434270e5b58ffd52a5ef964ace7c",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc_grayscale.png": "fa3e4ed05e1912022fc3e4c219fe5e11bdf0f13c2935473db5dcf04cd64c9743",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.pdf": "f69f53a6fcb2a0585b73ca5263734e5b934d793d6736c97700881c9c57824b43",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.png": "562f6c2c7e30ea4648a3f7962207f48adb0d250b7126cbcc947db2536664c331",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.svg": "3061f511a0d788d53349eee94dd499092284d9b0ad2cb207a9b4a23cc98ccba2",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection_grayscale.png": "e41ca6458bfcf6c0e6d158c240f6b1208d01cf9282fa0a89e59ad36b32096640",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.pdf": "44c56b1dd96f45dde08db7cf577b640deeeac3d3395db6f811a1fb9ad852477a",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.png": "5c2817c4717babe70d63cca82d33e3f69bb1232daa9769b66ff83fa155747e6c",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.svg": "ee8c66344d71e3d35544f8d25ad31a561fa22f72716982dde128fb866621ffe2",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution_grayscale.png": "ee18aaa7d5bc0a2115550a0f037385beae3245b23dfa23974c8c35bf2deb1a63",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.pdf": "77a604bcb3fe74becb8bcdc0554bd5452a039e0095406217f29776ea95a26ad0",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.png": "0a1419a77c27ff8672784529d6b980ca37e06e175ce21a9463a2dff7f632ba22",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.svg": "7d6a956b21cd449524195852da2b463e56711e778bfeeca91018213a2243e23c",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy_grayscale.png": "e145b9eaf91051597e1828984fbe5ef6698cf41e6d20accdcd2c372cc387079a",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.pdf": "600c155271592532a51e8590d6da403be638e0e724c0e24dc7f6a44ea761f996",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.png": "145c672f50f7c2cfcddfe34fd366e523baca4b5dc90f8bef7745bea3c1a70164",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.svg": "e88ef5efc994b9a95bd8450e1d0dfcb5064b4a82eec141353047eb3be304968e",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff_grayscale.png": "1eef831a722e944e82dabe84d29fba414fa16a261a60a6a531505be924035903",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.pdf": "b10177f2505f7356baf9adf38815013ede0d824d8ef3364f4c8d743d5d8c61f7",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.png": "1b6a3b5b4991e67a8de3e18ec5585b0e611530a0a80073e93b9fdf41a5cd2f1c",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.svg": "1fa73ae5dde47c9c52778fa058968de5dc30fe9318aedd1a9fe82521353ed502",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation_grayscale.png": "b6e49f3f4e724c9388154b1361d393fa9812d957b1d4c357e39177d242cb8cbd",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.pdf": "60de3ae8b3f0293ba34163efbfa6a7418229165325452d6a7e4fe78bd3b698c1",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.png": "f0fbd20341eec22f6d144b892a4fbfa9ddf1e3a01fc88a10432ae6f8c3caffe2",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.svg": "3e0a0b85720d0f4dfe4083a867543f4da09c14cc61b71e6062f3fe004c3a1759",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash_grayscale.png": "0cf9bb6edb7b851a1db2e5a0e772df3de5eae0861bd7c26d63035915c4b178e3",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.pdf": "85132a59db9799290a454927c342721705b33ec583c09b7f34c1fdb241657bb1",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.png": "64b9715a70cee359efc93745e814d2694f6248e96da41cb38356a1c577e6418c",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.svg": "351ebb997d06556123ebe6fa4e8425562dfd735b84ee0b397401bd7ef050ff18",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk_grayscale.png": "c60c5d8b11baa2d4726daf11738d1669810100d094f09b41fd38c82b068d3d32",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.pdf": "58f4f2ca7032d8458b3244acddf3ddad0ab74aee5d5f096ccaf1bbeaca6f2ab8",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.png": "2c289acea37b42fb52966dec6e79cf3b0ce5e15d7ebac0034147a2f14098c719",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.svg": "1095f3275543386c301a714c1320a2354b767aa1b5317a392b57f6f0465537f3",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity_grayscale.png": "c3f091534380c48caee31715f80ae24ba44e97cf34a8cd85ab2689a8a1d04572",
+    "solutions/Q2_V3_CAUSAL_FORECAST/others/figure_contracts.json": "7cd6e5721527ca81181e2994cffc55b4c2ffa6b6e1922c7738e11333adf367e2",
+    "solutions/Q2_V3_CAUSAL_FORECAST/others/figure_delivery_README.md": "b7e1520a0ad5043be1cbb7cf856784c8acc2a507b2a4fea83b9405bebad0e741",
+    "solutions/Q2_V3_CAUSAL_FORECAST/others/figure_eda.json": "98bbbd2cd1f27dc3e7f97251421a25eb0803f55e326f0ba02fa04023f07e6388",
+    "solutions/Q2_V3_CAUSAL_FORECAST/others/figure_visual_review.json": "8ba867f45614b99175dbb7b4e28dbaf916528f45acee547c0d71406b9aac88e8",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/candidate_key.csv": "c35ac572142cc571190cc957c4530a4594d49fa6e59d030729c1e9b25ad68e7c",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/candidate_trace.csv": "0be1b1b0d59d6a19c33141c29530abd993b2daa6db658540bd20547245f5881a",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/emergency_by_hour.csv": "278b7f4b08c177eaac018dee1ee320ddc3f0cbc9b60fe9d6177ba24dc1371bd8",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/emergency_ecdf.csv": "9f20ad939d64d8d6845286c7047732be0f5af125db8a8deb5cee69994cab82cb",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/figure_source_manifest.json": "2ffeef2d40a56f53318bf44ed660e0caf21c699df44291da51e74fe62a686822",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/main_daily.csv.gz": "f81e1d3e5429c54167a234f2864bcbced4ef05b64ac3b01aa4f5d5350906734b",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/main_interval.csv.gz": "7dbdf21d6d1f81a0bbb535e082f5e40bf48cc96280883af0256e5e20fda6baa6",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/monthly_risk.csv": "8ffa066a8b90bc890196ad971b479ab3613248ad3843abb4a71a35e84536ab14",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/monthly_summary.csv": "7d49c9b3c1838fe475f3248e2c95dfa815d061bb46362ffd77be2537eb943374",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/raw_daily.csv": "12f3a387e77e1a0cc867060d4ddb836667f13af5f42c792792454f9122c9e6e9",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/raw_diurnal.csv": "89be23679aaed5f2d5add873c5cd4190f59dff817f3e5089a8105f1254542e31",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/raw_observations.csv.gz": "6b3d52ff8c3ab1ed5a28443b1507008caf182cd3a60e74ca63dc03b7e56da109",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/sensitivity_summary.csv": "aea0a40ecc3ee56fe925bc1c980dfe333fa1325a53bd6899fdc4f6a0124c4fd5",
+    "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/soc_plan_grid.csv.gz": "247a148732757967b84bda82c6f76cdc6c938757e55a18ebed1a263668058170"
+  },
+  "author_visual_review": "others/figure_visual_review.json",
+  "canonical_profile_run": "results/annual_runs/q2v3-r2-full-b0-a-20260913-01"
+}

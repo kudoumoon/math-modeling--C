@@ -1,0 +1,26 @@
+{
+  "purpose": "Portable copies of the requested scientific figure skill scripts; narrow changes are recorded per file",
+  "source": "math-modeling/tools/figure/scripts",
+  "files": {
+    "setup_style.py": {
+      "source_sha256": "d58ef81684577bb605a92733dd2ca48ade03b4f819b3d255fd62f319be7fea82",
+      "modifications": "none"
+    },
+    "export_figure.py": {
+      "source_sha256": "40ce3bcd31dfc4b33e38a1cb180c75dc730ee6fa046f04934c79f285c6f890c1",
+      "modifications": "none"
+    },
+    "visual_qa.py": {
+      "source_sha256": "67675709e523c76e2748d50749de7bc6332f07df865379b26d024321fb40120f",
+      "modifications": "none"
+    },
+    "check_figure.py": {
+      "source_sha256": "861191858ff47c5af5247f08d0759b14956a2a7e7d8eafcc6b414d37b9d70f06",
+      "modifications": "Check Type0 PDF font embedding via descendant CID FontDescriptor objects; the upstream parent-only check falsely warns on Matplotlib embedded TrueType fonts. No warnings are suppressed."
+    },
+    "profile_data.py": {
+      "source_sha256": "d8a2a72c2607c390f2d3ed1508209d515ad4fbf833fa1602ab9da519b3596ec4",
+      "modifications": "none"
+    }
+  }
+}
