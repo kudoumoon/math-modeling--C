@@ -1,7 +1,9 @@
 # Q4 V1 aligned implementation
 
-Status: PROVISIONAL; formal_use=false. No reviewer score or formal approval is
-asserted. Parent owns joint review, source freeze and Q3-then-Q4 execution order.
+Status: CONTENT_PASS_WITH_LIMITATIONS; score=91/100; formal_use=false.
+Final review: `../../Q3_Q4_JOINT/others/round01_final_independent_review.md`.
+The annual run completed once, after Q3. The implementation status JSON is a
+historical P1 snapshot; current status is in root `VERSION_STATUS.json`.
 The Q2 RESET packaging issue is deferred by explicit user authorization in
 `reports/q3_q4_joint_iteration_contract.md`.
 
@@ -16,8 +18,8 @@ Scope is Q4-2 and Q4-3 only. There is no Q4-1 task. Designated tables cover
 .venv/bin/python solutions/Q4_V1_ALIGNED/program/run_q4.py --mode annual --run-id q4-v1-annual-20260913-01
 ```
 
-Only bounded tests/P1 are authorized now. The annual command is prepared for
-parent, not executed by this worker. Existing run IDs are never overwritten.
+The parent completed the authorized annual execution once, following Q3.
+Existing run IDs are never overwritten; use a new ID for a new version.
 One annual invocation includes Q4-2 and Q4-3 A primary/B sensitivity; these are
 distinct policy trajectories, not duplicate reproduction. Nothing auto-commits.
 

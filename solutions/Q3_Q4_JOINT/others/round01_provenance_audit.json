@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "source_commit": "3f9e6730414af5dc83211b8b655c278a5594f59f",
+  "passed": true,
+  "questions": [
+    {
+      "question": "Q3",
+      "run": "solutions/Q3_V3_ALIGNED/results/q3v3-r1",
+      "manifest_sha256": "2fde03a69ecceade2547666f232369a3cfc93297456001e8ffb47747bf9f92a2",
+      "passed": true,
+      "checks": {
+        "complete": true,
+        "formal_dependency_disclosed": true,
+        "source_matches_live_and_commit": true,
+        "input_hashes_match": true,
+        "output_hashes_match": true,
+        "figure_hashes_match": true,
+        "run_commit_matches": true
+      },
+      "source_mismatches": [],
+      "output_mismatches": [],
+      "source_files": 5,
+      "outputs_checked": 82,
+      "figures_checked_separately": 1,
+      "source_commit": "3f9e6730414af5dc83211b8b655c278a5594f59f",
+      "elapsed_seconds": 175.46521337301238
+    },
+    {
+      "question": "Q4",
+      "run": "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01",
+      "manifest_sha256": "b8631a5c30315928461e7dfccd97e497a13dd5d3f79c74ac8e0dcf7041a57c54",
+      "passed": true,
+      "checks": {
+        "complete": true,
+        "formal_dependency_disclosed": true,
+        "source_matches_live_and_commit": true,
+        "input_hashes_match": true,
+        "output_hashes_match": true,
+        "figure_hashes_match": true,
+        "sources_unchanged_during_run": true
+      },
+      "source_mismatches": [],
+      "output_mismatches": [],
+      "source_files": 19,
+      "outputs_checked": 44,
+      "figures_checked_separately": 0,
+      "source_commit": "3f9e6730414af5dc83211b8b655c278a5594f59f",
+      "elapsed_seconds": 3378.7514042149996
+    }
+  ],
+  "model_rerun": false,
+  "formal_use": false,
+  "scope": "Source/input/output provenance audit; independent modeling score is separate"
+}

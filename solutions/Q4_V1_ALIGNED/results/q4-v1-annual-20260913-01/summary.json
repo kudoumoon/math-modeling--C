@@ -1,0 +1,73 @@
+{
+  "q4_2": {
+    "cash_cost_yuan": 14812380.927696154,
+    "ordinary_cost_yuan": 13825007.200324293,
+    "emergency_cost_yuan": 987373.7273718605,
+    "emergency_kwh": 156378.0132501492,
+    "unused_supply_kwh": 2048370.4833234013,
+    "end_soc_kwh": 7174.897846148145,
+    "asset_adjusted_cost_yuan": 14811830.605545018,
+    "daily_cvar95_yuan": 88676.42847616524,
+    "days": 334,
+    "review_status": "NOT_REVIEWED_PROVISIONAL",
+    "template_readback": {
+      "passed": true,
+      "checked_cells": 63705,
+      "sheet_names": [
+        "计划购电量",
+        "充放电量",
+        "紧急购电量"
+      ],
+      "scope": "PROVISIONAL",
+      "soc_labels": "nominal 00:00/24:00 denote actual 00:10/next 00:10"
+    }
+  },
+  "q4_3_A": {
+    "cash_cost_yuan": 14327190.203178845,
+    "ordinary_cost_yuan": 14278357.927256957,
+    "emergency_cost_yuan": 48832.27592188943,
+    "emergency_kwh": 10780.27409896379,
+    "unused_supply_kwh": 2251210.802771017,
+    "end_soc_kwh": 7174.897846148145,
+    "asset_adjusted_cost_yuan": 14326639.88102771,
+    "daily_cvar95_yuan": 76532.52585039807,
+    "days": 334,
+    "review_status": "NOT_REVIEWED_PROVISIONAL",
+    "template_readback": {
+      "passed": true,
+      "checked_cells": 110727,
+      "sheet_names": [
+        "计划购电量",
+        "调整购电量",
+        "充放电量",
+        "紧急购电量"
+      ],
+      "scope": "PROVISIONAL",
+      "soc_labels": "nominal 00:00/24:00 denote actual 00:10/next 00:10"
+    }
+  },
+  "q4_3_B": {
+    "cash_cost_yuan": 14217047.322125785,
+    "ordinary_cost_yuan": 14131405.361130126,
+    "emergency_cost_yuan": 85641.96099565858,
+    "emergency_kwh": 16440.09963981114,
+    "unused_supply_kwh": 1699844.0450221265,
+    "end_soc_kwh": 7174.897846148145,
+    "asset_adjusted_cost_yuan": 14216496.99997465,
+    "daily_cvar95_yuan": 76032.34102773073,
+    "days": 334,
+    "review_status": "NOT_REVIEWED_PROVISIONAL",
+    "template_readback": {
+      "passed": true,
+      "checked_cells": 111180,
+      "sheet_names": [
+        "计划购电量",
+        "调整购电量",
+        "充放电量",
+        "紧急购电量"
+      ],
+      "scope": "PROVISIONAL",
+      "soc_labels": "nominal 00:00/24:00 denote actual 00:10/next 00:10"
+    }
+  }
+}

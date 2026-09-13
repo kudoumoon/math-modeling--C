@@ -13,12 +13,17 @@
     "q2_p2_status": "DEFERRED_BY_USER",
     "deferred_issue": "finalize_q2.py rejects declared RESET1 boundary as a continuity error; attempted fix did not apply",
     "minimum_score_per_question": 90,
-    "status": "ROUND01_Q3_COMPLETE_Q4_RUNNING",
+    "status": "ROUND01_JOINT_CONTENT_PASS_WITH_LIMITATIONS",
+    "scores": {"Q3": 94, "Q4": 91},
+    "content_iteration_stop_condition_met": true,
+    "formal_use": false,
+    "review": "solutions/Q3_Q4_JOINT/others/round01_final_independent_review.json",
+    "release_receipt": "solutions/Q3_Q4_JOINT/others/round01_release_receipt.json",
     "source_commit": "3f9e6730414af5dc83211b8b655c278a5594f59f",
     "independent_p1": {"Q3": "PASS", "Q4": "PASS"},
     "integration_tests_passed": 104
   },
-  "current_gate": "JOINT_Q3_Q4_P1_PASS; Q3 round01 complete; Q4 first annual execution running; final joint review pending",
+  "current_gate": "Q3 94 / Q4 91: joint content gate passed; Q2 P2 deferred; formal_use=false",
   "questions": {
     "Q1": {
       "directory": "solutions/Q1_BASELINE",
@@ -62,23 +67,28 @@
     },
     "Q3": {
       "directory": "solutions/Q3_V3_ALIGNED",
-      "status": "ROUND01_FULL_RUN_COMPLETE_JOINT_REVIEW_PENDING",
+      "status": "CONTENT_PASS_WITH_LIMITATIONS_DEPENDENCY_PENDING",
       "formal_use": false,
       "version": "Q3_V3_R1",
       "run": "solutions/Q3_V3_ALIGNED/results/q3v3-r1",
       "main_total_cost_yuan": 13532323.482237797,
-      "score": null,
-      "reason": "Correct causal Q2 contract used provisionally; independent final joint scoring awaits Q4.",
+      "score": 94,
+      "tag": "q3-v3-r1",
+      "content_hard_blockers": [],
+      "reason": "Independent joint review passed; sensitivity and rejected-candidate audit gaps disclosed; Q2 P2 remains provisional.",
       "archive": {"directory": "solutions/Q3_V2_WRONG_UPSTREAM_ARCHIVE", "status": "INVALID_FORMAL_UPSTREAM_ARCHIVE_ONLY", "reason": "Old version imports q2_pipeline_v1 through q2_v2_compatible."}
     },
     "Q4": {
       "directory": "solutions/Q4_V1_ALIGNED",
-      "status": "ROUND01_FIRST_ANNUAL_RUN_IN_PROGRESS",
+      "status": "CONTENT_PASS_WITH_LIMITATIONS_DEPENDENCY_PENDING",
       "formal_use": false,
       "version": "Q4_V1_R1",
       "run": "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01",
-      "score": null,
-      "reason": "Real Q2 risk core and aligned Q3 mechanism; independent P1 passed, first full run in progress.",
+      "score": 91,
+      "tag": "q4-v1-r1",
+      "main_total_cost_yuan": 14327190.203178847,
+      "content_hard_blockers": [],
+      "reason": "First annual execution and independent joint review passed; sensitivity and candidate audit gaps disclosed; Q2 P2 remains provisional.",
       "archive": {"directory": "solutions/Q4_WRONG_UPSTREAM_ARCHIVE", "status": "INVALID_FORMAL_UPSTREAM_ARCHIVE_ONLY", "reason": "Old version inherits invalid Q3 and imports q2_pipeline_v1/q2_v2_compatible."}
     }
   }

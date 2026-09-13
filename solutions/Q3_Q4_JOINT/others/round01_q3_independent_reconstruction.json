@@ -1,0 +1,42 @@
+{
+  "reviewer": "Maxwell",
+  "agent_id": "01a097e8-8820-7672-973f-8e5d64e36ba4",
+  "status": "NO_HARD_BLOCKERS_FOUND",
+  "score": null,
+  "scoring_deferred_until_Q4_complete": true,
+  "model_rerun": false,
+  "parent_audit_helper_used": false,
+  "source_commit": "3f9e6730414af5dc83211b8b655c278a5594f59f",
+  "run": "solutions/Q3_V3_ALIGNED/results/q3v3-r1",
+  "variants": ["baseline", "A", "B", "A_6", "A_6_12"],
+  "verification": {
+    "all_year_rows_per_variant": 52560,
+    "official_rows_per_variant": 48096,
+    "independently_reconstructed": ["feedback_charge_discharge", "emergency", "unused_supply", "SOC", "cash", "q0", "confirmation_windows", "daily_monthly_annual_summaries", "designated_dates", "paired_comparisons", "bootstrap", "template_cells", "natural_day_bridge", "historical_gate_scores"],
+    "numeric_max_difference": 1.87e-9,
+    "workbooks": 5,
+    "nonempty_template_cells_checked": 532003,
+    "template_max_difference": 4.37e-11,
+    "midnight_bridges_per_variant": 334,
+    "natural_four_hour_blocks_per_variant": 2004,
+    "cross_day_plan_initial_states_checked": 1820,
+    "keep_scores_checked": 2970,
+    "accepted_candidate_scores_checked": 1261,
+    "source_hashes_checked": 5,
+    "input_hashes_checked": 4,
+    "output_hashes_checked": 82,
+    "figure_hashes_checked": 1,
+    "hash_mismatches": []
+  },
+  "main_economic_result": {
+    "cash_saving_yuan": 479766.725531,
+    "cash_saving_percent": 3.42395,
+    "emergency_reduction_percent": 95.11863,
+    "same_initial_soc_kwh": 3717.349490,
+    "same_final_soc_kwh": 4407.270646
+  },
+  "limitations": [
+    "Rejected candidate contracts were not retained, so their new_score cannot be independently reconstructed without reoptimization.",
+    "Version and joint bootstrap tables use different seeds and difference conventions; both were checked, but citations must distinguish them."
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "selection_allowed": false,
+  "model_rerun": false,
+  "source_hashes": {
+    "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/q4_2_all_intervals.csv": "1d52d4f9287fef3c63360d298e0374c23641131fe067d745bcbeff5d46676cca",
+    "solutions/Q4_V1_ALIGNED/results/q4-v1-annual-20260913-01/q4_3_A_all_intervals.csv": "d954dcab059cb779c88b11e5f14e2c1b395b92ad9a78dc51e822566e025bd3a4"
+  },
+  "all_334_days": {
+    "days": 334,
+    "baseline_cash_yuan": 14812380.927696154,
+    "candidate_cash_yuan": 14327190.203178847,
+    "cash_saving_yuan": 485190.7245173065,
+    "inventory_adjusted_saving_yuan": 485190.7245173065,
+    "baseline_initial_soc_kwh": 10300.422321388887,
+    "candidate_initial_soc_kwh": 10300.422321388887,
+    "baseline_end_soc_kwh": 7174.897846148145,
+    "candidate_end_soc_kwh": 7174.897846148145,
+    "baseline_emergency_kwh": 156378.0132501492,
+    "candidate_emergency_kwh": 10780.27409896379,
+    "baseline_daily_cvar95_yuan": 88676.42847616522,
+    "candidate_daily_cvar95_yuan": 76532.52585039806,
+    "bootstrap_mean_daily_cash_saving_ci95_yuan": {
+      "3": [
+        710.741309514077,
+        2361.294884893853
+      ],
+      "7": [
+        685.0945174047697,
+        2489.4637221494077
+      ],
+      "14": [
+        687.9984583677519,
+        2549.5436847660926
+      ]
+    }
+  },
+  "development_feb_jun": {
+    "days": 150,
+    "baseline_cash_yuan": 5960530.985575857,
+    "candidate_cash_yuan": 5681994.22676806,
+    "cash_saving_yuan": 278536.7588077959,
+    "inventory_adjusted_saving_yuan": 278536.7588077959,
+    "baseline_initial_soc_kwh": 10300.422321388887,
+    "candidate_initial_soc_kwh": 10300.422321388887,
+    "baseline_end_soc_kwh": 5528.797301370374,
+    "candidate_end_soc_kwh": 5528.797301370374,
+    "baseline_emergency_kwh": 82118.25973418666,
+    "candidate_emergency_kwh": 4265.069347001145,
+    "baseline_daily_cvar95_yuan": 81199.91037403012,
+    "candidate_daily_cvar95_yuan": 62785.87625786168,
+    "bootstrap_mean_daily_cash_saving_ci95_yuan": {
+      "3": [
+        652.8373737895295,
+        3540.89984740379
+      ],
+      "7": [
+        675.1172208854007,
+        3825.197844469512
+      ],
+      "14": [
+        661.6174381962912,
+        3698.525218037012
+      ]
+    }
+  },
+  "retrospective_jul_dec": {
+    "days": 184,
+    "baseline_cash_yuan": 8851849.942120297,
+    "candidate_cash_yuan": 8645195.976410786,
+    "cash_saving_yuan": 206653.96570951064,
+    "inventory_adjusted_saving_yuan": 206653.96570951064,
+    "baseline_initial_soc_kwh": 5528.797301370374,
+    "candidate_initial_soc_kwh": 5528.797301370374,
+    "baseline_end_soc_kwh": 7174.897846148145,
+    "candidate_end_soc_kwh": 7174.897846148145,
+    "baseline_emergency_kwh": 74259.75351596254,
+    "candidate_emergency_kwh": 6515.204751962643,
+    "baseline_daily_cvar95_yuan": 90604.87463208502,
+    "candidate_daily_cvar95_yuan": 78024.57792703336,
+    "bootstrap_mean_daily_cash_saving_ci95_yuan": {
+      "3": [
+        246.01978737764546,
+        1955.5118156729322
+      ],
+      "7": [
+        135.8301670935669,
+        1975.5745873541198
+      ],
+      "14": [
+        100.74896723808247,
+        1630.506331429313
+      ]
+    }
+  },
+  "limitations": [
+    "Previously observed audit period; do not use for iterative parameter selection.",
+    "Bootstrap intervals are descriptive and do not remove development selection bias.",
+    "Inventory adjustment at frozen 0.4684 yuan/kWh is comparison-only, not cash revenue.",
+    "Policies may differ in both forecasts and adjustment; this comparison alone does not isolate either effect."
+  ]
+}
