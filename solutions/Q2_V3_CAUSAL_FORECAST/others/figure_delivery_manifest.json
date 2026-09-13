@@ -1,7 +1,7 @@
 {
-  "status": "complete_author_reviewed",
+  "status": "complete_pending_visual_review",
   "complete": true,
-  "created_at": "2026-09-13T02:26:37.244630+00:00",
+  "created_at": "2026-09-13T02:35:53.135620+00:00",
   "solver_called": false,
   "training_called": false,
   "annual_replay": false,
@@ -16,7 +16,7 @@
     "solutions/Q2_V3_CAUSAL_FORECAST/program/figure_tools/visual_qa.py": "67675709e523c76e2748d50749de7bc6332f07df865379b26d024321fb40120f",
     "solutions/Q2_V3_CAUSAL_FORECAST/program/q2_delivery_figures.py": "c0e57308cb863fbaee808b607f5dc7ca8be29acf396d084fe38202e21ab98040"
   },
-  "git_source_commit": "6c6a18114eee3e810ffa2f4fa9da0ae817e85254",
+  "git_source_commit": "b22a4f44ba17f1785e1d030f2c2c351fca4b5997",
   "input_hashes": {
     "data/附件1.xlsx": "03cab394053650f26cfa0930e32693385acbd9045813ee8313581ef2247f31cd",
     "data/附件2.xlsx": "c442c114af1348ae0f2586cc6b09ee43e7c75f2771e9c424651f775b3cb4d200",
@@ -130,7 +130,7 @@
         }
       ],
       "preview": "figures/delivery_r1/previews/raw_q2_01_daily_energy.png",
-      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+      "visual_review": "PENDING_AUTHOR_IMAGE_INSPECTION"
     },
     "raw_q2_02_diurnal_tariff": {
       "category": "raw",
@@ -203,7 +203,7 @@
         }
       ],
       "preview": "figures/delivery_r1/previews/raw_q2_02_diurnal_tariff.png",
-      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+      "visual_review": "PENDING_AUTHOR_IMAGE_INSPECTION"
     },
     "raw_q2_03_load_pv_relation": {
       "category": "raw",
@@ -276,7 +276,7 @@
         }
       ],
       "preview": "figures/delivery_r1/previews/raw_q2_03_load_pv_relation.png",
-      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+      "visual_review": "PENDING_AUTHOR_IMAGE_INSPECTION"
     },
     "process_q2_01_executed_soc": {
       "category": "process",
@@ -349,7 +349,7 @@
         }
       ],
       "preview": "figures/delivery_r1/previews/process_q2_01_executed_soc.png",
-      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+      "visual_review": "PENDING_AUTHOR_IMAGE_INSPECTION"
     },
     "process_q2_02_candidate_selection": {
       "category": "process",
@@ -422,7 +422,7 @@
         }
       ],
       "preview": "figures/delivery_r1/previews/process_q2_02_candidate_selection.png",
-      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+      "visual_review": "PENDING_AUTHOR_IMAGE_INSPECTION"
     },
     "process_q2_03_emergency_distribution": {
       "category": "process",
@@ -495,7 +495,7 @@
         }
       ],
       "preview": "figures/delivery_r1/previews/process_q2_03_emergency_distribution.png",
-      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+      "visual_review": "PENDING_AUTHOR_IMAGE_INSPECTION"
     },
     "result_q2_01_monthly_cash": {
       "category": "result",
@@ -568,7 +568,7 @@
         }
       ],
       "preview": "figures/delivery_r1/previews/result_q2_01_monthly_cash.png",
-      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+      "visual_review": "PENDING_AUTHOR_IMAGE_INSPECTION"
     },
     "result_q2_02_monthly_risk": {
       "category": "result",
@@ -641,7 +641,7 @@
         }
       ],
       "preview": "figures/delivery_r1/previews/result_q2_02_monthly_risk.png",
-      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+      "visual_review": "PENDING_AUTHOR_IMAGE_INSPECTION"
     },
     "result_q2_03_common333_sensitivity": {
       "category": "result",
@@ -714,7 +714,7 @@
         }
       ],
       "preview": "figures/delivery_r1/previews/result_q2_03_common333_sensitivity.png",
-      "visual_review": "PASS_AUTHOR_VISUAL_REVIEW; independent review pending"
+      "visual_review": "PENDING_AUTHOR_IMAGE_INSPECTION"
     }
   },
   "independent_review": "PENDING_OTHER_AGENT",
@@ -736,46 +736,42 @@
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/result_q2_01_monthly_cash.png": "797c675647b25d4609b8197f3a1c0a51efc1c0e02d196fb8da6b4f43e863431e",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/result_q2_02_monthly_risk.png": "f2df851ee89d989c3ad464b38f22796a73c0a62615917bf16a7ede63c102724c",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/previews/result_q2_03_common333_sensitivity.png": "c9d7b6f9adb5ac09b56588a57e790c4b188eadf52394b0c187894b946af395ac",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.pdf": "8df29f286d120410b4ba15511addd395287fdc3f9788cd787e5c84c4e11767a2",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.pdf": "8d1df343e26d229b48836286b9df5aa486c4ce566d5b0af4c42921c5ff896c0c",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.png": "c3b9394e6c6aa4a8d1ceba6727e78a38bad50f09a293edae5c432ae4916a0353",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.svg": "7e646cf9e4579dacb91c19f658e23ca175d4434270e5b58ffd52a5ef964ace7c",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc.svg": "0fc9b0e4cfae90d8d34c075e75df850712c434886e62cac69638f886176c6f40",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_01_executed_soc_grayscale.png": "fa3e4ed05e1912022fc3e4c219fe5e11bdf0f13c2935473db5dcf04cd64c9743",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.pdf": "f69f53a6fcb2a0585b73ca5263734e5b934d793d6736c97700881c9c57824b43",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.pdf": "28e62fed7425a928d5052befcef998d889f0f292878c1d4e3fee3eae75078454",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.png": "562f6c2c7e30ea4648a3f7962207f48adb0d250b7126cbcc947db2536664c331",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.svg": "3061f511a0d788d53349eee94dd499092284d9b0ad2cb207a9b4a23cc98ccba2",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection.svg": "293a67d3dae74fa6d24f0f99336446111974190fae092fa708b7dc181602fbc0",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_02_candidate_selection_grayscale.png": "e41ca6458bfcf6c0e6d158c240f6b1208d01cf9282fa0a89e59ad36b32096640",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.pdf": "44c56b1dd96f45dde08db7cf577b640deeeac3d3395db6f811a1fb9ad852477a",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.pdf": "440ff6da53ebc024c30cf291d736b9b711e5ad4aa67a88f7577118053c2d2437",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.png": "5c2817c4717babe70d63cca82d33e3f69bb1232daa9769b66ff83fa155747e6c",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.svg": "ee8c66344d71e3d35544f8d25ad31a561fa22f72716982dde128fb866621ffe2",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution.svg": "fbd1cf002e92268807566a70d947965e20c1f309f4f777392057fc2226749895",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/process_q2_03_emergency_distribution_grayscale.png": "ee18aaa7d5bc0a2115550a0f037385beae3245b23dfa23974c8c35bf2deb1a63",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.pdf": "77a604bcb3fe74becb8bcdc0554bd5452a039e0095406217f29776ea95a26ad0",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.pdf": "181b146cabcb56531f29271e9c24fec3048730ef66e09f6ba3d680dba0bff55d",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.png": "0a1419a77c27ff8672784529d6b980ca37e06e175ce21a9463a2dff7f632ba22",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.svg": "7d6a956b21cd449524195852da2b463e56711e778bfeeca91018213a2243e23c",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy.svg": "597323bafcecee5000a6f0de58a26c17007cf82cba640cbaf7dcd7c2a7b3af49",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_01_daily_energy_grayscale.png": "e145b9eaf91051597e1828984fbe5ef6698cf41e6d20accdcd2c372cc387079a",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.pdf": "600c155271592532a51e8590d6da403be638e0e724c0e24dc7f6a44ea761f996",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.pdf": "c7994a294e8856460ebbfa8e446317fd97d52f9bb15d2325347b8a0d53456d69",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.png": "145c672f50f7c2cfcddfe34fd366e523baca4b5dc90f8bef7745bea3c1a70164",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.svg": "e88ef5efc994b9a95bd8450e1d0dfcb5064b4a82eec141353047eb3be304968e",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff.svg": "3a0d391e40e6af30c771f460cd956d700eb6d30ab732c73a50577e5bd99fed82",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_02_diurnal_tariff_grayscale.png": "1eef831a722e944e82dabe84d29fba414fa16a261a60a6a531505be924035903",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.pdf": "b10177f2505f7356baf9adf38815013ede0d824d8ef3364f4c8d743d5d8c61f7",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.pdf": "cc1d84f267fd7db993b9d1eb9ec32c3825e1acde3cd5678ff6da59b6263f5ce9",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.png": "1b6a3b5b4991e67a8de3e18ec5585b0e611530a0a80073e93b9fdf41a5cd2f1c",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.svg": "1fa73ae5dde47c9c52778fa058968de5dc30fe9318aedd1a9fe82521353ed502",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation.svg": "24b8366512096ac9ddc98008e556cc4505adaa75b3c2a95e7f16d6bfa4485195",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/raw_q2_03_load_pv_relation_grayscale.png": "b6e49f3f4e724c9388154b1361d393fa9812d957b1d4c357e39177d242cb8cbd",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.pdf": "60de3ae8b3f0293ba34163efbfa6a7418229165325452d6a7e4fe78bd3b698c1",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.pdf": "b5cb6b645bfb5f5cf0e5503912c8355c5043d126d2ccaa94002ca835598123f9",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.png": "f0fbd20341eec22f6d144b892a4fbfa9ddf1e3a01fc88a10432ae6f8c3caffe2",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.svg": "3e0a0b85720d0f4dfe4083a867543f4da09c14cc61b71e6062f3fe004c3a1759",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash.svg": "c0e5c4e4c3113bb0a9147460cd4d1925bf8cd4f01bb340876df9d1195dcc0020",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_01_monthly_cash_grayscale.png": "0cf9bb6edb7b851a1db2e5a0e772df3de5eae0861bd7c26d63035915c4b178e3",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.pdf": "85132a59db9799290a454927c342721705b33ec583c09b7f34c1fdb241657bb1",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.pdf": "418cb2c89f4f112b0cd49164248b158752c947451975b0c6270586f046b62536",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.png": "64b9715a70cee359efc93745e814d2694f6248e96da41cb38356a1c577e6418c",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.svg": "351ebb997d06556123ebe6fa4e8425562dfd735b84ee0b397401bd7ef050ff18",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk.svg": "89bf2c24c4be7c42826323baefc13e315abc3fbadbe09f54c1022f9bf504849f",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_02_monthly_risk_grayscale.png": "c60c5d8b11baa2d4726daf11738d1669810100d094f09b41fd38c82b068d3d32",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.pdf": "58f4f2ca7032d8458b3244acddf3ddad0ab74aee5d5f096ccaf1bbeaca6f2ab8",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.pdf": "008ed573fbefa63bdbe816742bb325b78867225a53e023c5020a3cc734c2c542",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.png": "2c289acea37b42fb52966dec6e79cf3b0ce5e15d7ebac0034147a2f14098c719",
-    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.svg": "1095f3275543386c301a714c1320a2354b767aa1b5317a392b57f6f0465537f3",
+    "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity.svg": "866a0a5c7cc9057158810cbb741cb85f89cd56703de624b7804ea58c0d359034",
     "solutions/Q2_V3_CAUSAL_FORECAST/figures/delivery_r1/result_q2_03_common333_sensitivity_grayscale.png": "c3f091534380c48caee31715f80ae24ba44e97cf34a8cd85ab2689a8a1d04572",
-    "solutions/Q2_V3_CAUSAL_FORECAST/others/figure_contracts.json": "7cd6e5721527ca81181e2994cffc55b4c2ffa6b6e1922c7738e11333adf367e2",
-    "solutions/Q2_V3_CAUSAL_FORECAST/others/figure_delivery_README.md": "b7e1520a0ad5043be1cbb7cf856784c8acc2a507b2a4fea83b9405bebad0e741",
-    "solutions/Q2_V3_CAUSAL_FORECAST/others/figure_eda.json": "98bbbd2cd1f27dc3e7f97251421a25eb0803f55e326f0ba02fa04023f07e6388",
-    "solutions/Q2_V3_CAUSAL_FORECAST/others/figure_visual_review.json": "8ba867f45614b99175dbb7b4e28dbaf916528f45acee547c0d71406b9aac88e8",
     "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/candidate_key.csv": "c35ac572142cc571190cc957c4530a4594d49fa6e59d030729c1e9b25ad68e7c",
     "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/candidate_trace.csv": "0be1b1b0d59d6a19c33141c29530abd993b2daa6db658540bd20547245f5881a",
     "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/emergency_by_hour.csv": "278b7f4b08c177eaac018dee1ee320ddc3f0cbc9b60fe9d6177ba24dc1371bd8",
@@ -790,7 +786,5 @@
     "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/raw_observations.csv.gz": "6b3d52ff8c3ab1ed5a28443b1507008caf182cd3a60e74ca63dc03b7e56da109",
     "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/sensitivity_summary.csv": "aea0a40ecc3ee56fe925bc1c980dfe333fa1325a53bd6899fdc4f6a0124c4fd5",
     "solutions/Q2_V3_CAUSAL_FORECAST/results/figure_data/soc_plan_grid.csv.gz": "247a148732757967b84bda82c6f76cdc6c938757e55a18ebed1a263668058170"
-  },
-  "author_visual_review": "others/figure_visual_review.json",
-  "canonical_profile_run": "results/annual_runs/q2v3-r2-full-b0-a-20260913-01"
+  }
 }

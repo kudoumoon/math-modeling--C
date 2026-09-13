@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "review": "archive_content_p2",
+  "passed": true,
+  "model_rerun": false,
+  "workbooks": {
+    "count": 5,
+    "all_source_target_hashes_match": true,
+    "mapping": "deliveries/final-20260913-r1/others/WORKBOOK_MAPPING.json"
+  },
+  "archive_mapping": {
+    "count": 151,
+    "all_copy_and_git_source_hashes_match": true
+  },
+  "annual_outputs": {
+    "Q3": {"manifest_outputs": 82, "all_hashes_match": true},
+    "Q4": {"manifest_outputs": 44, "all_hashes_match": true}
+  },
+  "selected_files": {
+    "count": 749,
+    "bytes": 456256245,
+    "largest_file_bytes": 25036145,
+    "required_runtime_dependencies_present": true,
+    "missing_required": [],
+    "midnight_included": false,
+    "wrong_old_archives_included": false
+  },
+  "canonical_directories": {
+    "Q1_BASELINE": true,
+    "Q2_V3_CAUSAL_FORECAST": true,
+    "Q3_V3_ALIGNED": true,
+    "Q4_V1_ALIGNED": true
+  },
+  "scope_note": "This is delivery and provenance P2 only. It is not a PASS for the newly confirmed model conventions."
+}
