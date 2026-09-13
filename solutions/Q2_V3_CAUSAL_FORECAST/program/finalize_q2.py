@@ -43,6 +43,11 @@ DEFAULT_RUNS = {
     "delay_1": REPO_ROOT / "runs/q2v3-r2-full-b0-delay1-20260913-01",
     "reset_feb": REPO_ROOT / "runs/q2v3-r2-full-b0-resetfeb-20260913-01",
 }
+DEFAULT_RUNS = {
+    name: VERSION_ROOT / "results/annual_runs" / path.name
+    if (VERSION_ROOT / "results/annual_runs" / path.name).is_dir() else path
+    for name, path in DEFAULT_RUNS.items()
+}
 EXPECTED = {
     "main": {"time_mapping": "A", "battery_interpretation": "A", "end_day": 364, "observation_delay_slots": 0, "compatibility_reset": False},
     "battery_b": {"time_mapping": "A", "battery_interpretation": "B", "end_day": 364, "observation_delay_slots": 0, "compatibility_reset": False},
@@ -73,6 +78,32 @@ def _git_blob_sha256(commit: str, relative_path: str) -> str:
         ["git", "show", f"{commit}:{relative_path}"], cwd=REPO_ROOT
     )
     return hashlib.sha256(content).hexdigest()
+
+
+def audit_soc_boundaries(
+    soc: np.ndarray, run_days: np.ndarray, *, compatibility_reset: bool,
+    report_start_day: int = 31, initial_soc_kwh: float = 6000.0,
+) -> dict[str, Any]:
+    """Validate every transition, isolating only the declared RESET1 boundary."""
+    destinations = run_days[1:]
+    jumps = soc[destinations, 0] - soc[run_days[:-1], -1]
+    exempt = destinations == report_start_day if compatibility_reset else np.zeros(len(jumps), dtype=bool)
+    ordinary = jumps[~exempt]
+    reset_present = not compatibility_reset or int(exempt.sum()) == 1
+    reset_target_matches = not compatibility_reset or (
+        reset_present and abs(float(soc[report_start_day, 0]) - initial_soc_kwh) <= TOL
+    )
+    residual = float(np.max(np.abs(ordinary), initial=0.0))
+    return {
+        "passed": bool(np.all(np.isfinite(jumps)) and residual <= 1e-8 and reset_target_matches),
+        "continuous_boundaries_checked": int((~exempt).sum()),
+        "max_continuous_boundary_residual_kwh": residual,
+        "declared_reset_day_index": report_start_day if compatibility_reset else None,
+        "declared_reset_jump_kwh": float(jumps[exempt][0]) if compatibility_reset and reset_present else None,
+        "declared_reset_target_kwh": initial_soc_kwh if compatibility_reset else None,
+        "declared_reset_target_matches": bool(reset_target_matches),
+        "reset_is_sensitivity_only": compatibility_reset,
+    }
 
 
 def verify_run(name: str, run_root: Path) -> dict[str, Any]:
@@ -156,6 +187,10 @@ def verify_run(name: str, run_root: Path) -> dict[str, Any]:
     balance = g + pv[report_days] * DT + discharge + emergency - load[report_days] * DT - c - spill
     state = soc[:, 1:] - soc[:, :-1] - ETA_C * c + discharge / ETA_D
     continuity = arrays["SOC"][run_days[:-1], -1] - arrays["SOC"][run_days[1:], 0]
+    boundary_audit = audit_soc_boundaries(
+        arrays["SOC"], run_days,
+        compatibility_reset=expected["compatibility_reset"],
+    )
     calculated = {
         "days": int(len(report_days)),
         "plan_cost_yuan": float(np.sum(g * price)),
@@ -179,7 +214,7 @@ def verify_run(name: str, run_root: Path) -> dict[str, Any]:
         "summary_recomputed": max(numeric_differences.values(), default=0.0) <= 1e-5,
         "energy_balance_closes": float(np.max(np.abs(balance))) <= 1e-8,
         "soc_balance_closes": float(np.max(np.abs(state))) <= 1e-8,
-        "cross_day_soc_continuity": float(np.max(np.abs(continuity))) <= 1e-8,
+        "cross_day_soc_contract": boundary_audit["passed"],
         "soc_bounds_hold": float(np.nanmin(arrays["SOC"][run_days])) >= E_MIN - TOL
         and float(np.nanmax(arrays["SOC"][run_days])) <= E_MAX + TOL,
         "power_bounds_hold": min(float(c.min()), float(discharge.min()), float(g.min()), float(emergency.min()), float(spill.min())) >= -TOL
@@ -208,7 +243,13 @@ def verify_run(name: str, run_root: Path) -> dict[str, Any]:
     checks["interval_ledger_matches_policy"] = max(ledger_differences.values()) <= 1e-8
 
     daily = pd.read_csv(run_root / "daily_ledger.csv")
-    checks["daily_ledger_days"] = len(daily) == len(run_days)
+    checks["daily_ledger_days"] = daily["day_index"].tolist() == run_days.tolist()
+    if expected["compatibility_reset"]:
+        reset_row = daily.loc[daily["day_index"] == 31]
+        checks["declared_reset_daily_ledger_matches"] = len(reset_row) == 1 and bool(
+            np.all(np.abs(reset_row[["planned_initial_energy_kwh", "executed_initial_energy_kwh"]]
+                          .to_numpy(float) - 6000.0) <= TOL)
+        )
     checks["daily_score_release_contract"] = bool(
         np.array_equal(
             daily["latest_full_score_day_released"].to_numpy(int),
@@ -228,6 +269,7 @@ def verify_run(name: str, run_root: Path) -> dict[str, Any]:
         "max_energy_balance_residual_kwh": float(np.max(np.abs(balance))),
         "max_soc_balance_residual_kwh": float(np.max(np.abs(state))),
         "max_cross_day_soc_residual_kwh": float(np.max(np.abs(continuity))),
+        "soc_boundary_audit": boundary_audit,
     }
     if not audit["passed"]:
         failed = [key for key, passed in checks.items() if not passed]
@@ -295,6 +337,9 @@ def natural_day_ledger(arrays: dict[str, np.ndarray], dates: pd.DatetimeIndex) -
     ends = pd.DatetimeIndex(result["interval_end"])
     if not bool(np.all(starts[1:].asi8 == ends[:-1].asi8)):
         raise AssertionError("natural-day bridge has a timestamp gap")
+    if not np.allclose(result["actual_soc_after_kwh"].to_numpy()[:-1],
+                       result["actual_soc_before_kwh"].to_numpy()[1:], atol=1e-8, rtol=0):
+        raise AssertionError("natural-day bridge has a SOC discontinuity")
     return result
 
 
@@ -304,6 +349,12 @@ def storage_blocks(ledger: pd.DataFrame) -> pd.DataFrame:
     day_column = "natural_day" if "natural_day" in work else "plan_day"
     work["block_index"] = work[time_column].astype(int) // 24
     work["date"] = pd.to_datetime(work[day_column])
+    work = work.sort_values(["date", time_column])
+    if work.duplicated(["date", time_column]).any():
+        raise AssertionError("storage ledger has duplicate intervals")
+    if not all(np.array_equal(group[time_column].to_numpy(), np.arange(144))
+               for _, group in work.groupby("date")):
+        raise AssertionError("storage ledger must contain 144 ordered intervals per day")
     grouped = work.groupby(["date", "block_index"], as_index=False).agg(
         charge_kwh=("charge_kwh", "sum"),
         discharge_kwh=("discharge_kwh", "sum"),
@@ -341,6 +392,16 @@ def write_result2(
     plan_sheet = book["计划购电量"]
     storage_sheet = book["充放电量"]
     emergency_sheet = book["紧急购电量"]
+    plan_sheet.cell(1, 2).comment = openpyxl.comments.Comment(
+        "Archived Time A purchase contract: 00:10 to next-day 00:10. "
+        "Storage and emergency sheets use actual natural-clock windows reconstructed "
+        "from these same stored trajectories. This export does not implement the new interval-end model.",
+        "Q2 delivery",
+    )
+    storage_sheet.cell(1, 2).comment = openpyxl.comments.Comment(
+        "Actual natural-clock four-hour blocks; 00:00/24:00 SOC uses the prior-day "
+        "slot143 bridge under archived Time A. See q2_natural_day_ledger.csv.", "Q2 delivery",
+    )
     days = pd.DatetimeIndex(pd.to_datetime(ledger["plan_day"].drop_duplicates()))
     if len(days) != 334:
         raise AssertionError(f"official result requires 334 plan days, got {len(days)}")
@@ -558,7 +619,8 @@ def finalize(args: argparse.Namespace) -> Path:
     natural_ledger = natural_day_ledger(
         verified["main"]["arrays"], load_data().dates
     )
-    blocks = storage_blocks(main_ledger)
+    blocks = storage_blocks(natural_ledger)
+    plan_blocks = storage_blocks(main_ledger)
     events = emergency_events(natural_ledger)
     plan_day_events = emergency_events(main_ledger)
     monthly = monthly_summary(main_ledger)
@@ -592,7 +654,7 @@ def finalize(args: argparse.Namespace) -> Path:
             "scope_note": {
                 "main": "334-day official plan window; common columns stop at 2025-12-30",
                 "battery_b": "frozen battery action; common columns stop at 2025-12-30",
-                "time_b": "right-endpoint mapping; 333 days through 2025-12-30",
+                "time_b": "historical cross-day-shift sensitivity; not the newly confirmed natural-day mapping; 333 days through 2025-12-30",
                 "delay_1": "Battery A with one 10-minute measurement delay; common columns stop at 2025-12-30",
                 "reset_feb": "January history retained; planned and executed SOC reset to 6000 kWh on 2025-02-01",
             }[name],
@@ -607,6 +669,7 @@ def finalize(args: argparse.Namespace) -> Path:
     official_daily.to_csv(output / "q2_daily_ledger.csv", index=False)
     natural_ledger.to_csv(output / "q2_natural_day_ledger.csv", index=False)
     blocks.to_csv(output / "q2_natural_day_storage_blocks.csv", index=False)
+    plan_blocks.to_csv(output / "q2_plan_day_storage_blocks.csv", index=False)
     events.to_csv(output / "q2_emergency_events_natural_day.csv", index=False)
     plan_day_events.to_csv(output / "q2_emergency_events_plan_day.csv", index=False)
     monthly.to_csv(output / "q2_monthly_summary.csv", index=False)
@@ -648,7 +711,9 @@ def finalize(args: argparse.Namespace) -> Path:
         "schema_version": 1,
         "release_id": "Q2-V3-CAUSAL-FORECAST-FINAL-V1-R2",
         "created_at": datetime.now(timezone.utc).isoformat(),
-        "status": "P2_REVIEW_PENDING",
+        "status": "DELIVERY_EXPORT_CHECKS_PASS_P2_PENDING",
+        "model_rerun": False,
+        "new_conventions_implemented": False,
         "formal_use": False,
         "selected_arm": "B0",
         "selected_model_id": "Q2V2-SW2-REC5",
@@ -662,7 +727,8 @@ def finalize(args: argparse.Namespace) -> Path:
         "result2_readback_passed": readback["passed"],
         "reporting_windows": {
             "plan_and_cost": "334 plan days from 2025-02-01 00:10 through 2026-01-01 00:10",
-            "storage_template": "six fixed groups of 24 plan-row slots; labels are nominal and physical boundaries are shifted 10 minutes under mapping A",
+            "storage_template": "334 actual natural days, six four-hour blocks each, with true 00:00 and 24:00 SOC projected from archived Time A trajectories",
+            "plan_day_storage_reference": "q2_plan_day_storage_blocks.csv retains six nominal groups of 24 plan-row slots; physical boundaries are shifted 10 minutes under mapping A",
             "emergency_template": "334 natural days from 2025-02-01 00:00 through 2026-01-01 00:00",
             "natural_day_bridge": "natural slot 0 uses prior plan-day slot 143; slots 1-143 use current plan-day slots 0-142",
         },
@@ -676,7 +742,7 @@ def finalize(args: argparse.Namespace) -> Path:
         "emergency_events": len(events),
         "files": len(release_files) + 1,
         "figures": len(figure_paths),
-        "status": "P2_REVIEW_PENDING",
+        "status": "DELIVERY_EXPORT_CHECKS_PASS_P2_PENDING",
     }, ensure_ascii=False, indent=2))
     return output
 

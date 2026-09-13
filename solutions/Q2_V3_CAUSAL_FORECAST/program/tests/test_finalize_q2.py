@@ -3,8 +3,9 @@ from __future__ import annotations
 import pandas as pd
 
 import numpy as np
+import pytest
 
-from finalize_q2 import emergency_events, natural_day_ledger, storage_blocks
+from finalize_q2 import audit_soc_boundaries, emergency_events, natural_day_ledger, storage_blocks
 
 
 def _ledger() -> pd.DataFrame:
@@ -62,3 +63,44 @@ def test_natural_day_bridge_uses_previous_plan_midnight_slot():
     assert first.iloc[0]["source_plan_day"] == "2025-01-31"
     assert first.iloc[1]["planned_grid_kwh"] == 31000.0
     assert first.iloc[-1]["planned_grid_kwh"] == 31142.0
+
+
+def test_only_declared_reset_boundary_is_exempted():
+    soc = np.full((365, 145), 6000.0)
+    soc[:31] = 5000.0
+    days = np.arange(365)
+    assert not audit_soc_boundaries(soc, days, compatibility_reset=False)["passed"]
+    audited = audit_soc_boundaries(soc, days, compatibility_reset=True)
+    assert audited["passed"]
+    assert audited["declared_reset_jump_kwh"] == 1000.0
+    assert audited["continuous_boundaries_checked"] == 363
+    soc[32, 0] += 1.0
+    assert not audit_soc_boundaries(soc, days, compatibility_reset=True)["passed"]
+
+
+def test_reset_target_and_finite_boundaries_remain_mandatory():
+    soc = np.full((365, 145), 6000.0)
+    soc[31, 0] = 5900.0
+    assert not audit_soc_boundaries(soc, np.arange(365), compatibility_reset=True)["passed"]
+    soc[31, 0] = np.nan
+    assert not audit_soc_boundaries(soc, np.arange(365), compatibility_reset=True)["passed"]
+
+
+def test_storage_blocks_reject_missing_or_duplicate_slots():
+    with pytest.raises(AssertionError):
+        storage_blocks(_ledger().iloc[:-1])
+    with pytest.raises(AssertionError):
+        storage_blocks(pd.concat([_ledger(), _ledger().iloc[:1]]))
+
+
+def test_storage_uses_natural_midnight_bridge_without_changing_plans():
+    arrays = {key: np.ones((365, 144)) for key in
+              ("G", "C", "D", "CommandedC", "CommandedD", "Emergency", "Spill")}
+    arrays["SOC"] = np.full((365, 145), 6000.0)
+    arrays["C"][30, 143] = 9.0
+    arrays["C"][31, 23] = 99.0
+    bridge = natural_day_ledger(arrays, pd.date_range("2025-01-01", periods=365))
+    blocks = storage_blocks(bridge)
+    assert blocks.iloc[0]["charge_kwh"] == 32.0
+    assert blocks.iloc[1]["charge_kwh"] == 122.0
+    assert arrays["C"][31, 23] == 99.0
